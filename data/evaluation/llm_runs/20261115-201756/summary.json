@@ -1,0 +1,94 @@
+{
+  "created": "20261115-201756",
+  "registry_version": "1.7.0",
+  "runs": 5,
+  "api_base": "http://localhost:11434/v1",
+  "skipped_models": [],
+  "models": {
+    "qwen3.8:27b": {
+      "label": "Qwen 3.8 27B (lokal)",
+      "runs_total": 30,
+      "synthetic_tp": 25,
+      "synthetic_fp": 0,
+      "synthetic_fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "consistency": 0.9761904761904762,
+      "complete_valid_share": 1.0,
+      "latency_median_s": 41.3101,
+      "transport_errors": 0,
+      "invalid_responses": 0
+    }
+  },
+  "reference_model": "qwen3.8:27b",
+  "hybrid_rows": [
+    {
+      "form": "Synthetisch konform",
+      "score_min": 100,
+      "score_max": 100,
+      "status": "green_compliant",
+      "semantic_violations": {},
+      "runs": 5
+    },
+    {
+      "form": "Synthetisch fehlerhaft",
+      "score_min": 0,
+      "score_max": 0,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-STAMM-02": 5,
+        "HWG-UI-01": 5,
+        "HWG-BTN-01": 5,
+        "HWG-LANG-01": 5,
+        "HWG-FEEDBACK-01": 5
+      },
+      "runs": 5
+    },
+    {
+      "form": "Auslagenerstattung (Prod)",
+      "score_min": 20,
+      "score_max": 28,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-BTN-01": 5,
+        "HWG-LANG-02": 5,
+        "HWG-LANG-01": 2
+      },
+      "runs": 5
+    },
+    {
+      "form": "Antrag-Sprints (alt)",
+      "score_min": 6,
+      "score_max": 6,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-STAMM-02": 5,
+        "HWG-BTN-01": 5,
+        "HWG-LANG-01": 5
+      },
+      "runs": 5
+    },
+    {
+      "form": "Antrag-Sprints (saniert)",
+      "score_min": 100,
+      "score_max": 100,
+      "status": "green_compliant",
+      "semantic_violations": {},
+      "runs": 5
+    },
+    {
+      "form": "Master-Formular (Vorlage)",
+      "score_min": 29,
+      "score_max": 29,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-STAMM-02": 5,
+        "HWG-UI-01": 5,
+        "HWG-LANG-01": 5,
+        "HWG-FEEDBACK-01": 5
+      },
+      "runs": 5
+    }
+  ]
+}

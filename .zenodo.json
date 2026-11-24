@@ -1,0 +1,22 @@
+{
+  "title": "Formular-Standard und KI-gestützte Compliance-Prüfung für Formcycle – Artefakte zur Bachelorarbeit",
+  "upload_type": "software",
+  "description": "<p>Artefakte zur Bachelorarbeit „Konzeption eines einheitlichen Formular-Standards für die HWG Ludwigshafen und prototypische Umsetzung einer KI-gestützten Compliance-Prüfung in Formcycle“ (Hochschule für Wirtschaft und Gesellschaft Ludwigshafen, 2026): der Formular-Standard als maschinenlesbares Regelwerk, der Prototyp der Prüfpipeline mit Prüf-Server und Dashboard, zwei synthetische Testformulare sowie die Mess- und Auswertungsergebnisse.</p><p>Quellcode unter MIT-Lizenz; Regelwerk, Testformulare und Messergebnisse unter CC BY 4.0. Ausgenommen sind das Logo der HWG Ludwigshafen und die Schrift Lexend (SIL Open Font License 1.1).</p>",
+  "creators": [
+    {
+      "name": "Logaras, Fotios",
+      "affiliation": "Hochschule für Wirtschaft und Gesellschaft Ludwigshafen"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Formcycle",
+    "Online-Formulare",
+    "Barrierefreiheit",
+    "Compliance-Prüfung",
+    "Large Language Model",
+    "Design Science Research"
+  ],
+  "language": "deu",
+  "version": "1.7.0"
+}

@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "model": "qwen3.8:27b",
+    "form": "Synthetisch konform",
+    "run": 1,
+    "wall_ms": 30352.8,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "PASS",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 100,
+    "release_status": "green_compliant",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'qwen3.8:27b' abgeschlossen.",
+    "llm_latency_ms": 30347.3,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "synthetic_compliant_form.xfp",
+    "violations": [],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (7 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Beschriftungen ohne Pipe-Zeichen, Pfeile und sichtbare Code-Reste)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-UPLOAD-01 (Alle Dateiuploads technisch und im Hilfetext konsistent spezifiziert)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-UX-01 (Affordanzgerechte kompakte Feldbreiten eingehalten)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 1/1 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Alle persönlichen Stammdatenfelder verwenden die kanonischen Bezeichnungen: 'Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' und 'Telefonnummer'. Es gibt keine Sammelfelder, keine Rollenzusätze, keine mehrdeutigen Kurzbezeichnungen (z. B. bloß 'Name') und keine technischen Feldbezeichner als sichtbares Label.)",
+      "HWG-UI-01 (Stufe 1 (deterministisch): suspected_dev_notes_count = 0, keine generischen Code- oder Arbeitsmarker (TODO, FIXME, display:none, hide/show, script, lorem ipsum) in den sichtbaren Texten. Stufe 2 (semantisch): Alle sichtbaren Labels, Hinweistexte und Rich-Text-Blöcke enthalten ausschließlich antragstellerorientierte Informationen; keine internen Entwicklerkommentare, Konfigurationsnotizen oder redaktionellen Arbeitshinweise erkennbar.)",
+      "HWG-BTN-01 (Die einzige für Antragstellende sichtbare Aktionsschaltfläche (applicant_visible = true, role = 'submit') trägt das Label 'Antrag einreichen', das aus dem Zielobjekt 'Antrag' und dem Vollverb 'einreichen' im Infinitiv besteht und die ausgelöste Transaktion eindeutig beschreibt. Dies entspricht exakt dem in der Regel definierten Muster [Zielobjekt] + [Vollverb im Infinitiv].)",
+      "HWG-LANG-01 (Die Sie-Ansprache ist durchgängig konsistent ('Ihre personenbezogenen Daten', 'finden Sie', 'Ihr Antrag', 'Sie erhalten'). Die verwendeten Begriffe – 'DSGVO', 'Art. 13', 'IBAN', 'Studierendensekretariat' – sind entweder allgemein geläufige Abkürzungen (DSGVO, IBAN) oder im Kontext der Hochschule selbst erklärende Bezeichnungen. Der Hinweis auf die 'Datenschutzerklärung der HWG Ludwigshafen' verweist auf eine nachvollziehbare Informationsquelle. Es sind keine unerklärten internen Organisationskürzel oder hochschulspezifischen Fachbegriffe ohne Hilfetext vorhanden.)",
+      "HWG-LANG-02 (Stufe 1 (deterministisch): sentences_over_25_words_count = 0; kein Satz überschreitet den Richtwert von 25 Wörtern. Stufe 2 (semantisch): Die vorhandenen Passivkonstruktionen ('werden … verarbeitet', 'wird … geprüft') sind einfache, nicht verschachtelte Passivsätze in einem sachlichen, kurzen Kontext. Es liegen keine verschachtelten Passiv- oder Behördenkonstruktionen vor; die Sätze sind kurz, aktiv formuliert und klar strukturiert.)",
+      "HWG-FEEDBACK-01 (Stufe 1: applicant_addressed_emails_count = 1; der FC_EMAIL-Knoten ist an den dynamischen Platzhalter [%tfEmail%] adressiert. Stufe 2: Die E-Mail bestätigt den Eingang ('Ihr Antrag ist eingegangen'), benennt die zuständige Prüfstelle ('Studierendensekretariat der HWG Ludwigshafen') und informiert über die nächsten Schritte ('wird nun … geprüft', 'Über die weiteren Prozessschritte und die Entscheidung werden Sie per E-Mail informiert'). Alle drei Pflichtinhalte sind erfüllt.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UX-02": "[KI-Prüfung · qwen3.8:27b] Der Komplexitätsschwellenwert ist nicht erreicht: Das Formular umfasst 1 XPage (Schwelle: ≥ 3) und 9 Eingabefelder (Schwelle: ≥ 25). Die Empfehlung zum Zwischenspeichern mit Fortsetzungs-Link greift daher nicht."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "http://localhost:11434/v1",
+      "model": "qwen3.8:27b",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'qwen3.8:27b' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 100,
+    "provenance": {
+      "engine_version": "1.7.0",
+      "registry_version": "1.7.0",
+      "prompt_version": "1.6.6",
+      "input_sha256": "525816e6377865052a3d67ec4635aaa8f4f20b55ed8d240e83fce756d2f9cf93",
+      "stage1_ms": 2.484,
+      "prompt_sha256": "ea7073a0ed4c6c36c2483a9fe044915e214de6589571901cff98c2725f3ee0f0",
+      "model": "qwen3.8:27b",
+      "api_base": "http://localhost:11434/v1",
+      "llm_latency_ms": 30347.3,
+      "llm_raw_response": "{\n  \"form_name\": \"synthetic_compliant_form.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"selAnrede\", \"tfVorname\", \"tfNachname\", \"tfEmail\", \"tfTelefon\"],\n      \"finding\": \"Alle persönlichen Stammdatenfelder verwenden die kanonischen Bezeichnungen: 'Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' und 'Telefonnummer'. Es gibt keine Sammelfelder, keine Rollenzusätze, keine mehrdeutigen Kurzbezeichnungen (z. B. bloß 'Name') und keine technischen Feldbezeichner als sichtbares Label.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Stufe 1 (deterministisch): suspected_dev_notes_count = 0, keine generischen Code- oder Arbeitsmarker (TODO, FIXME, display:none, hide/show, script, lorem ipsum) in den sichtbaren Texten. Stufe 2 (semantisch): Alle sichtbaren Labels, Hinweistexte und Rich-Text-Blöcke enthalten ausschließlich antragstellerorientierte Informationen; keine internen Entwicklerkommentare, Konfigurationsnotizen oder redaktionellen Arbeitshinweise erkennbar.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"btnSubmit\"],\n      \"finding\": \"Die einzige für Antragstellende sichtbare Aktionsschaltfläche (applicant_visible = true, role = 'submit') trägt das Label 'Antrag einreichen', das aus dem Zielobjekt 'Antrag' und dem Vollverb 'einreichen' im Infinitiv besteht und die ausgelöste Transaktion eindeutig beschreibt. Dies entspricht exakt dem in der Regel definierten Muster [Zielobjekt] + [Vollverb im Infinitiv].\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Der Komplexitätsschwellenwert ist nicht erreicht: Das Formular umfasst 1 XPage (Schwelle: ≥ 3) und 9 Eingabefelder (Schwelle: ≥ 25). Die Empfehlung zum Zwischenspeichern mit Fortsetzungs-Link greift daher nicht.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Bei zukünftiger Erweiterung des Formulars auf ≥ 3 Seiten oder ≥ 25 Eingabefelder sollte eine 'Zwischenspeichern'-Schaltfläche (Aktion 'speichern', submitNoCheck) sowie ein FC_EMAIL-Versand mit [%$FORM_PROCESS_LINK%] an die antragstellende Person ergänzt werden.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"txtDatenschutzHinweis\", \"txtVerfahrensablauf\", \"uplNachweise\"],\n      \"finding\": \"Die Sie-Ansprache ist durchgängig konsistent ('Ihre personenbezogenen Daten', 'finden Sie', 'Ihr Antrag', 'Sie erhalten'). Die verwendeten Begriffe – 'DSGVO', 'Art. 13', 'IBAN', 'Studierendensekretariat' – sind entweder allgemein geläufige Abkürzungen (DSGVO, IBAN) oder im Kontext der Hochschule selbst erklärende Bezeichnungen. Der Hinweis auf die 'Datenschutzerklärung der HWG Ludwigshafen' verweist auf eine nachvollziehbare Informationsquelle. Es sind keine unerklärten internen Organisationskürzel oder hochschulspezifischen Fachbegriffe ohne Hilfetext vorhanden.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"txtDatenschutzHinweis\", \"txtVerfahrensablauf\", \"uplNachweise\"],\n      \"finding\": \"Stufe 1 (deterministisch): sentences_over_25_words_count = 0; kein Satz überschreitet den Richtwert von 25 Wörtern. Stufe 2 (semantisch): Die vorhandenen Passivkonstruktionen ('werden … verarbeitet', 'wird … geprüft') sind einfache, nicht verschachtelte Passivsätze in einem sachlichen, kurzen Kontext. Es liegen keine verschachtelten Passiv- oder Behördenkonstruktionen vor; die Sätze sind kurz, aktiv formuliert und klar strukturiert.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"E-Mail Eingangsbestätigung an Antragstellende\"],\n      \"finding\": \"Stufe 1: applicant_addressed_emails_count = 1; der FC_EMAIL-Knoten ist an den dynamischen Platzhalter [%tfEmail%] adressiert. Stufe 2: Die E-Mail bestätigt den Eingang ('Ihr Antrag ist eingegangen'), benennt die zuständige Prüfstelle ('Studierendensekretariat der HWG Ludwigshafen') und informiert über die nächsten Schritte ('wird nun … geprüft', 'Über die weiteren Prozessschritte und die Entscheidung werden Sie per E-Mail informiert'). Alle drei Pflichtinhalte sind erfüllt.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 0,
+    "release_status": "green_compliant",
+    "release_label": "Konform (Freigabefähig)",
+    "is_releasable": true
+  }
+}

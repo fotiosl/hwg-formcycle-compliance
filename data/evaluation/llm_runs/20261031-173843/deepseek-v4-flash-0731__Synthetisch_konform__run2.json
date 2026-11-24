@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "model": "deepseek-v4-flash-0731",
+    "form": "Synthetisch konform",
+    "run": 2,
+    "wall_ms": 9356.2,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "PASS",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 100,
+    "release_status": "green_compliant",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'deepseek-v4-flash-0731' abgeschlossen.",
+    "llm_latency_ms": 9353.1,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "synthetic_compliant_form.xfp",
+    "violations": [],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (7 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Saubere Label-Syntax ohne störende HTML-Fragmente)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-UPLOAD-01 (Alle Dateiuploads technisch und im Hilfetext konsistent spezifiziert)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-UX-01 (Affordanzgerechte kompakte Feldbreiten eingehalten)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 1/1 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Die persönlichen Stammdatenfelder verwenden die kanonischen Bezeichnungen 'Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' und 'Telefonnummer'. Es gibt keine Sammelfelder, mehrdeutigen Kurzbezeichnungen oder technischen Feldbezeichner als sichtbare Labels.)",
+      "HWG-UI-01 (Es wurden keine Entwickler-Notizen, Code-Artefakte oder redaktionellen Arbeitsnotizen in den sichtbaren UI-Elementen gefunden. Die Texte sind alle an Antragstellende gerichtet und enthalten keine internen Marker.)",
+      "HWG-BTN-01 (Die einzige für Antragstellende sichtbare Aktionsschaltfläche 'Antrag einreichen' enthält das Vollverb 'einreichen' mit Zielobjekt 'Antrag' und erfüllt damit das Action-Verb-Pattern.)",
+      "HWG-LANG-01 (Es wurden keine unerklärten Hochschul- oder Amtsjargon-Begriffe außerhalb des Headers gefunden. Die Texte sind verständlich formuliert und verwenden durchgängig die Sie-Ansprache.)",
+      "HWG-LANG-02 (Die deterministische Satzlängenanalyse ergab keine Sätze mit mehr als 25 Wörtern. Zudem sind die Texte in aktiver, klarer Sprache verfasst, ohne verschachtelte Passiv- oder Behördenkonstruktionen.)",
+      "HWG-FEEDBACK-01 (Die Workflow-E-Mail ist an den dynamischen Empfänger-Platzhalter [%tfEmail%] adressiert und bestätigt den Eingang des Antrags. Sie nennt die zuständige Prüfstelle (Studierendensekretariat der HWG Ludwigshafen) und informiert über die nächsten Schritte (Prüfung und Benachrichtigung per E-Mail).)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UX-02": "[KI-Prüfung · deepseek-v4-flash-0731] Das Formular umfasst nur 1 Seite und 9 Eingabefelder, sodass der Komplexitätsschwellenwert (>= 3 Seiten oder >= 25 Eingabefelder) nicht erreicht wird. Die Empfehlung zur Zwischenspeicherung ist daher nicht anwendbar."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "deepseek-v4-flash-0731",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'deepseek-v4-flash-0731' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 100,
+    "provenance": {
+      "engine_version": "1.6.0",
+      "registry_version": "1.6.0",
+      "prompt_version": "1.6.0",
+      "input_sha256": "525816e6377865052a3d67ec4635aaa8f4f20b55ed8d240e83fce756d2f9cf93",
+      "stage1_ms": 0.623,
+      "prompt_sha256": "3fc2458536ecf6f8ddf89d179ec341a30795fdd45f1c45d4c9a198d13b55e6fe",
+      "model": "deepseek-v4-flash-0731",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 9353.1,
+      "llm_raw_response": "{\n  \"form_name\": \"synthetic_compliant_form.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"selAnrede\", \"tfVorname\", \"tfNachname\", \"tfEmail\", \"tfTelefon\"],\n      \"finding\": \"Die persönlichen Stammdatenfelder verwenden die kanonischen Bezeichnungen 'Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' und 'Telefonnummer'. Es gibt keine Sammelfelder, mehrdeutigen Kurzbezeichnungen oder technischen Feldbezeichner als sichtbare Labels.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Es wurden keine Entwickler-Notizen, Code-Artefakte oder redaktionellen Arbeitsnotizen in den sichtbaren UI-Elementen gefunden. Die Texte sind alle an Antragstellende gerichtet und enthalten keine internen Marker.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"btnSubmit\"],\n      \"finding\": \"Die einzige für Antragstellende sichtbare Aktionsschaltfläche 'Antrag einreichen' enthält das Vollverb 'einreichen' mit Zielobjekt 'Antrag' und erfüllt damit das Action-Verb-Pattern.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Das Formular umfasst nur 1 Seite und 9 Eingabefelder, sodass der Komplexitätsschwellenwert (>= 3 Seiten oder >= 25 Eingabefelder) nicht erreicht wird. Die Empfehlung zur Zwischenspeicherung ist daher nicht anwendbar.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Es wurden keine unerklärten Hochschul- oder Amtsjargon-Begriffe außerhalb des Headers gefunden. Die Texte sind verständlich formuliert und verwenden durchgängig die Sie-Ansprache.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Die deterministische Satzlängenanalyse ergab keine Sätze mit mehr als 25 Wörtern. Zudem sind die Texte in aktiver, klarer Sprache verfasst, ohne verschachtelte Passiv- oder Behördenkonstruktionen.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"E-Mail Eingangsbestätigung an Antragstellende\"],\n      \"finding\": \"Die Workflow-E-Mail ist an den dynamischen Empfänger-Platzhalter [%tfEmail%] adressiert und bestätigt den Eingang des Antrags. Sie nennt die zuständige Prüfstelle (Studierendensekretariat der HWG Ludwigshafen) und informiert über die nächsten Schritte (Prüfung und Benachrichtigung per E-Mail).\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 0,
+    "release_status": "green_compliant",
+    "release_label": "Konform (Freigabefähig)",
+    "is_releasable": true
+  }
+}

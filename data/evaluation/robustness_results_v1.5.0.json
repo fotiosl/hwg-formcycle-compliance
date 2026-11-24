@@ -1,0 +1,176 @@
+{
+  "engine_registry_version": "1.5.0",
+  "passed": 3,
+  "total": 28,
+  "tests": [
+    {
+      "id": "P1",
+      "description": "Referenzformular ohne Verstoß in Stufe 1 (AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp)",
+      "passed": true,
+      "observed": "Score 100, Status green_compliant"
+    },
+    {
+      "id": "P2",
+      "description": "Referenzformular ohne Verstoß in Stufe 1 (synthetic_compliant_form.xfp)",
+      "passed": true,
+      "observed": "Score 100, Status green_compliant"
+    },
+    {
+      "id": "A",
+      "description": "Ohne KI-Prüfung keine Freigabe trotz 100 Punkten in Stufe 1",
+      "passed": false,
+      "observed": "Score 100, Status green_compliant"
+    },
+    {
+      "id": "B",
+      "description": "Nutzerhinweis 'Bitte aktivieren Sie JavaScript' erzeugt keinen Stufe-1-Verstoß HWG-UI-01",
+      "passed": false,
+      "observed": "Verstöße: ['HWG-UI-01']"
+    },
+    {
+      "id": "C1",
+      "description": "Unsichtbarer Datenschutztext mit beliebigem Link erfüllt HWG-DSGVO-01 nicht",
+      "passed": false,
+      "observed": "HWG-DSGVO-01 umgangen"
+    },
+    {
+      "id": "C2",
+      "description": "Umbenannte Personenfelder machen HWG-DSGVO-01 nicht unanwendbar",
+      "passed": false,
+      "observed": "HWG-DSGVO-01 umgangen"
+    },
+    {
+      "id": "D",
+      "description": "Fieldset mit Legende '.' erfüllt HWG-A11Y-01 nicht",
+      "passed": false,
+      "observed": "HWG-A11Y-01 umgangen"
+    },
+    {
+      "id": "E",
+      "description": "Regex '[0-9]*.*' (akzeptiert beliebigen Text) gilt nicht als Validierung",
+      "passed": false,
+      "observed": "HWG-VAL-01 umgangen"
+    },
+    {
+      "id": "F",
+      "description": "Archiv mit zweiter (konformer) .fcp-Datei wird abgewiesen",
+      "passed": false,
+      "observed": "ausgewertet: Score 94"
+    },
+    {
+      "id": "G",
+      "description": "Server nimmt keine .json-Uploads mit selbst deklarierten Workflow-Daten an",
+      "passed": false,
+      "observed": "angenommen"
+    },
+    {
+      "id": "H1",
+      "description": "Leere KI-Antwort führt nicht zur Freigabe",
+      "passed": false,
+      "observed": "Status green_compliant, offen 6"
+    },
+    {
+      "id": "H2",
+      "description": "Unzulässiger Status RECOMMENDATION für HWG-BTN-01 wird nicht als bestanden gewertet",
+      "passed": false,
+      "observed": "HWG-BTN-01 offen: False, Status green_compliant"
+    },
+    {
+      "id": "H3",
+      "description": "VIOLATION bleibt VIOLATION, auch wenn die Begründung 'keine Korrektur erforderlich' enthält",
+      "passed": false,
+      "observed": "HWG-BTN-01 umgedeutet"
+    },
+    {
+      "id": "I",
+      "description": "Vorgangsnummer nur im HTML-Kommentar erfüllt HWG-WF-02 nicht",
+      "passed": false,
+      "observed": "HWG-WF-02 umgangen"
+    },
+    {
+      "id": "J",
+      "description": "Feste externe Empfängeradresse gilt nicht als Eingangsbestätigung (HWG-FEEDBACK-01)",
+      "passed": false,
+      "observed": "HWG-FEEDBACK-01 umgangen"
+    },
+    {
+      "id": "K",
+      "description": "PLZ-Feld mit Klasse col-12 gilt nicht als kompakt (HWG-UX-01)",
+      "passed": false,
+      "observed": "HWG-UX-01 umgangen"
+    },
+    {
+      "id": "L1",
+      "description": "Nicht freigegebener Endpunkt wird abgelehnt",
+      "passed": false,
+      "observed": "Status partial, Anfrage gesendet: True, Authorization: Bearer SERVER-SCHLUESSEL-TEST"
+    },
+    {
+      "id": "L2",
+      "description": "Serverschlüssel wird nicht an einen vom Client gewählten Endpunkt gesendet",
+      "passed": false,
+      "observed": "Anfrage gesendet: True, Authorization-Header: Bearer SERVER-SCHLUESSEL-TEST"
+    },
+    {
+      "id": "M",
+      "description": "Archiv mit übergroßem Eintrag wird abgewiesen",
+      "passed": false,
+      "observed": "vollständig entpackt, danach Fehler (JSONDecodeError)"
+    },
+    {
+      "id": "N1",
+      "description": "Fremdes Bild mit HWG-Alternativtext gilt nicht als HWG-Logo (HWG-CD-02)",
+      "passed": false,
+      "observed": "HWG-CD-02 umgangen"
+    },
+    {
+      "id": "N2",
+      "description": "Platzhalter-Legende 'Abc' gilt nicht als aussagekräftige Legende (HWG-A11Y-01)",
+      "passed": false,
+      "observed": "HWG-A11Y-01 umgangen"
+    },
+    {
+      "id": "N3",
+      "description": "Vorgangsnummer nur in unsichtbarem HTML erfüllt HWG-WF-02 nicht",
+      "passed": false,
+      "observed": "HWG-WF-02 umgangen"
+    },
+    {
+      "id": "N4",
+      "description": "Geldbetrag mit Datentyp 'posmoney' gilt als validiert (kein Fehlalarm bei HWG-VAL-01)",
+      "passed": false,
+      "observed": "HWG-VAL-01 Fehlalarm"
+    },
+    {
+      "id": "N5",
+      "description": "Aufzählung mit Zeilenumbrüchen gilt nicht als überlanger Satz (kein Fehlalarm bei HWG-LANG-02)",
+      "passed": false,
+      "observed": "HWG-LANG-02 Fehlalarm"
+    },
+    {
+      "id": "N6",
+      "description": "Server liefert keine Dateien außer Dashboard und API aus (z. B. server.py)",
+      "passed": false,
+      "observed": "server.py ausgeliefert"
+    },
+    {
+      "id": "S1",
+      "description": "Statusliste bei abgeschalteter statusabhängiger Sichtbarkeit blendet die Felder nicht aus (HWG-DSGVO-01 bleibt anwendbar)",
+      "passed": true,
+      "observed": "HWG-DSGVO-01 erkannt"
+    },
+    {
+      "id": "S2",
+      "description": "Datenschutzhinweis, der erst nach dem Absenden sichtbar ist, erfüllt HWG-DSGVO-01 nicht",
+      "passed": false,
+      "observed": "HWG-DSGVO-01 umgangen"
+    },
+    {
+      "id": "T1",
+      "description": "Formatierungs-Tags und geschütztes Leerzeichen in einer Beschriftung verändern die Ansage nicht (kein Fehlalarm bei HWG-A11Y-03)",
+      "passed": false,
+      "observed": "HWG-A11Y-03 Fehlalarm (nachträglicher Einzelaufruf von evaluate_form am Engine-Stand 555a5c2, weil das Testskript den Freigabestatus voraussetzt)"
+    }
+  ],
+  "hinweis": "S1 und S2 wurden nachträglich einzeln gegen v1.5.0 geprüft, weil das Testskript das ältere Ergebnisformat nicht mehr lesen kann."
+}

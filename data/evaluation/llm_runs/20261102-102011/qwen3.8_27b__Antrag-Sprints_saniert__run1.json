@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "model": "qwen3.8:27b",
+    "form": "Antrag-Sprints (saniert)",
+    "run": 1,
+    "wall_ms": 29348.6,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "PASS",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 100,
+    "release_status": "green_compliant",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'qwen3.8:27b' abgeschlossen.",
+    "llm_latency_ms": 29344.5,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp",
+    "violations": [],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (12 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Saubere Label-Syntax ohne störende HTML-Fragmente)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 8/8 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Alle persönlichen Stammdatenfelder verwenden die kanonischen Bezeichnungen: 'Vorname', 'Nachname', 'E-Mail' und 'Telefonnummer'. Es liegen keine Sammelfelder, Rollenzusätze, mehrdeutigen Kurzbezeichnungen oder technischen Feldnamen als sichtbare Labels vor.)",
+      "HWG-UI-01 (Stufe 1 (deterministisch): 0 verdächtige Entwickler-Notizen oder Code-Artefakte erkannt (suspected_dev_notes_count = 0). Stufe 2 (semantisch): Alle sichtbaren Labels, Headings und Hilfetexte enthalten ausschließlich antragstellerorientierte Inhalte. Keine TODO/FIXME-Marker, keine CSS-Artefakte, keine internen Konfigurationshinweise.)",
+      "HWG-BTN-01 (Die beiden für Antragstellende sichtbaren Aktionsschaltflächen folgen dem Muster [Zielobjekt] + [Vollverb im Infinitiv]: 'Antrag einreichen' (Zielobjekt: Antrag, Verb: einreichen) und 'Kritischen Fall einreichen' (Zielobjekt: Kritischen Fall, Verb: einreichen). Keine reinen Substantive, Statusbezeichnungen oder kontextlosen Minimal-Labels.)",
+      "HWG-LANG-01 (Alle identifizierten Fachbegriffe sind erklärt: 'Mittelgeber' (edNameFoerderprogramm, selFoerderprojektvolumen) verfügt über einen verständlichen Hilfetext; 'ZFK' (tfHoeheZuschuss) wird im Hilfetext als 'Zentrum für Forschung und Kooperation' aufgelöst; 'verausgabt' (edAusgabenplanZuschuss) wird als Synonym für 'ausgegeben / eingesetzt' erläutert. Der Begriff 'Fördermittelgeber' in selFoerderprojektvolumen ist im unmittelbaren Kontext durch den benachbarten Hilfetext zu 'Mittelgeber' abgedeckt. Die Sie-Ansprache ist durchgängig konsistent ('beantragen Sie', 'möchten Sie').)",
+      "HWG-LANG-02 (Stufe 1 (deterministisch): 0 Sätze mit mehr als 25 Wörtern in sichtbaren Text- und Hilfetextfeldern. Stufe 2 (semantisch): Alle Labels und Hilfetexte sind prägnant formuliert. Die einzige Passivkonstruktion ('verausgabt werden' in edAusgabenplanZuschuss) ist eine einfache, nicht verschachtelte Passivform in einem Fragekontext und nicht als Behördenjargon zu werten. Keine weiteren verschachtelten Passiv- oder Behördensyntax-Konstruktionen.)",
+      "HWG-FEEDBACK-01 (Drei E-Mails sind an den dynamischen Empfänger-Platzhalter [%tfEmail%] adressiert. Die Eingangsbestätigung bestätigt den Eingang ('Ihr Antrag ist erfolgreich bei uns eingegangen'), benennt die zuständige Prüfstelle (Signatur: 'Ihr ZFK-Team') und nennt die nächsten Schritte ('befindet sich nun in Prüfung. Wir werden Sie zeitnah über die Entscheidung informieren.'). Die nachgelagerten E-Mails (Genehmigung, Ablehnung) informieren ebenfalls transparent über den Ausgang und die weiteren Handlungsschritte.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UPLOAD-01": "Keine Dateiupload-Elemente im Formular vorhanden.",
+      "HWG-UX-01": "Keine typischen Kompaktfelder (PLZ, Hausnummer) im Formular vorhanden.",
+      "HWG-UX-02": "[KI-Prüfung · qwen3.8:27b] Der Komplexitätsschwellenwert ist nicht erreicht: Das Formular umfasst 1 Seite und 16 Eingabefelder, liegt damit unter den Schwellenwerten von 3 Seiten bzw. 25 Eingabefeldern. Die Empfehlung zum Zwischenspeichern mit Fortsetzungs-Link greift nicht."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "http://localhost:11434/v1",
+      "model": "qwen3.8:27b",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'qwen3.8:27b' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 100,
+    "provenance": {
+      "engine_version": "1.6.1",
+      "registry_version": "1.6.1",
+      "prompt_version": "1.6.0",
+      "input_sha256": "281f8c2b6863668b3ed66ae189302fd354b656ce17785c025fb06665e9732d88",
+      "stage1_ms": 1.231,
+      "prompt_sha256": "014d018ad6614adeff8603fb7277bf83aa952064b7d6d1e939687e5019dbe174",
+      "model": "qwen3.8:27b",
+      "api_base": "http://localhost:11434/v1",
+      "llm_latency_ms": 29344.5,
+      "llm_raw_response": "{\n  \"form_name\": \"AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"tfVorname\", \"tfName\", \"tfEmail\", \"tfTelefonnummer\"],\n      \"finding\": \"Alle persönlichen Stammdatenfelder verwenden die kanonischen Bezeichnungen: 'Vorname', 'Nachname', 'E-Mail' und 'Telefonnummer'. Es liegen keine Sammelfelder, Rollenzusätze, mehrdeutigen Kurzbezeichnungen oder technischen Feldnamen als sichtbare Labels vor.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Stufe 1 (deterministisch): 0 verdächtige Entwickler-Notizen oder Code-Artefakte erkannt (suspected_dev_notes_count = 0). Stufe 2 (semantisch): Alle sichtbaren Labels, Headings und Hilfetexte enthalten ausschließlich antragstellerorientierte Inhalte. Keine TODO/FIXME-Marker, keine CSS-Artefakte, keine internen Konfigurationshinweise.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"btnSenden\", \"btnKritisch\"],\n      \"finding\": \"Die beiden für Antragstellende sichtbaren Aktionsschaltflächen folgen dem Muster [Zielobjekt] + [Vollverb im Infinitiv]: 'Antrag einreichen' (Zielobjekt: Antrag, Verb: einreichen) und 'Kritischen Fall einreichen' (Zielobjekt: Kritischen Fall, Verb: einreichen). Keine reinen Substantive, Statusbezeichnungen oder kontextlosen Minimal-Labels.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Der Komplexitätsschwellenwert ist nicht erreicht: Das Formular umfasst 1 Seite und 16 Eingabefelder, liegt damit unter den Schwellenwerten von 3 Seiten bzw. 25 Eingabefeldern. Die Empfehlung zum Zwischenspeichern mit Fortsetzungs-Link greift nicht.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Bei zukünftiger Erweiterung auf ≥ 3 Seiten oder ≥ 25 Eingabefelder sollte eine 'Zwischenspeichern'-Schaltfläche (submitNoCheck) mit E-Mail-Versand des Fortsetzungs-Links ([%$URL_FORM%]) ergänzt werden.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"edNameFoerderprogramm\", \"selFoerderprojektvolumen\", \"tfHoeheZuschuss\", \"edAusgabenplanZuschuss\"],\n      \"finding\": \"Alle identifizierten Fachbegriffe sind erklärt: 'Mittelgeber' (edNameFoerderprogramm, selFoerderprojektvolumen) verfügt über einen verständlichen Hilfetext; 'ZFK' (tfHoeheZuschuss) wird im Hilfetext als 'Zentrum für Forschung und Kooperation' aufgelöst; 'verausgabt' (edAusgabenplanZuschuss) wird als Synonym für 'ausgegeben / eingesetzt' erläutert. Der Begriff 'Fördermittelgeber' in selFoerderprojektvolumen ist im unmittelbaren Kontext durch den benachbarten Hilfetext zu 'Mittelgeber' abgedeckt. Die Sie-Ansprache ist durchgängig konsistent ('beantragen Sie', 'möchten Sie').\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Stufe 1 (deterministisch): 0 Sätze mit mehr als 25 Wörtern in sichtbaren Text- und Hilfetextfeldern. Stufe 2 (semantisch): Alle Labels und Hilfetexte sind prägnant formuliert. Die einzige Passivkonstruktion ('verausgabt werden' in edAusgabenplanZuschuss) ist eine einfache, nicht verschachtelte Passivform in einem Fragekontext und nicht als Behördenjargon zu werten. Keine weiteren verschachtelten Passiv- oder Behördensyntax-Konstruktionen.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"E-Mail Antragsteller (Eingangsbestätigung)\"],\n      \"finding\": \"Drei E-Mails sind an den dynamischen Empfänger-Platzhalter [%tfEmail%] adressiert. Die Eingangsbestätigung bestätigt den Eingang ('Ihr Antrag ist erfolgreich bei uns eingegangen'), benennt die zuständige Prüfstelle (Signatur: 'Ihr ZFK-Team') und nennt die nächsten Schritte ('befindet sich nun in Prüfung. Wir werden Sie zeitnah über die Entscheidung informieren.'). Die nachgelagerten E-Mails (Genehmigung, Ablehnung) informieren ebenfalls transparent über den Ausgang und die weiteren Handlungsschritte.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 0,
+    "release_status": "green_compliant",
+    "release_label": "Konform (Freigabefähig)",
+    "is_releasable": true
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "model": "glm-5.3-flash",
+    "form": "Synthetisch konform",
+    "run": 5,
+    "wall_ms": 44502.8,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "PASS",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 100,
+    "release_status": "green_compliant",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'glm-5.3-flash' abgeschlossen.",
+    "llm_latency_ms": 44499.3,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "synthetic_compliant_form.xfp",
+    "violations": [],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (7 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Beschriftungen ohne Pipe-Zeichen, Pfeile und sichtbare Code-Reste)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-UPLOAD-01 (Alle Dateiuploads technisch und im Hilfetext konsistent spezifiziert)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-UX-01 (Affordanzgerechte kompakte Feldbreiten eingehalten)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 1/1 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Alle Felder für persönliche Stammdaten verwenden die kanonischen Bezeichnungen: 'Anrede' (selAnrede), 'Vorname' (tfVorname), 'Nachname' (tfNachname), 'E-Mail-Adresse' (tfEmail) und 'Telefonnummer' (tfTelefon). Vor- und Nachname sind getrennt erfasst; es gibt keine Sammelfelder mit sperrigen Rollenzusätzen, keine mehrdeutige Kurzbezeichnung 'Name' und keine technischen Feldbezeichner als sichtbares Label.)",
+      "HWG-UI-01 (Stufe 1 lieferte keine deterministischen Marker (suspected_dev_notes leer, suspected_dev_notes_count = 0). Die semantische Prüfung aller sichtbaren Texte (Labels, Fieldset-Überschriften, Hinweis-Spans txtDatenschutzHinweis und txtVerfahrensablauf sowie der Helptext von uplNachweise) ergab keine Entwicklerkommentare, Baustellenhinweise oder redaktionellen Arbeitsnotizen; alle Texte sind antragstellendengerecht formuliert.)",
+      "HWG-BTN-01 (Die einzige für Antragstellende sichtbare Aktionsschaltfläche btnSubmit (Label 'Antrag einreichen', applicant_visible: true, role: 'submit', keine Pagination) enthält das Zielobjekt 'Antrag' und das Vollverb 'einreichen' im Infinitiv und entspricht damit exakt dem geforderten Action-Verb-Pattern. Keine reinen Statusbezeichnungen oder generischen Minimal-Labels vorhanden.)",
+      "HWG-LANG-01 (Keine unerklärten Hochschul- oder Amtsjargon-Begriffe außerhalb des XHeader-Titels: 'Art. 13 DSGVO' im txtDatenschutzHinweis ist eine allgemein übliche Rechtsquellenangabe, 'IBAN' ist das geläufige Standardkürzel im eindeutigen Kontext des FieldSets 'Anschrift und Bankverbindung', 'Werktage' und 'schriftlicher Bescheid' im txtVerfahrensablauf sind gängige Begriffe. Die Helptexte (z. B. uplNachweise zu Dateiformaten und Dateigröße) sind verständlich. Durchgängige Sie-Ansprache in allen Hinweistexten ('finden Sie', 'Sie erhalten', 'Ihr Antrag').)",
+      "HWG-LANG-02 (Kein sichtbarer Satz überschreitet die Grenze von 25 Wörtern (sentences_over_25_words_count = 0; die längsten Sätze in txtDatenschutzHinweis und txtVerfahrensablauf liegen bei deutlich unter 15 Wörtern). Die vorhandenen Passivformulierungen ('werden ... vertraulich verarbeitet', 'wird Ihr Antrag geprüft') sind einfach strukturiert und nicht verschachtelt; keine Behördensyntax.)",
+      "HWG-FEEDBACK-01 (Der FC_EMAIL-Knoten 'E-Mail Eingangsbestätigung an Antragstellende' ist an den dynamischen Platzhalter [%tfEmail%] adressiert (applicant_addressed_emails_count = 1), also nicht ausschließlich an interne Funktionspostfächer. Betreff und Body bestätigen den Eingang inklusive Vorgangsnummer ([%$RECORD_ID%]). Die zuständige Prüfstelle ist namentlich genannt ('Studierendensekretariat der HWG Ludwigshafen'), und die nächsten Prozessschritte werden transparent beschrieben ('Ihr Antrag ist eingegangen und wird nun ... geprüft. Über die weiteren Prozessschritte und die Entscheidung werden Sie per E-Mail informiert.').)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UX-02": "[KI-Prüfung · glm-5.3-flash] Der Komplexitätsschwellenwert ist nicht erreicht (ux02_complexity_threshold_reached = false; 1 Seite, 9 Eingabefelder zuzüglich 1 Upload-Feld). Die Empfehlung zu Zwischenspeichern mit Fortsetzungs-Link greift bei diesem Umfang nicht."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "glm-5.3-flash",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'glm-5.3-flash' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 100,
+    "provenance": {
+      "engine_version": "1.7.0",
+      "registry_version": "1.7.0",
+      "prompt_version": "1.6.6",
+      "input_sha256": "525816e6377865052a3d67ec4635aaa8f4f20b55ed8d240e83fce756d2f9cf93",
+      "stage1_ms": 0.623,
+      "prompt_sha256": "ea7073a0ed4c6c36c2483a9fe044915e214de6589571901cff98c2725f3ee0f0",
+      "model": "glm-5.3-flash",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 44499.3,
+      "llm_raw_response": "{\n  \"form_name\": \"synthetic_compliant_form.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"selAnrede\", \"tfVorname\", \"tfNachname\", \"tfEmail\", \"tfTelefon\"],\n      \"finding\": \"Alle Felder für persönliche Stammdaten verwenden die kanonischen Bezeichnungen: 'Anrede' (selAnrede), 'Vorname' (tfVorname), 'Nachname' (tfNachname), 'E-Mail-Adresse' (tfEmail) und 'Telefonnummer' (tfTelefon). Vor- und Nachname sind getrennt erfasst; es gibt keine Sammelfelder mit sperrigen Rollenzusätzen, keine mehrdeutige Kurzbezeichnung 'Name' und keine technischen Feldbezeichner als sichtbares Label.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich; die kanonischen Bezeichnungen auch in künftigen Formularen unverändert übernehmen.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Stufe 1 lieferte keine deterministischen Marker (suspected_dev_notes leer, suspected_dev_notes_count = 0). Die semantische Prüfung aller sichtbaren Texte (Labels, Fieldset-Überschriften, Hinweis-Spans txtDatenschutzHinweis und txtVerfahrensablauf sowie der Helptext von uplNachweise) ergab keine Entwicklerkommentare, Baustellenhinweise oder redaktionellen Arbeitsnotizen; alle Texte sind antragstellendengerecht formuliert.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Kosmetischer Hinweis ohne Regelverstoß: Im txtDatenschutzHinweis steht vor dem abschließenden Punkt ein Leerzeichen ('... der HWG Ludwigshafen .'), das entfernt werden kann.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"btnSubmit\"],\n      \"finding\": \"Die einzige für Antragstellende sichtbare Aktionsschaltfläche btnSubmit (Label 'Antrag einreichen', applicant_visible: true, role: 'submit', keine Pagination) enthält das Zielobjekt 'Antrag' und das Vollverb 'einreichen' im Infinitiv und entspricht damit exakt dem geforderten Action-Verb-Pattern. Keine reinen Statusbezeichnungen oder generischen Minimal-Labels vorhanden.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Der Komplexitätsschwellenwert ist nicht erreicht (ux02_complexity_threshold_reached = false; 1 Seite, 9 Eingabefelder zuzüglich 1 Upload-Feld). Die Empfehlung zu Zwischenspeichern mit Fortsetzungs-Link greift bei diesem Umfang nicht.\",\n      \"remediation_suggestion\": \"Kein Handlungsbedarf. Sollte das Formular auf mindestens 3 Seiten oder 25 Eingabefelder anwachsen, ergänzen Sie eine Schaltfläche 'Zwischenspeichern' (Aktion 'speichern' bzw. absenden ohne Prüfung, submitNoCheck) sowie den Workflow-Versand des Fortsetzungs-Links [%$FORM_PROCESS_LINK%] per E-Mail an die antragstellende Person.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"txtDatenschutzHinweis\", \"txtVerfahrensablauf\", \"tfIBAN\", \"uplNachweise\"],\n      \"finding\": \"Keine unerklärten Hochschul- oder Amtsjargon-Begriffe außerhalb des XHeader-Titels: 'Art. 13 DSGVO' im txtDatenschutzHinweis ist eine allgemein übliche Rechtsquellenangabe, 'IBAN' ist das geläufige Standardkürzel im eindeutigen Kontext des FieldSets 'Anschrift und Bankverbindung', 'Werktage' und 'schriftlicher Bescheid' im txtVerfahrensablauf sind gängige Begriffe. Die Helptexte (z. B. uplNachweise zu Dateiformaten und Dateigröße) sind verständlich. Durchgängige Sie-Ansprache in allen Hinweistexten ('finden Sie', 'Sie erhalten', 'Ihr Antrag').\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Optional könnte das Label 'IBAN' um die Erläuterung 'Internationale Kontonummer' ergänzt werden; aufgrund des eindeutigen Kontexts 'Bankverbindung' ist dies nicht geboten.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"txtDatenschutzHinweis\", \"txtVerfahrensablauf\", \"uplNachweise\"],\n      \"finding\": \"Kein sichtbarer Satz überschreitet die Grenze von 25 Wörtern (sentences_over_25_words_count = 0; die längsten Sätze in txtDatenschutzHinweis und txtVerfahrensablauf liegen bei deutlich unter 15 Wörtern). Die vorhandenen Passivformulierungen ('werden ... vertraulich verarbeitet', 'wird Ihr Antrag geprüft') sind einfach strukturiert und nicht verschachtelt; keine Behördensyntax.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"E-Mail Eingangsbestätigung an Antragstellende\"],\n      \"finding\": \"Der FC_EMAIL-Knoten 'E-Mail Eingangsbestätigung an Antragstellende' ist an den dynamischen Platzhalter [%tfEmail%] adressiert (applicant_addressed_emails_count = 1), also nicht ausschließlich an interne Funktionspostfächer. Betreff und Body bestätigen den Eingang inklusive Vorgangsnummer ([%$RECORD_ID%]). Die zuständige Prüfstelle ist namentlich genannt ('Studierendensekretariat der HWG Ludwigshafen'), und die nächsten Prozessschritte werden transparent beschrieben ('Ihr Antrag ist eingegangen und wird nun ... geprüft. Über die weiteren Prozessschritte und die Entscheidung werden Sie per E-Mail informiert.').\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 0,
+    "release_status": "green_compliant",
+    "release_label": "Konform (Freigabefähig)",
+    "is_releasable": true
+  }
+}

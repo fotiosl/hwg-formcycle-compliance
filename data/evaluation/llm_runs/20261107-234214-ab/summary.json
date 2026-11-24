@@ -1,0 +1,97 @@
+{
+  "created": "20261107-234214",
+  "form": "Antrag-Sprints (saniert)",
+  "model": "deepseek-v4-flash-0731",
+  "runs": 5,
+  "old_rev": "86c01ea",
+  "arms": {
+    "alt": {
+      "prompt_version": [
+        "1.6.0"
+      ],
+      "registry_version": [
+        "1.6.2"
+      ],
+      "prompt_sha256": [
+        "014d018ad6614adeff8603fb7277bf83aa952064b7d6d1e939687e5019dbe174"
+      ],
+      "scores": [
+        89,
+        89,
+        89,
+        89,
+        89
+      ],
+      "release_status": {
+        "green_compliant": 5
+      },
+      "statuses": {
+        "HWG-STAMM-02": {
+          "PASS": 5
+        },
+        "HWG-UI-01": {
+          "PASS": 5
+        },
+        "HWG-BTN-01": {
+          "PASS": 5
+        },
+        "HWG-UX-02": {
+          "NOT_APPLICABLE": 5
+        },
+        "HWG-LANG-01": {
+          "VIOLATION": 5
+        },
+        "HWG-LANG-02": {
+          "PASS": 5
+        },
+        "HWG-FEEDBACK-01": {
+          "VIOLATION": 5
+        }
+      }
+    },
+    "neu": {
+      "prompt_version": [
+        "1.6.1"
+      ],
+      "registry_version": [
+        "1.6.3"
+      ],
+      "prompt_sha256": [
+        "43371175a689a6d4a733715f0a7e5043b2c5befb1a571f273d939ef93041cf1f"
+      ],
+      "scores": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "release_status": {
+        "green_compliant": 5
+      },
+      "statuses": {
+        "HWG-STAMM-02": {
+          "PASS": 5
+        },
+        "HWG-UI-01": {
+          "PASS": 5
+        },
+        "HWG-BTN-01": {
+          "PASS": 5
+        },
+        "HWG-UX-02": {
+          "NOT_APPLICABLE": 5
+        },
+        "HWG-LANG-01": {
+          "PASS": 5
+        },
+        "HWG-LANG-02": {
+          "PASS": 5
+        },
+        "HWG-FEEDBACK-01": {
+          "PASS": 5
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "finished_at": "2026-11-16 04:11",
+  "python": "3.13.17",
+  "stand": {
+    "registry": "1.7.0",
+    "engine": "1.7.0",
+    "prompt": "1.6.6",
+    "git_commit": "e956dc0",
+    "git_tag": "messlauf-final-v1.7.0",
+    "uncommitted_changes": false
+  },
+  "steps": [
+    {
+      "step": "benchmark",
+      "return_code": 0,
+      "duration_s": 22519,
+      "log": "data\\evaluation\\messlauf_1_benchmark.log"
+    },
+    {
+      "step": "holdout",
+      "return_code": 0,
+      "duration_s": 4407,
+      "log": "data\\evaluation\\messlauf_2_holdout.log"
+    }
+  ]
+}

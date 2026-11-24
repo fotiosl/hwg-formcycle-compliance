@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "model": "qwen3-30b-a3b-instruct-2507",
+    "form": "Synthetisch fehlerhaft",
+    "run": 5,
+    "wall_ms": 6897.9,
+    "statuses": {
+      "HWG-STAMM-02": "VIOLATION",
+      "HWG-UI-01": "VIOLATION",
+      "HWG-BTN-01": "VIOLATION",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "VIOLATION",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "VIOLATION"
+    },
+    "score": 0,
+    "release_status": "red_blocked",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'qwen3-30b-a3b-instruct-2507' abgeschlossen.",
+    "llm_latency_ms": 6895.1,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "synthetic_noncompliant_form.xfp",
+    "violations": [
+      {
+        "rule": "HWG-CD-01",
+        "severity": "major",
+        "message": "Layout-Container weichen vom 850px-Standard ab (gefunden: 700px).",
+        "rule_id": "HWG-CD-01",
+        "remediation": "Öffnen Sie im Formcycle-Designer im Eigenschaftsbereich den Reiter 'Formular' und setzen Sie im Bereich 'Darstellung' die 'Maximale Breite' auf 850 (Pixel). Im Export steht dieser Wert als maxwidth = '850px' an Kopfzeile, Seiten und Fußzeile. Die Mindestbreite von Kopf- und Fußzeile (minwidth = '300px') steht in allen Exporten, ohne dass der Designer dafür ein eigenes Feld anbietet; an den Seiten steht die 'Minimale Breite' des Formulars (zulässig '300px' oder '0px')."
+      },
+      {
+        "rule": "HWG-CD-02",
+        "severity": "critical",
+        "message": "Kein offizielles HWG-Header-Banner (XImage mit gültiger Bilddatei) innerhalb des Header-Containers (XHeader) vorhanden.",
+        "rule_id": "HWG-CD-02",
+        "remediation": "Platzieren Sie in der Kopfzeile ('header1' / XHeader) ein Element 'Bild' (XImage) und wählen Sie im Bereich 'Bilder' die freigegebene HWG-Logodatei aus. Setzen Sie im Bereich 'Darstellung' das Feld 'Höhe (in px)' auf '60' (imageheight = '60') und die 'Ausrichtung' auf rechtsbündig (textalign = 'right') und hinterlegen Sie im Bereich 'Label' im Feld 'Alt Text' (alt) eine institutionsbezogene Bezeichnung wie 'Das Logo der HWG LU' oder 'Hochschule für Wirtschaft und Gesellschaft Ludwigshafen'."
+      },
+      {
+        "rule": "HWG-CD-03",
+        "severity": "major",
+        "message": "Im Footer (XFooter) ist 'Logo anzeigen' (showlogo='1') aktiviert ('Powered by XIMA Formcycle').",
+        "rule_id": "HWG-CD-03",
+        "remediation": "Wählen Sie im Formcycle-Designer das Element 'Fußzeile' ('footer1' / XFooter) aus und entfernen Sie im Bereich 'Darstellung' den Haken bei 'Logo anzeigen' (showlogo = '0'). Damit entfällt der Herstellerhinweis 'powered by XIMA® formcycle'."
+      },
+      {
+        "rule": "HWG-CD-04",
+        "severity": "major",
+        "message": "Kein Formulartitel als <h1> innerhalb des Kopfbereichs (XHeader) vorhanden.",
+        "rule_id": "HWG-CD-04",
+        "remediation": "Ziehen Sie im Formcycle-Designer ein Element 'Text' (XSpan) in die Kopfzeile ('header1' / XHeader), geben Sie im Bereich 'Werte' den Formulartitel ein und formatieren Sie ihn im Editor über 'Format' (Absatzformat) genau einmal als 'Überschrift 1' (im HTML <h1>Antrag auf ...</h1>), nicht als 'Überschrift 2' oder 'Normal'."
+      },
+      {
+        "rule": "HWG-A11Y-01",
+        "severity": "critical",
+        "message": "Keine semantischen XFieldSet-Gruppierungen für 8 Eingabefelder vorhanden.",
+        "rule_id": "HWG-A11Y-01",
+        "remediation": "Ziehen Sie im Formcycle-Designer ein Element 'Fieldset' (XFieldSet) auf die Seite, vergeben Sie im Bereich 'Label' im Feld 'Text' (legend) einen sprechenden Abschnittstitel (z. B. 'Persönliche Angaben') und ordnen Sie alle zusammengehörigen Eingabefelder darin an. Belassen Sie keine Eingabefeldblöcke ungruppiert direkt auf der Seite (XPage) oder in einfachen Containern (XContainer)."
+      },
+      {
+        "rule": "HWG-A11Y-02",
+        "severity": "major",
+        "message": "Pflichtfeld-Deklaration fehlerhaft: Pflichtfeldlegende (showrequiredhint='1') weder in Kopfzeile (XHeader) noch Fußzeile (XFooter) aktiviert; Manuelles Sternchen (*) im Label ohne native Pflichtfeldfunktion (required='1') in ['tfVorname'].",
+        "rule_id": "HWG-A11Y-02",
+        "remediation": "Aktivieren Sie bei jedem Pflichtfeld im Bereich 'Bedingungen' die Option 'Mussfeld' (required = '1'; bedingte Pflichtfelder über 'Mussfeld wenn'), statt ein Sternchen '*' von Hand in den Labeltext (Bereich 'Label') zu tippen, und setzen Sie in der Kopfzeile ('header1') oder Fußzeile ('footer1') im Bereich 'Darstellung' den Haken bei 'Hinweis auf Pflichtfelder' (showrequiredhint = '1')."
+      },
+      {
+        "rule": "HWG-A11Y-03",
+        "severity": "minor",
+        "message": "Zeichen, die die Screenreader-Ansage verändern (Pipe-Zeichen, sichtbarer Zeichencode), in 1 Beschriftung(en): [tfPLZ].",
+        "rule_id": "HWG-A11Y-03",
+        "remediation": "Ersetzen Sie im Labeltext von Eingabefeldern (Bereich 'Label') und im Feld 'Text' im Bereich 'Label' von Fieldsets Pipe-Zeichen durch Wörter, z. B. 'Fachbereich und Studiengang' statt 'Fachbereich|Studiengang' oder 'Fachbereich, Abteilung oder Institut' statt 'Fachbereich|Abteilung|Institut'. Schreiben Sie Pfeile aus (z. B. 'keine Kostenerstattung, daher ohne Budgetverwaltung' statt 'keine Kostenerstattung => ohne Budgetverwaltung'). Ersetzen Sie sichtbare Zeichencodes wie '&szlig;' durch das gemeinte Zeichen ('ß') und entfernen Sie als Text sichtbare Tags wie '<br>'. Erläuterungen gehören in den Bereich 'Hilfe'."
+      },
+      {
+        "rule": "HWG-STAMM-01",
+        "severity": "major",
+        "message": "Inkonsistente Stammdaten-Abfolge: 'Nachname' (tfNachname) vor 'Vorname*' (tfVorname). Erwartet: Anrede -> Vorname -> Nachname -> E-Mail-Adresse -> Telefonnummer.",
+        "rule_id": "HWG-STAMM-01",
+        "remediation": "Ordnen Sie persönliche Stammdaten innerhalb jedes Fieldsets (XFieldSet) in der kanonischen Reihenfolge an: Anrede -> Vorname -> Nachname -> E-Mail-Adresse (bzw. E-Mail) -> Telefonnummer. Kapseln Sie getrennte Personen- oder Rollenblöcke (z. B. Antragstellende vs. Projektpartner) in eigene Fieldsets."
+      },
+      {
+        "rule": "HWG-DSGVO-01",
+        "severity": "critical",
+        "message": "Das Formular erhebt Eingaben, aber weder die Footer-Datenschutzerklärung (privacyPolicyShow='1') noch ein sichtbarer, auf die Datenschutzerklärung verlinkter Art.-13-Hinweis ist vorhanden.",
+        "rule_id": "HWG-DSGVO-01",
+        "remediation": "Aktivieren Sie im Fußzeilen-Element ('footer1' / XFooter) im Bereich 'Datenschutzerklärung' die Option 'Anzeigen' (privacyPolicyShow = '1') und wählen Sie unter 'Inhalt' das Template 'Datenschutzerklärung_HWGLU', oder fügen Sie vor der Absende-Schaltfläche ein Text-Element ('Text' / XSpan) mit Hinweis nach Art. 13 DSGVO und aktivem Link zur HWG-Datenschutzerklärung (https://www.hwg-lu.de/datenschutzerklaerung) ein."
+      },
+      {
+        "rule": "HWG-UPLOAD-01",
+        "severity": "major",
+        "message": "1 Upload-Element(e) unvollständig oder widersprüchlich spezifiziert: uplDateien (technische Dateiendung/Maximalgröße fehlt, Formate im Hilfetext/Label fehlen, Größenlimit im Hilfetext/Label fehlt).",
+        "rule_id": "HWG-UPLOAD-01",
+        "remediation": "Wählen Sie das Upload-Element ('Upload' / XUpload) im Formcycle-Designer aus: (1) Setzen Sie unter 'Bedingungen' die zulässigen 'Dateiendungen' (fileextension, z. B. '.pdf, .jpg, .png') und die 'Max. Größe' in Kilobyte (maxfilesize, z. B. '10240' für 10 MB). (2) Nennen Sie exakt dieselben Formate und dasselbe Größenlimit im Label oder im Bereich 'Hilfe' (z. B. 'Erlaubte Dateiformate: PDF, JPG, PNG; max. 10 MB')."
+      },
+      {
+        "rule": "HWG-VAL-01",
+        "severity": "major",
+        "message": "Strukturierte Eingabefelder ohne gültigen Validator / Regex gefunden: tfEmail (E-Mail: Typ 'text'), tfIBAN (IBAN: leeres/fehlendes Regex-Muster).",
+        "rule_id": "HWG-VAL-01",
+        "remediation": "Wählen Sie das Eingabefeld ('Eingabefeld' / XTextField) im Formcycle-Designer aus und stellen Sie im Bereich 'Bedingungen' den passenden 'Datentyp' (datatype) ein (Trennen Sie kombinierte 2-in-1-Felder wie 'E-Mail/Telefon' stets in separate Einzelfelder auf!):\n• E-Mail, Postleitzahl, Datum und Telefonnummer: Datentyp 'E-Mail' (email; alternativ 'E-Mail (Traditionell o. Umlaute)', traditionalEmail), 'Postleitzahl (Deutschland)' (plzDE), 'Datum (TT.MM.YYYY)' (dateDE) bzw. 'Telefonnummer' (phone). 'Telefonnummer' akzeptiert Ländervorwahlen wie '+49 621 …', sofern nach der Vorwahl ein Leerzeichen, Punkt oder Bindestrich folgt.\n• Geldbeträge: Datentyp 'Zahl' (formattedNumber) mit Einheit und Nachkommastellen.\n• IBAN (DE, leerzeichentolerant): Datentyp 'Regulärer Ausdruck' (regexp) mit dem Muster ^[A-Z]{2}[0-9]{2}(?:\\s?[0-9]{4}){4}\\s?[0-9]{2}$ (vrule)\n• Matrikelnummer (HWG, derzeit 6 Ziffern; das Muster lässt eine 7. Ziffer für spätere Nummern zu): Datentyp 'Regulärer Ausdruck' (regexp) mit dem Muster ^[0-9]{6,7}$ (vrule)\nHinterlegen Sie im Feld 'Fehlertext' (vrulemismatch) stets einen verständlichen Hinweistext."
+      },
+      {
+        "rule": "HWG-UX-01",
+        "severity": "minor",
+        "message": "Kompakte Felder über volle 100%-Zeilenbreite gestreckt: tfPLZ.",
+        "rule_id": "HWG-UX-01",
+        "remediation": "Ziehen Sie kurze Eingabefelder (z. B. Postleitzahl neben Ort oder Hausnummer neben Straße) im Formcycle-Designer per Drag-and-Drop nebeneinander in dieselbe Formularzeile und verteilen Sie die Zeilenbreite in den Grundeigenschaften über 'Breite' (relative Breite, z. B. PLZ 10 und Ort 30)."
+      },
+      {
+        "rule": "HWG-WF-01",
+        "severity": "minor",
+        "message": "Keine expliziten Status-Knoten (FC_CHANGE_STATE) im Workflow hinterlegt.",
+        "rule_id": "HWG-WF-01",
+        "remediation": "Legen Sie im Workflow-Designer unter 'Status' über 'Neuer Status' Status an, deren Name mit einer der kanonischen Phasen beginnt ('Eingegangen', 'In Prüfung', 'Nachforderung ausstehend', 'Genehmigt', 'Abgelehnt', 'Archiviert'; gleichwertig sind 'In Bearbeitung' und 'Abgeschlossen'), und ziehen Sie diese Status aus der Elementauswahl (Kategorie 'Status') als Endpunkte ans Ende der Verarbeitungsketten (im Export FC_CHANGE_STATE). Fachliche Zusätze nach der Phase sind zulässig (z. B. 'In Prüfung Finanzabteilung'); der Systemstatus 'Eingegangen' ist bereits angelegt."
+      },
+      {
+        "rule": "HWG-WF-02",
+        "severity": "minor",
+        "message": "Fehlender dynamischer Vorgangsplatzhalter ([%$RECORD_ID%]) in 1/1 automatisierten Workflow-E-Mails (FC_EMAIL).",
+        "rule_id": "HWG-WF-02",
+        "remediation": "Binden Sie im Formcycle-Workflow in sämtlichen Aktionen vom Typ 'E-Mail' (FC_EMAIL) im Feld 'Betreff' oder im Inhalt ('HTML') den dynamischen Vorgangsplatzhalter [%$RECORD_ID%] als eindeutige Vorgangsnummer ein."
+      },
+      {
+        "rule": "HWG-STAMM-02",
+        "rule_id": "HWG-STAMM-02",
+        "severity": "minor",
+        "message": "[KI-Befund · qwen3-30b-a3b-instruct-2507] Das Feld 'HWGLU-Email' verwendet eine technische Kürzelbezeichnung statt eines standardisierten Labels. Gemäß HWG-STAMM-02 muss die E-Mail-Adresse als 'E-Mail-Adresse', 'E-Mail' oder 'Hochschul-E-Mail' bezeichnet werden. Die Verwendung von 'HWGLU-Email' ist ein technischer Marker und verletzt die Konsistenzvorgabe. (Betroffen: tfEmail) — Vorschlag: Ersetze das Label 'HWGLU-Email' durch 'Hochschul-E-Mail' oder 'E-Mail-Adresse' gemäß den canonical_patterns in HWG-STAMM-02.",
+        "remediation": "Nutzen Sie für persönliche Stammdaten im Labeltext (Bereich 'Label'; label) ausschließlich die kanonischen Standardbezeichnungen ('Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' bzw. 'E-Mail' oder 'Hochschul-E-Mail', 'Telefonnummer', 'Matrikelnummer') ohne sperrige Rollenzusätze oder technische Kürzel."
+      },
+      {
+        "rule": "HWG-UI-01",
+        "rule_id": "HWG-UI-01",
+        "severity": "critical",
+        "message": "[KI-Befund · qwen3-30b-a3b-instruct-2507] Das sichtbare UI-Element 'txtDevNote' enthält den Text 'Fieldset wird per JavaScript eingeblendet, wenn Shibboleth/LDAP-Member authentifiziert.', der eine interne Entwickler-Notiz darstellt. Dieser Text ist nicht für Antragstellende bestimmt und verletzt die Regel, dass keine Code- oder Arbeitsnotizen im Frontend sichtbar sein dürfen. Der Eintrag wurde als 'kandidat' erkannt und ist semantisch als interne Notiz identifiziert. (Betroffen: txtDevNote) — Vorschlag: Entferne das sichtbare UI-Element 'txtDevNote' oder ersetze den Text durch eine an Antragstellende gerichtete, verständliche Information, z. B. 'Weitere Angaben werden nach der Authentifizierung sichtbar'.",
+        "remediation": "Entfernen Sie technische Implementierungs- und Redaktionshinweise aus sichtbaren Elementen vom Typ 'Text' (XSpan) und aus Beschriftungen. Hinterlegen Sie interne Notizen im Reiter 'Erweitert' im Bereich 'Sonstiges' als 'Bemerkung' (nur im Designer sichtbar) oder machen Sie interne Bearbeiterblöcke im Reiter 'Erweitert' über 'Verfügbar wenn' (Status) nur in nachgelagerten Status verfügbar (im Export viewstatus)."
+      },
+      {
+        "rule": "HWG-BTN-01",
+        "rule_id": "HWG-BTN-01",
+        "severity": "major",
+        "message": "[KI-Befund · qwen3-30b-a3b-instruct-2507] Die Schaltfläche 'senden' ist ein reines Verb ohne Zielobjekt und entspricht nicht dem Action-Verb-Pattern. Gemäß HWG-BTN-01 muss eine sichtbare Aktionsschaltfläche ein konkretes Vollverb im Infinitiv mit Zielobjekt enthalten, z. B. 'Antrag einreichen'. 'senden' ist ein generisches, kontextloses Minimal-Label und stiftet Verwirrung. (Betroffen: btnSubmit) — Vorschlag: Ersetze das Label 'senden' durch 'Antrag einreichen' oder 'Antrag absenden', um die Handlung eindeutig zu beschreiben.",
+        "remediation": "Wählen Sie im Formcycle-Designer das Element 'Schaltflächen' (XButtonList bzw. XButton) aus und beschriften Sie jede Aktionsschaltfläche im Bereich 'Schaltflächen' in der Spalte 'Text' (value) nach dem Action-Verb-Muster (z. B. 'Antrag einreichen', 'Kritischen Fall einreichen' oder 'Rückmeldung übermitteln') anstelle von reinen Zuständen ('Kritischer Fall') oder generischen Ein-Wort-Begriffen ('senden')."
+      },
+      {
+        "rule": "HWG-LANG-01",
+        "rule_id": "HWG-LANG-01",
+        "severity": "major",
+        "message": "[KI-Befund · qwen3-30b-a3b-instruct-2507] Das Feld 'Kostenstelle' ist ein Hochschuljargon-Begriff, der für Antragstellende nicht unbedingt verständlich ist. Es fehlt ein verständlicher Hilfetext, der den Begriff erläutert. Laut HWG-LANG-01 muss jeder unerklärte Fachbegriff in Formularfeldern oder Hinweistexten (außer im Header) durch einen Hilfetext erläutert werden. (Betroffen: tfKostenstelle) — Vorschlag: Füge einen Hilfetext hinzu, z. B. 'Geben Sie die Kostenstelle Ihrer Abteilung an (z. B. 123456-789).', um den Begriff zu erklären.",
+        "remediation": "Ergänzen Sie bei hochschulspezifischen Fachbegriffen oder Abkürzungen in Eingabefeldern im Bereich 'Hilfe' (helptext) eine kurze, allgemeinverständliche Begriffserklärung (z. B. Erklärung von 'ZFK', 'Mittelgeber' oder 'Kostenstelle') und achten Sie auf eine konsistente 'Sie'-Ansprache."
+      },
+      {
+        "rule": "HWG-FEEDBACK-01",
+        "rule_id": "HWG-FEEDBACK-01",
+        "severity": "minor",
+        "message": "[KI-Befund · qwen3-30b-a3b-instruct-2507] Die Workflow-E-Mail bestätigt den Eingang des Antrags, nennt jedoch weder die zuständige Prüfstelle noch die nächsten Schritte im Prozess. Gemäß HWG-FEEDBACK-01 muss die E-Mail die zuständige Stelle (z. B. ZFK, Fachbereich) und die nächsten Prozessschritte benennen. Der Inhalt 'Bitte haben Sie etwas Geduld.' ist zu vage und verletzt die Transparenzvorgabe. (Betroffen: E-Mail an Antragstellende) — Vorschlag: Erweitere den E-Mail-Text um eine klare Angabe der zuständigen Stelle und der nächsten Schritte, z. B.: 'Ihr Antrag wird von der Zentrale Finanzkontrolle (ZFK) geprüft. Die Entscheidung wird innerhalb von 5 Werktagen per E-Mail mitgeteilt.'",
+        "remediation": "Hinterlegen Sie im Formcycle-Workflow in der Verarbeitungskette des Absende-Ereignisses eine Aktion 'E-Mail' (FC_EMAIL) als automatisierte Eingangsbestätigung, deren Feld 'E-Mail an' die E-Mail-Adresse der antragstellenden Person enthält (z. B. den Platzhalter [%tfEmail%]) und deren Inhalt ('HTML') den Eingang bestätigt, die prüfende Organisationseinheit nennt und beschreibt, was als Nächstes geschieht."
+      }
+    ],
+    "recommendations": [],
+    "passed": [
+      "HWG-LANG-02 (Keine Sätze mit mehr als 25 Wörtern wurden erkannt. Die Anweisungen im Formular sind kurz und prägnant. Es liegen keine verschachtelten Passiv- oder Behördenkonstruktionen vor, die die Lesbarkeit beeinträchtigen würden.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UX-02": "[KI-Prüfung · qwen3-30b-a3b-instruct-2507] Das Formular umfasst nur 1 Seite und 8 Eingabefelder, was unter den Schwellenwerten von 3 Seiten oder 25 Eingabefeldern liegt. Daher ist die Empfehlung zur Implementierung eines Zwischenspeichermechanismus nicht anwendbar."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'qwen3-30b-a3b-instruct-2507' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 0,
+    "provenance": {
+      "engine_version": "1.7.0",
+      "registry_version": "1.7.0",
+      "prompt_version": "1.6.6",
+      "input_sha256": "858d5f220dff58444ccef02805af2c868757ac722f83029bb05b23a981b644b3",
+      "stage1_ms": 0.497,
+      "prompt_sha256": "b34548344bd28ce7ab73f9923113a7d811303043662fd1d114866c71b511598b",
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 6895.1,
+      "llm_raw_response": "{\n  \"form_name\": \"synthetic_noncompliant_form.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\n        \"tfEmail\"\n      ],\n      \"finding\": \"Das Feld 'HWGLU-Email' verwendet eine technische Kürzelbezeichnung statt eines standardisierten Labels. Gemäß HWG-STAMM-02 muss die E-Mail-Adresse als 'E-Mail-Adresse', 'E-Mail' oder 'Hochschul-E-Mail' bezeichnet werden. Die Verwendung von 'HWGLU-Email' ist ein technischer Marker und verletzt die Konsistenzvorgabe.\",\n      \"remediation_suggestion\": \"Ersetze das Label 'HWGLU-Email' durch 'Hochschul-E-Mail' oder 'E-Mail-Adresse' gemäß den canonical_patterns in HWG-STAMM-02.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\n        \"txtDevNote\"\n      ],\n      \"finding\": \"Das sichtbare UI-Element 'txtDevNote' enthält den Text 'Fieldset wird per JavaScript eingeblendet, wenn Shibboleth/LDAP-Member authentifiziert.', der eine interne Entwickler-Notiz darstellt. Dieser Text ist nicht für Antragstellende bestimmt und verletzt die Regel, dass keine Code- oder Arbeitsnotizen im Frontend sichtbar sein dürfen. Der Eintrag wurde als 'kandidat' erkannt und ist semantisch als interne Notiz identifiziert.\",\n      \"remediation_suggestion\": \"Entferne das sichtbare UI-Element 'txtDevNote' oder ersetze den Text durch eine an Antragstellende gerichtete, verständliche Information, z. B. 'Weitere Angaben werden nach der Authentifizierung sichtbar'.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\n        \"btnSubmit\"\n      ],\n      \"finding\": \"Die Schaltfläche 'senden' ist ein reines Verb ohne Zielobjekt und entspricht nicht dem Action-Verb-Pattern. Gemäß HWG-BTN-01 muss eine sichtbare Aktionsschaltfläche ein konkretes Vollverb im Infinitiv mit Zielobjekt enthalten, z. B. 'Antrag einreichen'. 'senden' ist ein generisches, kontextloses Minimal-Label und stiftet Verwirrung.\",\n      \"remediation_suggestion\": \"Ersetze das Label 'senden' durch 'Antrag einreichen' oder 'Antrag absenden', um die Handlung eindeutig zu beschreiben.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Das Formular umfasst nur 1 Seite und 8 Eingabefelder, was unter den Schwellenwerten von 3 Seiten oder 25 Eingabefeldern liegt. Daher ist die Empfehlung zur Implementierung eines Zwischenspeichermechanismus nicht anwendbar.\",\n      \"remediation_suggestion\": \"Keine Maßnahme erforderlich. Die Regel ist nicht anwendbar.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\n        \"tfKostenstelle\"\n      ],\n      \"finding\": \"Das Feld 'Kostenstelle' ist ein Hochschuljargon-Begriff, der für Antragstellende nicht unbedingt verständlich ist. Es fehlt ein verständlicher Hilfetext, der den Begriff erläutert. Laut HWG-LANG-01 muss jeder unerklärte Fachbegriff in Formularfeldern oder Hinweistexten (außer im Header) durch einen Hilfetext erläutert werden.\",\n      \"remediation_suggestion\": \"Füge einen Hilfetext hinzu, z. B. 'Geben Sie die Kostenstelle Ihrer Abteilung an (z. B. 123456-789).', um den Begriff zu erklären.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Keine Sätze mit mehr als 25 Wörtern wurden erkannt. Die Anweisungen im Formular sind kurz und prägnant. Es liegen keine verschachtelten Passiv- oder Behördenkonstruktionen vor, die die Lesbarkeit beeinträchtigen würden.\",\n      \"remediation_suggestion\": \"Keine Korrektur notwendig. Die Formulierung erfüllt die Anforderungen an Prägnanz und barrierearme Sprache.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\n        \"E-Mail an Antragstellende\"\n      ],\n      \"finding\": \"Die Workflow-E-Mail bestätigt den Eingang des Antrags, nennt jedoch weder die zuständige Prüfstelle noch die nächsten Schritte im Prozess. Gemäß HWG-FEEDBACK-01 muss die E-Mail die zuständige Stelle (z. B. ZFK, Fachbereich) und die nächsten Prozessschritte benennen. Der Inhalt 'Bitte haben Sie etwas Geduld.' ist zu vage und verletzt die Transparenzvorgabe.\",\n      \"remediation_suggestion\": \"Erweitere den E-Mail-Text um eine klare Angabe der zuständigen Stelle und der nächsten Schritte, z. B.: 'Ihr Antrag wird von der Zentrale Finanzkontrolle (ZFK) geprüft. Die Entscheidung wird innerhalb von 5 Werktagen per E-Mail mitgeteilt.'\"\n    }\n  ]\n}"
+    },
+    "critical_count": 4,
+    "release_status": "red_blocked",
+    "release_label": "Kritisch unzureichend (Gesperrt)",
+    "is_releasable": false
+  }
+}

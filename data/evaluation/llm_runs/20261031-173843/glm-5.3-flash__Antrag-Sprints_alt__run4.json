@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "model": "glm-5.3-flash",
+    "form": "Antrag-Sprints (alt)",
+    "run": 4,
+    "wall_ms": 151790.2,
+    "statuses": {
+      "HWG-STAMM-02": "VIOLATION",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "VIOLATION",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "VIOLATION",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 6,
+    "release_status": "red_blocked",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'glm-5.3-flash' abgeschlossen.",
+    "llm_latency_ms": 151785.7,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "AFörderung Antrag-Sprints für Drittmittelanträge.xfp",
+    "violations": [
+      {
+        "rule": "HWG-CD-02",
+        "severity": "critical",
+        "message": "Kein offizielles HWG-Header-Banner (XImage mit gültiger Bilddatei) innerhalb des Header-Containers (XHeader) vorhanden.",
+        "rule_id": "HWG-CD-02",
+        "remediation": "Platzieren Sie im Kopfbereich ('header1' / XHeader) das offizielle HWG-Logo als Bild-Element ('Bild' / XImage) mit gültiger Bilddatei. Setzen Sie im Eigenschaften-Bereich das Feld 'Höhe (in px)' auf '60' (imageheight = '60'), das Feld 'Ausrichtung' auf 'Rechts' (textalign = 'right') und hinterlegen Sie explizit im Feld 'Alternativtext' (alt) eine institutionsbezogene Bezeichnung wie 'Das Logo der HWG LU' oder 'Hochschule für Wirtschaft und Gesellschaft Ludwigshafen'."
+      },
+      {
+        "rule": "HWG-CD-03",
+        "severity": "major",
+        "message": "Im Footer (XFooter) ist 'Logo anzeigen' (showlogo='1') aktiviert ('Powered by XIMA Formcycle').",
+        "rule_id": "HWG-CD-03",
+        "remediation": "Wählen Sie im Formcycle-Designer das Fußzeilen-Element ('footer1' / XFooter) aus und entfernen Sie unter 'Eigenschaften' den Haken bei 'Logo anzeigen' (showlogo = '0'), um den Hinweis 'Powered by XIMA Formcycle' auszublenden."
+      },
+      {
+        "rule": "HWG-CD-04",
+        "severity": "major",
+        "message": "Kein Formulartitel als <h1> innerhalb des Kopfbereichs (XHeader) vorhanden.",
+        "rule_id": "HWG-CD-04",
+        "remediation": "Ziehen Sie im Formcycle-Designer das Element 'Text' (XSpan) direkt in den Header-Container ('header1' / XHeader), öffnen Sie den Rich-Text-Editor (Stift-Icon) und formatieren Sie den Formulartitel über 'Absatzformat -> Überschrift 1' exakt einmal als <h1>Antrag auf ...</h1> (anstelle von H2 oder unformatiertem Fließtext)."
+      },
+      {
+        "rule": "HWG-A11Y-01",
+        "severity": "critical",
+        "message": "Keine semantischen XFieldSet-Gruppierungen für 13 Eingabefelder vorhanden.",
+        "rule_id": "HWG-A11Y-01",
+        "remediation": "Ziehen Sie im Formcycle-Designer unter 'Layout-Elemente' das Element 'Gruppierung (Fieldset)' (XFieldSet) auf die Seite, vergeben Sie unter 'Allgemein -> Legende' (legend) einen sprechenden Abschnittstitel (z. B. 'Persönliche Angaben') und ordnen Sie alle zusammengehörigen Eingabefelder darin an. Belassen Sie keine Eingabefeldblöcke ungruppiert direkt auf der Seite (XPage) oder in einfachen Containern (XContainer)."
+      },
+      {
+        "rule": "HWG-STAMM-01",
+        "severity": "major",
+        "message": "Inkonsistente Stammdaten-Abfolge: 'Name Antragstellende/r' (tfName) vor 'Vorname Antragstellende/r' (tfVorname), 'Telefonnummer' (tfTelefonnummer) vor 'E-Mail' (tfEmail). Erwartet: Anrede -> Vorname -> Nachname -> E-Mail-Adresse -> Telefonnummer.",
+        "rule_id": "HWG-STAMM-01",
+        "remediation": "Ordnen Sie persönliche Stammdaten innerhalb jedes Fieldsets (XFieldSet) in der kanonischen Reihenfolge an: Anrede -> Vorname -> Nachname -> E-Mail-Adresse (bzw. E-Mail) -> Telefonnummer. Kapseln Sie getrennte Personen- oder Rollenblöcke (z. B. Antragstellende vs. Projektpartner) in eigene Fieldsets."
+      },
+      {
+        "rule": "HWG-DSGVO-01",
+        "severity": "critical",
+        "message": "Das Formular erhebt Eingaben, aber weder die Footer-Datenschutzerklärung (privacyPolicyShow='1') noch ein sichtbarer, auf die Datenschutzerklärung verlinkter Art.-13-Hinweis ist vorhanden.",
+        "rule_id": "HWG-DSGVO-01",
+        "remediation": "Aktivieren Sie im Fußzeilen-Element ('footer1' / XFooter) unter 'Eigenschaften' die native Option 'Datenschutzerklärung anzeigen' (privacyPolicyShow = '1') und wählen Sie das Template 'Datenschutzerklärung_HWGLU', oder fügen Sie vor der Absende-Schaltfläche ein Text-Element ('Text' / XSpan) mit Hinweis nach Art. 13 DSGVO und aktivem Link zur HWG-Datenschutzerklärung (https://www.hwg-lu.de/datenschutz) ein."
+      },
+      {
+        "rule": "HWG-WF-01",
+        "severity": "minor",
+        "message": "Nicht-standardisierte Ad-hoc-Workflow-Status gefunden (3): ['Kritischer Fall', 'Kritischer Fall Rückmeldung', 'Angenommen'].",
+        "rule_id": "HWG-WF-01",
+        "remediation": "Definieren Sie im Formcycle-Workflow über 'Aktionen -> Formular -> Status ändern' (FC_CHANGE_STATE) strukturierte Statusübergänge, die mit einer der kanonischen Phasen beginnen ('Eingegangen', 'In Prüfung', 'Nachforderung ausstehend', 'Genehmigt', 'Abgelehnt', 'Archiviert')."
+      },
+      {
+        "rule": "HWG-WF-02",
+        "severity": "minor",
+        "message": "Fehlender dynamischer Vorgangsplatzhalter ([%$RECORD_ID%]) in 8/8 automatisierten Workflow-E-Mails (FC_EMAIL).",
+        "rule_id": "HWG-WF-02",
+        "remediation": "Binden Sie im Formcycle-Workflow unter 'Aktionen -> Allgemein -> E-Mail' (FC_EMAIL) in sämtlichen E-Mail-Knoten im Betreff oder Textkörper den dynamischen Vorgangsplatzhalter [%$RECORD_ID%] (bzw. [%$ID%]) als eindeutige Vorgangsnummer ein."
+      },
+      {
+        "rule": "HWG-STAMM-02",
+        "rule_id": "HWG-STAMM-02",
+        "severity": "minor",
+        "message": "[KI-Befund · glm-5.3-flash] Die Stammdatenfelder weichen vom kanonischen Muster ab: tfName ist mit 'Name Antragstellende/r' und tfVorname mit 'Vorname Antragstellende/r' beschriftet. Beide Labels enthalten den sperrigen Rollenzusatz 'Antragstellende/r' (Anti-Pattern 'Sammelfelder oder sperrige Rollenzusätze in Standardfeldern', vgl. Beispiel 'Name der beantragenden Person'); zudem trägt das Nachname-Feld die mehrdeutige Kurzbezeichnung 'Name' statt dem kanonischen 'Nachname'. Die Felder tfTelefonnummer ('Telefonnummer') und tfEmail ('E-Mail') entsprechen hingegen den kanonischen Bezeichnungen. (Betroffen: tfName, tfVorname) — Vorschlag: Im Formcycle-Designer die Labels auf 'Nachname' (tfName) und 'Vorname' (tfVorname) verkürzen; den Bezug zur antragstellenden Person stattdessen über den Formulartitel, den Seitenkontext oder einen Hilfetext vermitteln.",
+        "remediation": "Nutzen Sie für persönliche Stammdaten im Feld 'Beschriftung' (label) ausschließlich die kanonischen Standardbezeichnungen ('Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' bzw. 'E-Mail' oder 'Hochschul-E-Mail', 'Telefonnummer', 'Matrikelnummer') ohne sperrige Rollenzusätze oder technische Kürzel."
+      },
+      {
+        "rule": "HWG-BTN-01",
+        "rule_id": "HWG-BTN-01",
+        "severity": "major",
+        "message": "[KI-Befund · glm-5.3-flash] Von den für Antragstellende sichtbaren Aktionsschaltflächen verletzen zwei das Action-Verb-Pattern: btnSenden ('senden') enthält zwar ein Verb, aber kein Zielobjekt und ist ein generisches, kontextloses Minimal-Label (vergleichbar dem disallowed Beispiel 'Abschicken'); btnKritisch ('Kritischer Fall') ist eine reine Substantiv-/Statusbezeichnung ohne Handlungsverb (vergleichbar dem Anti-Pattern-Beispiel 'Eilfall'). Die Schaltflächen btnRueckmeldung sowie btn1 ('Abgelehnt'/'Angenommen') sind mit applicant_visible = false gemäß Prüfumfang nicht zu bewerten. (Betroffen: btnSenden, btnKritisch) — Vorschlag: btnSenden in 'Antrag absenden' oder 'Antrag einreichen' umbenennen; btnKritisch in eine Handlungsformulierung mit Zielobjekt ändern, z. B. 'Kritischen Fall melden'.",
+        "remediation": "Wählen Sie im Formcycle-Designer das Element 'Schaltflächenleiste' (XButtonList) bzw. 'Schaltfläche' (XButton) aus und beschriften Sie jede Aktionsschaltfläche im Feld 'Beschriftung' (value) nach dem Action-Verb-Muster (z. B. 'Antrag einreichen', 'Kritischen Fall einreichen' oder 'Rückmeldung übermitteln') anstelle von reinen Zuständen ('Kritischer Fall') oder generischen Ein-Wort-Begriffen ('senden')."
+      },
+      {
+        "rule": "HWG-LANG-01",
+        "rule_id": "HWG-LANG-01",
+        "severity": "major",
+        "message": "[KI-Befund · glm-5.3-flash] Das Label des Feldes tfHoeheZuschuss ('Wie viel Geld möchten Sie beim ZFK beantragen?') verwendet das interne Organisationskürzel 'ZFK' ohne erläuternden Hilfetext (helptext leer) – Antragstellende können die zuständige Kommission nicht identifizieren. Zudem nennt der Textblock txtBestaetigung die Förder- bzw. Haushaltsbegriffe 'Restmitteln' und 'Forschungsinitiative' ohne Erläuterung. Die Sie-Ansprache ist dagegen durchgängig konsistent; der Formulartitel mit dem hochschulspezifischen Begriff 'Antrags-Sprints' ist als Kopfbereich-Element von der Hilfetext-Pflicht ausgenommen. (Betroffen: tfHoeheZuschuss, txtBestaetigung) — Vorschlag: Am Feld tfHoeheZuschuss einen Hilfetext hinterlegen, der ZFK erläutert (z. B. 'ZFK = Zentrale Forschungskommission der HWG Ludwigshafen, die über Förderanträge entscheidet'), oder die Abkürzung im Label ausschreiben; in txtBestaetigung 'Restmittel' und 'Forschungsinitiative' kurz im Text oder per Hilfetext erläutern (z. B. 'noch nicht vergebene Mittel des internen Förderprogramms').",
+        "remediation": "Ergänzen Sie bei hochschulspezifischen Fachbegriffen oder Abkürzungen in Eingabefeldern unter 'Allgemein -> Hilfetext' (helptext) eine kurze, allgemeinverständliche Begriffserklärung (z. B. Erklärung von 'ZFK', 'Mittelgeber' oder 'Kostenstelle') und achten Sie auf eine konsistente 'Sie'-Ansprache."
+      }
+    ],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-A11Y-02 (12 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Saubere Label-Syntax ohne störende HTML-Fragmente)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-UI-01 (Keine Entwickler-Notizen oder Code-Artefakte in den sichtbaren Formularelementen: metrics.suspected_dev_notes_count = 0; weder deterministische Stufe-1-Marker (todo/fixme, display:none, hide/show, script-Tags, lorem ipsum) noch Stufe-2-Kandidaten (javascript, admin, intern:, Platzhalter etc.) in Labels oder Texten der ui_elements. Randbeobachtung außerhalb des Regelziels: Die Genehmigungs-E-Mail ('E-Mail Antragsteller') enthält im Link-Markup Copy-Paste-Artefakte (jslog-, data-ved-, _ngcontent-Attribute); da Workflow-E-Mail-Vorlagen keine sichtbaren Formularelemente sind und die Attribute im gerenderten Text unsichtbar bleiben, lösen sie hier keinen Verstoß aus, sollten aber bereinigt werden.)",
+      "HWG-LANG-02 (Kein sichtbarer Satz in Textblöcken, Labels oder Hinweistexten überschreitet die Grenze von 25 Wörtern (metrics.sentences_over_25_words_count = 0). Auch die manuelle Prüfung der Texte (z. B. txtBestaetigung, txtTitel, Feldlabels) ergab keine verschachtelten Passiv- oder Behördenkonstruktionen; die Formulierungen sind kurz und handlungsorientiert.)",
+      "HWG-FEEDBACK-01 (Stufe 1: 3 von 8 Workflow-E-Mails sind an den dynamischen Empfänger-Platzhalter [%tfEmail%] adressiert (metrics.applicant_addressed_emails_count = 3); eine ausschließlich interne Adressierung liegt nicht vor. Stufe 2: Die Eingangsbestätigungs-E-Mail bestätigt den Eingang explizit ('Ihr Antrag ist erfolgreich bei uns eingegangen'), macht die zuständige Prüfstelle über die Signatur 'Ihr ZFK-Team' erkennbar und nennt die nächsten Prozessschritte ('befindet sich nun in Prüfung. Wir werden Sie zeitnah über die Entscheidung informieren').)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UPLOAD-01": "Keine Dateiupload-Elemente im Formular vorhanden.",
+      "HWG-UX-01": "Keine typischen Kompaktfelder (PLZ, Hausnummer) im Formular vorhanden.",
+      "HWG-UX-02": "[KI-Prüfung · glm-5.3-flash] Der Komplexitätsschwellenwert ist nicht erreicht: Das Formular umfasst 1 Seite (XPage) und 16 Eingabefelder (metrics.ux02_complexity_threshold_reached = false; Schwellenwerte ≥ 3 Seiten bzw. ≥ 25 Eingabefelder). Eine Empfehlung zum Zwischenspeichern mit Fortsetzungs-Link ist daher nicht anwendbar."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "glm-5.3-flash",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'glm-5.3-flash' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 6,
+    "provenance": {
+      "engine_version": "1.6.0",
+      "registry_version": "1.6.0",
+      "prompt_version": "1.6.0",
+      "input_sha256": "fd6d7df7a4d701b24e3911d90336a1ed404a40513fb8ea2f082e17bb1ec957c8",
+      "stage1_ms": 0.977,
+      "prompt_sha256": "a2f4950987f412c16514bc3cd2fd8f4f418cdeadb5acbc11db6b808d68d1f55d",
+      "model": "glm-5.3-flash",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 151785.7,
+      "llm_raw_response": "{\n  \"form_name\": \"AFörderung Antrag-Sprints für Drittmittelanträge.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"tfName\", \"tfVorname\"],\n      \"finding\": \"Die Stammdatenfelder weichen vom kanonischen Muster ab: tfName ist mit 'Name Antragstellende/r' und tfVorname mit 'Vorname Antragstellende/r' beschriftet. Beide Labels enthalten den sperrigen Rollenzusatz 'Antragstellende/r' (Anti-Pattern 'Sammelfelder oder sperrige Rollenzusätze in Standardfeldern', vgl. Beispiel 'Name der beantragenden Person'); zudem trägt das Nachname-Feld die mehrdeutige Kurzbezeichnung 'Name' statt dem kanonischen 'Nachname'. Die Felder tfTelefonnummer ('Telefonnummer') und tfEmail ('E-Mail') entsprechen hingegen den kanonischen Bezeichnungen.\",\n      \"remediation_suggestion\": \"Im Formcycle-Designer die Labels auf 'Nachname' (tfName) und 'Vorname' (tfVorname) verkürzen; den Bezug zur antragstellenden Person stattdessen über den Formulartitel, den Seitenkontext oder einen Hilfetext vermitteln.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Keine Entwickler-Notizen oder Code-Artefakte in den sichtbaren Formularelementen: metrics.suspected_dev_notes_count = 0; weder deterministische Stufe-1-Marker (todo/fixme, display:none, hide/show, script-Tags, lorem ipsum) noch Stufe-2-Kandidaten (javascript, admin, intern:, Platzhalter etc.) in Labels oder Texten der ui_elements. Randbeobachtung außerhalb des Regelziels: Die Genehmigungs-E-Mail ('E-Mail Antragsteller') enthält im Link-Markup Copy-Paste-Artefakte (jslog-, data-ved-, _ngcontent-Attribute); da Workflow-E-Mail-Vorlagen keine sichtbaren Formularelemente sind und die Attribute im gerenderten Text unsichtbar bleiben, lösen sie hier keinen Verstoß aus, sollten aber bereinigt werden.\",\n      \"remediation_suggestion\": \"Keine Korrektur am Formular erforderlich; empfohlen wird dennoch, die übernommenen Tracking-/Framework-Attribute im Link der E-Mail-Vorlage 'E-Mail Antragsteller' (genehmigt) zu entfernen.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"btnSenden\", \"btnKritisch\"],\n      \"finding\": \"Von den für Antragstellende sichtbaren Aktionsschaltflächen verletzen zwei das Action-Verb-Pattern: btnSenden ('senden') enthält zwar ein Verb, aber kein Zielobjekt und ist ein generisches, kontextloses Minimal-Label (vergleichbar dem disallowed Beispiel 'Abschicken'); btnKritisch ('Kritischer Fall') ist eine reine Substantiv-/Statusbezeichnung ohne Handlungsverb (vergleichbar dem Anti-Pattern-Beispiel 'Eilfall'). Die Schaltflächen btnRueckmeldung sowie btn1 ('Abgelehnt'/'Angenommen') sind mit applicant_visible = false gemäß Prüfumfang nicht zu bewerten.\",\n      \"remediation_suggestion\": \"btnSenden in 'Antrag absenden' oder 'Antrag einreichen' umbenennen; btnKritisch in eine Handlungsformulierung mit Zielobjekt ändern, z. B. 'Kritischen Fall melden'.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Der Komplexitätsschwellenwert ist nicht erreicht: Das Formular umfasst 1 Seite (XPage) und 16 Eingabefelder (metrics.ux02_complexity_threshold_reached = false; Schwellenwerte ≥ 3 Seiten bzw. ≥ 25 Eingabefelder). Eine Empfehlung zum Zwischenspeichern mit Fortsetzungs-Link ist daher nicht anwendbar.\",\n      \"remediation_suggestion\": \"Keine Maßnahme erforderlich; bei künftiger Erweiterung des Formulars um weitere Seiten oder Eingabefelder den Schwellenwert erneut prüfen und ggf. eine 'Zwischenspeichern'-Schaltfläche (submitNoCheck) mit Fortsetzungs-Link ([%$URL_FORM%]) ergänzen.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"tfHoeheZuschuss\", \"txtBestaetigung\"],\n      \"finding\": \"Das Label des Feldes tfHoeheZuschuss ('Wie viel Geld möchten Sie beim ZFK beantragen?') verwendet das interne Organisationskürzel 'ZFK' ohne erläuternden Hilfetext (helptext leer) – Antragstellende können die zuständige Kommission nicht identifizieren. Zudem nennt der Textblock txtBestaetigung die Förder- bzw. Haushaltsbegriffe 'Restmitteln' und 'Forschungsinitiative' ohne Erläuterung. Die Sie-Ansprache ist dagegen durchgängig konsistent; der Formulartitel mit dem hochschulspezifischen Begriff 'Antrags-Sprints' ist als Kopfbereich-Element von der Hilfetext-Pflicht ausgenommen.\",\n      \"remediation_suggestion\": \"Am Feld tfHoeheZuschuss einen Hilfetext hinterlegen, der ZFK erläutert (z. B. 'ZFK = Zentrale Forschungskommission der HWG Ludwigshafen, die über Förderanträge entscheidet'), oder die Abkürzung im Label ausschreiben; in txtBestaetigung 'Restmittel' und 'Forschungsinitiative' kurz im Text oder per Hilfetext erläutern (z. B. 'noch nicht vergebene Mittel des internen Förderprogramms').\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Kein sichtbarer Satz in Textblöcken, Labels oder Hinweistexten überschreitet die Grenze von 25 Wörtern (metrics.sentences_over_25_words_count = 0). Auch die manuelle Prüfung der Texte (z. B. txtBestaetigung, txtTitel, Feldlabels) ergab keine verschachtelten Passiv- oder Behördenkonstruktionen; die Formulierungen sind kurz und handlungsorientiert.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"E-Mail Antragsteller (Eingangsbestätigung)\"],\n      \"finding\": \"Stufe 1: 3 von 8 Workflow-E-Mails sind an den dynamischen Empfänger-Platzhalter [%tfEmail%] adressiert (metrics.applicant_addressed_emails_count = 3); eine ausschließlich interne Adressierung liegt nicht vor. Stufe 2: Die Eingangsbestätigungs-E-Mail bestätigt den Eingang explizit ('Ihr Antrag ist erfolgreich bei uns eingegangen'), macht die zuständige Prüfstelle über die Signatur 'Ihr ZFK-Team' erkennbar und nennt die nächsten Prozessschritte ('befindet sich nun in Prüfung. Wir werden Sie zeitnah über die Entscheidung informieren').\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 3,
+    "release_status": "red_blocked",
+    "release_label": "Kritisch unzureichend (Gesperrt)",
+    "is_releasable": false
+  }
+}

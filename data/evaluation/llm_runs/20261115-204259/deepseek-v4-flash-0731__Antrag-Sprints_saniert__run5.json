@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "model": "deepseek-v4-flash-0731",
+    "form": "Antrag-Sprints (saniert)",
+    "run": 5,
+    "wall_ms": 13310.1,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "VIOLATION",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "VIOLATION"
+    },
+    "score": 89,
+    "release_status": "green_compliant",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'deepseek-v4-flash-0731' abgeschlossen.",
+    "llm_latency_ms": 13306.1,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp",
+    "violations": [
+      {
+        "rule": "HWG-LANG-01",
+        "rule_id": "HWG-LANG-01",
+        "severity": "major",
+        "message": "[KI-Befund · deepseek-v4-flash-0731] Der Begriff 'ZFK' im Label 'Wie viel Geld möchten Sie beim ZFK beantragen?' wird durch den Hilfetext 'Das ZFK ist das Zentrum für Forschung und Kooperation' erläutert. Der Begriff 'verausgabt' im Label 'Wofür sollen die beantragten Gelder verausgabt werden?' wird durch den Hilfetext 'verausgabt ist ein anderes wort für ausgegeben / eingesetzt' erläutert. Allerdings ist der Hilfetext zum ZFK unvollständig (es fehlt die Angabe, dass es sich um eine interne Organisationseinheit der Hochschule handelt) und der Hilfetext zu 'verausgabt' enthält einen Rechtschreibfehler ('wort' statt 'Wort') und ist stilistisch nicht professionell. Zudem wird die Sie-Ansprache in den Labels durchgängig verwendet, aber der Hilfetext zum ZFK ist unpersönlich. Daher liegt ein Verstoß vor, weil die Erläuterungen nicht vollständig verständlich und sprachlich nicht angemessen sind. (Betroffen: tfHoeheZuschuss, edAusgabenplanZuschuss) — Vorschlag: Hilfetexte überarbeiten: 'ZFK' als 'Zentrum für Forschung und Kooperation der Hochschule Ludwigshafen' erläutern und 'verausgabt' als 'ausgegeben oder eingesetzt' korrekt und verständlich formulieren.",
+        "remediation": "Ergänzen Sie bei hochschulspezifischen Fachbegriffen oder Abkürzungen in Eingabefeldern im Bereich 'Hilfe' (helptext) eine kurze, allgemeinverständliche Begriffserklärung (z. B. Erklärung von 'ZFK', 'Mittelgeber' oder 'Kostenstelle') und achten Sie auf eine konsistente 'Sie'-Ansprache."
+      },
+      {
+        "rule": "HWG-FEEDBACK-01",
+        "rule_id": "HWG-FEEDBACK-01",
+        "severity": "minor",
+        "message": "[KI-Befund · deepseek-v4-flash-0731] Es sind mehrere E-Mail-Knoten an dynamische Empfänger adressiert, darunter auch an die antragstellende Person ([%tfEmail%]). Die Eingangsbestätigung an die antragstellende Person bestätigt den Eingang, nennt aber weder die zuständige Prüfstelle (nur 'wir' und 'Ihr ZFK-Team' in der Signatur, was als Hinweis auf das ZFK gewertet werden kann) noch die nächsten Prozessschritte. Es wird lediglich mitgeteilt, dass der Antrag in Prüfung ist und man zeitnah informiert werde. Die nächsten Schritte (z. B. Prüfung durch das ZFK, mögliche Rückfragen, Entscheidungsfrist) werden nicht erläutert. (Betroffen: E-Mail Antragsteller (Eingangsbestätigung)) — Vorschlag: Die Eingangsbestätigung an die Antragstellenden sollte die zuständige Prüfstelle (ZFK) explizit benennen und die nächsten Schritte beschreiben, z. B.: 'Ihr Antrag wird nun vom Zentrum für Forschung und Kooperation (ZFK) geprüft. Sie erhalten innerhalb von X Tagen eine Rückmeldung. Bei Rückfragen werden wir uns bei Ihnen melden.'",
+        "remediation": "Hinterlegen Sie im Formcycle-Workflow in der Verarbeitungskette des Absende-Ereignisses eine Aktion 'E-Mail' (FC_EMAIL) als automatisierte Eingangsbestätigung, deren Feld 'E-Mail an' die E-Mail-Adresse der antragstellenden Person enthält (z. B. den Platzhalter [%tfEmail%]) und deren Inhalt ('HTML') den Eingang bestätigt, die prüfende Organisationseinheit nennt und beschreibt, was als Nächstes geschieht."
+      }
+    ],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (12 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Beschriftungen ohne Pipe-Zeichen, Pfeile und sichtbare Code-Reste)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 8/8 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Die Felder für persönliche Stammdaten verwenden die kanonischen Bezeichnungen 'Vorname', 'Nachname', 'E-Mail' und 'Telefonnummer'. Es gibt keine Sammelfelder, mehrdeutigen Kurzbezeichnungen oder technischen Feldbezeichner als sichtbares Label.)",
+      "HWG-UI-01 (Es wurden keine Entwickler-Notizen, Code-Artefakte oder redaktionellen Arbeitsnotizen in den sichtbaren UI-Elementen gefunden. Die Texte sind fachlich und an Antragstellende gerichtet.)",
+      "HWG-BTN-01 (Die für Antragstellende sichtbaren Aktionsschaltflächen 'Antrag einreichen' und 'Kritischen Fall einreichen' enthalten jeweils ein konkretes Vollverb im Infinitiv mit Zielobjekt und beschreiben die ausgelöste Transaktion eindeutig. Die nicht sichtbaren Schaltflächen (z. B. 'Rückmeldung übermitteln', 'Antrag ablehnen', 'Antrag annehmen') sind nicht relevant.)",
+      "HWG-LANG-02 (Die deterministische Satzlängenanalyse ergab keine Sätze mit mehr als 25 Wörtern. Auch die semantische Prüfung auf verschachtelte Passiv- oder Behördenkonstruktionen ergab keine Auffälligkeiten in den sichtbaren Texten und Hilfetexten.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UPLOAD-01": "Keine Dateiupload-Elemente im Formular vorhanden.",
+      "HWG-UX-01": "Keine typischen Kompaktfelder (PLZ, Hausnummer) im Formular vorhanden.",
+      "HWG-UX-02": "[KI-Prüfung · deepseek-v4-flash-0731] Das Formular umfasst 1 Seite und 16 Eingabefelder, damit wird der Komplexitätsschwellenwert (>= 3 Seiten oder >= 25 Eingabefelder) nicht erreicht. Die Empfehlung zur Zwischenspeicherung ist daher nicht anwendbar."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "deepseek-v4-flash-0731",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'deepseek-v4-flash-0731' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 89,
+    "provenance": {
+      "engine_version": "1.7.0",
+      "registry_version": "1.7.0",
+      "prompt_version": "1.6.6",
+      "input_sha256": "281f8c2b6863668b3ed66ae189302fd354b656ce17785c025fb06665e9732d88",
+      "stage1_ms": 0.931,
+      "prompt_sha256": "11d4960e5d932a508ee3ef5d39fdc2dbc596db742896a6ecdbd72bc29e198b08",
+      "model": "deepseek-v4-flash-0731",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 13306.1,
+      "llm_raw_response": "{\n  \"form_name\": \"AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"tfVorname\", \"tfName\", \"tfEmail\", \"tfTelefonnummer\"],\n      \"finding\": \"Die Felder für persönliche Stammdaten verwenden die kanonischen Bezeichnungen 'Vorname', 'Nachname', 'E-Mail' und 'Telefonnummer'. Es gibt keine Sammelfelder, mehrdeutigen Kurzbezeichnungen oder technischen Feldbezeichner als sichtbares Label.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Es wurden keine Entwickler-Notizen, Code-Artefakte oder redaktionellen Arbeitsnotizen in den sichtbaren UI-Elementen gefunden. Die Texte sind fachlich und an Antragstellende gerichtet.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"btnSenden\", \"btnKritisch\"],\n      \"finding\": \"Die für Antragstellende sichtbaren Aktionsschaltflächen 'Antrag einreichen' und 'Kritischen Fall einreichen' enthalten jeweils ein konkretes Vollverb im Infinitiv mit Zielobjekt und beschreiben die ausgelöste Transaktion eindeutig. Die nicht sichtbaren Schaltflächen (z. B. 'Rückmeldung übermitteln', 'Antrag ablehnen', 'Antrag annehmen') sind nicht relevant.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Das Formular umfasst 1 Seite und 16 Eingabefelder, damit wird der Komplexitätsschwellenwert (>= 3 Seiten oder >= 25 Eingabefelder) nicht erreicht. Die Empfehlung zur Zwischenspeicherung ist daher nicht anwendbar.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"tfHoeheZuschuss\", \"edAusgabenplanZuschuss\"],\n      \"finding\": \"Der Begriff 'ZFK' im Label 'Wie viel Geld möchten Sie beim ZFK beantragen?' wird durch den Hilfetext 'Das ZFK ist das Zentrum für Forschung und Kooperation' erläutert. Der Begriff 'verausgabt' im Label 'Wofür sollen die beantragten Gelder verausgabt werden?' wird durch den Hilfetext 'verausgabt ist ein anderes wort für ausgegeben / eingesetzt' erläutert. Allerdings ist der Hilfetext zum ZFK unvollständig (es fehlt die Angabe, dass es sich um eine interne Organisationseinheit der Hochschule handelt) und der Hilfetext zu 'verausgabt' enthält einen Rechtschreibfehler ('wort' statt 'Wort') und ist stilistisch nicht professionell. Zudem wird die Sie-Ansprache in den Labels durchgängig verwendet, aber der Hilfetext zum ZFK ist unpersönlich. Daher liegt ein Verstoß vor, weil die Erläuterungen nicht vollständig verständlich und sprachlich nicht angemessen sind.\",\n      \"remediation_suggestion\": \"Hilfetexte überarbeiten: 'ZFK' als 'Zentrum für Forschung und Kooperation der Hochschule Ludwigshafen' erläutern und 'verausgabt' als 'ausgegeben oder eingesetzt' korrekt und verständlich formulieren.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Die deterministische Satzlängenanalyse ergab keine Sätze mit mehr als 25 Wörtern. Auch die semantische Prüfung auf verschachtelte Passiv- oder Behördenkonstruktionen ergab keine Auffälligkeiten in den sichtbaren Texten und Hilfetexten.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"E-Mail Antragsteller (Eingangsbestätigung)\"],\n      \"finding\": \"Es sind mehrere E-Mail-Knoten an dynamische Empfänger adressiert, darunter auch an die antragstellende Person ([%tfEmail%]). Die Eingangsbestätigung an die antragstellende Person bestätigt den Eingang, nennt aber weder die zuständige Prüfstelle (nur 'wir' und 'Ihr ZFK-Team' in der Signatur, was als Hinweis auf das ZFK gewertet werden kann) noch die nächsten Prozessschritte. Es wird lediglich mitgeteilt, dass der Antrag in Prüfung ist und man zeitnah informiert werde. Die nächsten Schritte (z. B. Prüfung durch das ZFK, mögliche Rückfragen, Entscheidungsfrist) werden nicht erläutert.\",\n      \"remediation_suggestion\": \"Die Eingangsbestätigung an die Antragstellenden sollte die zuständige Prüfstelle (ZFK) explizit benennen und die nächsten Schritte beschreiben, z. B.: 'Ihr Antrag wird nun vom Zentrum für Forschung und Kooperation (ZFK) geprüft. Sie erhalten innerhalb von X Tagen eine Rückmeldung. Bei Rückfragen werden wir uns bei Ihnen melden.'\"\n    }\n  ]\n}"
+    },
+    "critical_count": 0,
+    "release_status": "green_compliant",
+    "release_label": "Konform (Freigabefähig)",
+    "is_releasable": true
+  }
+}

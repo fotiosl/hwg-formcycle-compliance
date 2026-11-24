@@ -1,0 +1,76 @@
+{
+  "n": 25,
+  "forms_with_critical": 23,
+  "schemes": {
+    "Basis 15/8/3": {
+      "spearman_vs_basis": 1.0,
+      "median_score": 30,
+      "status_with_veto": {
+        "grün": 0,
+        "orange": 0,
+        "rot": 25
+      },
+      "status_without_veto": {
+        "grün": 0,
+        "orange": 0,
+        "rot": 25
+      }
+    },
+    "flach 10/5/2": {
+      "spearman_vs_basis": 0.996,
+      "median_score": 54,
+      "status_with_veto": {
+        "grün": 0,
+        "orange": 1,
+        "rot": 24
+      },
+      "status_without_veto": {
+        "grün": 0,
+        "orange": 5,
+        "rot": 20
+      }
+    },
+    "steil 20/10/5": {
+      "spearman_vs_basis": 0.964,
+      "median_score": 5,
+      "status_with_veto": {
+        "grün": 0,
+        "orange": 0,
+        "rot": 25
+      },
+      "status_without_veto": {
+        "grün": 0,
+        "orange": 0,
+        "rot": 25
+      }
+    },
+    "gleichgewichtet 6/6/6": {
+      "spearman_vs_basis": 0.536,
+      "median_score": 46,
+      "status_with_veto": {
+        "grün": 0,
+        "orange": 0,
+        "rot": 25
+      },
+      "status_without_veto": {
+        "grün": 0,
+        "orange": 3,
+        "rot": 22
+      }
+    },
+    "Critical betont 25/8/3": {
+      "spearman_vs_basis": 0.839,
+      "median_score": 9,
+      "status_with_veto": {
+        "grün": 0,
+        "orange": 0,
+        "rot": 25
+      },
+      "status_without_veto": {
+        "grün": 0,
+        "orange": 0,
+        "rot": 25
+      }
+    }
+  }
+}

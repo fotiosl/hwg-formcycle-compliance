@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "model": "qwen3.8:27b",
+    "form": "Master-Formular (Vorlage)",
+    "run": 3,
+    "wall_ms": 53354.7,
+    "statuses": {
+      "HWG-STAMM-02": "VIOLATION",
+      "HWG-UI-01": "VIOLATION",
+      "HWG-BTN-01": "NOT_APPLICABLE",
+      "HWG-UX-02": "RECOMMENDATION",
+      "HWG-LANG-01": "VIOLATION",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "VIOLATION"
+    },
+    "score": 29,
+    "release_status": "red_blocked",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'qwen3.8:27b' abgeschlossen.",
+    "llm_latency_ms": 53351.5,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "Master-Formular.xfp",
+    "violations": [
+      {
+        "rule": "HWG-CD-01",
+        "severity": "major",
+        "message": "Layout-Container weichen vom 850px-Standard ab (gefunden: 700px).",
+        "rule_id": "HWG-CD-01",
+        "remediation": "Wählen Sie im Formcycle-Designer sämtliche Layout-Container (Kopfzeile 'header1' / XHeader, alle Seiten 'p1'… / XPage sowie Fußzeile 'footer1' / XFooter) einzeln aus und setzen Sie im Reiter 'Layout' das Feld 'Max. Breite' (maxwidth) durchgängig auf '850px'. Setzen Sie zudem bei Kopf- und Fußzeile (XHeader/XFooter) das Feld 'Min. Breite' (minwidth) auf '300px' (auf Seitenebene XPage ist '300px' oder '0px' zulässig)."
+      },
+      {
+        "rule": "HWG-CD-02",
+        "severity": "major",
+        "message": "HWG-Header-Logo weicht von den Vorgaben ab: Höhe ist '50' statt 60px, barrierefreier Alternativtext (alt) fehlt oder unvollständig.",
+        "rule_id": "HWG-CD-02",
+        "remediation": "Platzieren Sie im Kopfbereich ('header1' / XHeader) das offizielle HWG-Logo als Bild-Element ('Bild' / XImage) mit gültiger Bilddatei. Setzen Sie im Eigenschaften-Bereich das Feld 'Höhe (in px)' auf '60' (imageheight = '60'), das Feld 'Ausrichtung' auf 'Rechts' (textalign = 'right') und hinterlegen Sie explizit im Feld 'Alternativtext' (alt) eine institutionsbezogene Bezeichnung wie 'Das Logo der HWG LU' oder 'Hochschule für Wirtschaft und Gesellschaft Ludwigshafen'."
+      },
+      {
+        "rule": "HWG-A11Y-01",
+        "severity": "critical",
+        "message": "Semantische Abschnittsgruppierung unvollständig: XFieldSet ohne aussagekräftige Legende (mind. 3 Buchstaben): fsMasterInhalt.",
+        "rule_id": "HWG-A11Y-01",
+        "remediation": "Ziehen Sie im Formcycle-Designer unter 'Layout-Elemente' das Element 'Gruppierung (Fieldset)' (XFieldSet) auf die Seite, vergeben Sie unter 'Allgemein -> Legende' (legend) einen sprechenden Abschnittstitel (z. B. 'Persönliche Angaben') und ordnen Sie alle zusammengehörigen Eingabefelder darin an. Belassen Sie keine Eingabefeldblöcke ungruppiert direkt auf der Seite (XPage) oder in einfachen Containern (XContainer)."
+      },
+      {
+        "rule": "HWG-A11Y-03",
+        "severity": "minor",
+        "message": "HTML-Störfragmente (<br>, <span>, &nbsp;, doppelte Entities oder '|') in 3 Label(s): [tfMasterFachbereichSudiengang, tfMasterFachbereichSudiengang1, tfMasterFachbereichSudiengang2].",
+        "rule_id": "HWG-A11Y-03",
+        "remediation": "Bereinigen Sie bei Eingabefeldern unter 'Allgemein -> Beschriftung' (label) bzw. bei Gruppierungen unter 'Allgemein -> Legende' (legend) manuelle Zeilenumbrüche (<br>), kopierte Formatierungs-Tags (<span>, <b>, <strong>, Inline-Styles), geschützte Leerzeichen (&nbsp;), doppelt maskierte Entities sowie technische Trenner ('|'). Lagern Sie erläuternde Zusatzhinweise unter 'Allgemein' in das dedizierte Feld 'Hilfetext' (helptext) aus."
+      },
+      {
+        "rule": "HWG-VAL-01",
+        "severity": "major",
+        "message": "Strukturierte Eingabefelder ohne gültigen Validator / Regex gefunden: tfMasterMatrikelnummer (Matrikelnummer: Typ 'text' ohne 6–7-stelligen Regex), tfMasterMatrikelnummer1 (Matrikelnummer: Typ 'text' ohne 6–7-stelligen Regex), tfMasterMatrikelnummer2 (Matrikelnummer: Typ 'text' ohne 6–7-stelligen Regex).",
+        "rule_id": "HWG-VAL-01",
+        "remediation": "Wählen Sie das Textfeld ('Textfeld' / XTextField) im Formcycle-Designer aus und stellen Sie im Bereich 'Einschränkungen -> Datentyp' (datatype) den passenden Validator ein (Trennen Sie kombinierte 2-in-1-Felder wie 'E-Mail/Telefon' stets in separate Einzelfelder auf!):\n• E-Mail, Postleitzahl, Datum & Geldbeträge: Nutzen Sie den nativen Datentyp 'E-Mail' (email), 'Postleitzahl (DE)' (plzDE), 'Datum (TT.MM.JJJJ)' (dateDE) bzw. 'Fließkommazahl / Währung' (formattedNumber / float).\n• Telefonnummer (Empfehlung Regex, da Formcycles Typ 'phone' kein '+' für Ländervorwahlen wie +49 erlaubt): Datentyp 'Regulärer Ausdruck' (regexp) und unter 'Einschränkungen -> Regulärer Ausdruck' (vrule) das Muster ^(\\+[0-9]{1,3}|0)[0-9\\s\\-/]{6,20}$\n• IBAN (DE, leerzeichentolerant): Datentyp 'Regulärer Ausdruck' (regexp) mit Muster ^[A-Z]{2}[0-9]{2}(?:\\s?[0-9]{4}){4}\\s?[0-9]{2}$ im Feld 'Regulärer Ausdruck' (vrule)\n• Matrikelnummer (HWG, 6–7 Ziffern): Datentyp 'Regulärer Ausdruck' (regexp) mit Muster ^[0-9]{6,7}$ im Feld 'Regulärer Ausdruck' (vrule)\nHinterlegen Sie im Feld 'Fehlermeldung' (vrulemismatch) stets einen verständlichen Hinweistext."
+      },
+      {
+        "rule": "HWG-UI-01",
+        "severity": "critical",
+        "message": "[KI-Befund · qwen3.8:27b] Das Element 'txt1' enthält den vollständigen Entwicklerkommentar 'Fieldset wird per JavaScript eingeblendet, wenn Shibboleh/LDAP-Member oder FormS-Admin oder FormS-Postfach-SB, ansonsten ausgeblendet (hide)'. Der deterministische Marker '(hide)' sowie die Beschreibung interner Show/Hide-Logik mit Systemrollen (FormS-Admin, FormS-Postfach-SB) sind eindeutig eine interne Konfigurationsnotiz, die nicht an Antragstellende gerichtet ist. In 'txtDecline' ist der Klammerzusatz '(nur mit Shibboleh-Anmeldung = SAML-HSLU)' eine technische Konfigurationsangabe (Authentifizierungsprotokoll und interne Kurzbezeichnung), die als Entwicklerhinweis erkennbar ist und keine antragstellendenorientierte Information darstellt. (Betroffen: txt1, txtDecline) — Vorschlag: Das Element 'txt1' vollständig aus dem Frontend entfernen oder durch eine neutrale, antragstellendenorientierte Erläuterung ersetzen (z. B. 'Diese Angaben werden automatisch aus Ihrem Hochschullogin übernommen.'). Den Klammerzusatz in 'txtDecline' entfernen; falls eine Erläuterung zum Login erforderlich ist, einen verständlichen Hilfetext hinterlegen, z. B. 'Zugang über den offiziellen Hochschul-Login (SSO) erforderlich.'",
+        "rule_id": "HWG-UI-01",
+        "remediation": "Entfernen Sie alle technischen Implementierungs- und Redaktionshinweise aus sichtbaren Text-Elementen ('Text' / XSpan) und Feld-Beschriftungen. Hinterlegen Sie interne Notizen ausschließlich im Entwickler-Feld 'Kommentar' (comment) der Komponente oder beschränken Sie interne Bearbeiterblöcke unter 'Zugriff -> Sichtbarkeit (Status)' (viewstatus) auf nachgelagerte Workflow-Status."
+      },
+      {
+        "rule": "HWG-STAMM-02",
+        "rule_id": "HWG-STAMM-02",
+        "severity": "minor",
+        "message": "[KI-Befund · qwen3.8:27b] Das Feld 'tfMasterSucheName' trägt das Label 'Person (SucheName)', wobei 'SucheName' ein technischer Feldbezeichner ist, der als sichtbarer Bestandteil des Labels erscheint – ein klarer Verstoß gegen das Anti-Pattern 'Technische Feldbezeichner als sichtbares Label'. Zusätzlich enthalten die Fieldset-Labels 'Persönliche Angaben (Shibboleth-Anmeldung)', 'Persönliche Angaben (Systemanmeldung / LDAP)' und 'Persönliche Angaben aus Suchfeld (autocomplete)' technische Implementierungsbegriffe (Shibboleth, LDAP, autocomplete), die für Antragstellende nicht selbsterklärend sind und als sperrige Rollenzusätze/Technikbezeichnungen wirken. (Betroffen: tfMasterSucheName, fsMasterAntragsteller, fsMasterAntragsteller1, fsMasterAntragsteller2) — Vorschlag: Label von 'tfMasterSucheName' auf 'Person' oder 'Name der Person' ändern und den technischen Bezeichner 'SucheName' entfernen. Fieldset-Labels auf neutrale, antragstellendenorientierte Bezeichnungen umstellen, z. B. 'Persönliche Angaben (über Hochschullogin)', 'Persönliche Angaben (über Systemlogin)' bzw. 'Persönliche Angaben (aus Personensuche)'. Technische Protokollnamen (Shibboleth, LDAP, autocomplete) aus den sichtbaren Labels entfernen.",
+        "remediation": "Nutzen Sie für persönliche Stammdaten im Feld 'Beschriftung' (label) ausschließlich die kanonischen Standardbezeichnungen ('Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' bzw. 'E-Mail' oder 'Hochschul-E-Mail', 'Telefonnummer', 'Matrikelnummer') ohne sperrige Rollenzusätze oder technische Kürzel."
+      },
+      {
+        "rule": "HWG-LANG-01",
+        "rule_id": "HWG-LANG-01",
+        "severity": "major",
+        "message": "[KI-Befund · qwen3.8:27b] Die Fieldset-Labels enthalten unerklärte technische Fachbegriffe: 'Shibboleth-Anmeldung' (fsMasterAntragsteller), 'LDAP' (fsMasterAntragsteller1) und 'autocomplete' (fsMasterAntragsteller2). Keines dieser Elemente verfügt über einen Hilfetext (helptext ist durchgehend leer). In 'txtDecline' erscheinen zusätzlich 'Shibboleh-Anmeldung' (Fehlschreibung) und 'SAML-HSLU' (internes Kurzzeichen) ohne Erläuterung. Diese Begriffe sind für Antragstellende ohne IT-Vorkenntnisse nicht verständlich und werden weder durch einen Hilfetext noch durch den unmittelbaren Kontext erklärt. (Betroffen: fsMasterAntragsteller, fsMasterAntragsteller1, fsMasterAntragsteller2, txtDecline) — Vorschlag: Fieldset-Labels in antragstellendenverständliche Sprache umformulieren, z. B. 'Persönliche Angaben (automatisch aus Ihrem Hochschullogin)', 'Persönliche Angaben (automatisch aus Ihrem Systemlogin)', 'Persönliche Angaben (aus der Personensuche)'. In 'txtDecline' die technischen Begriffe durch eine verständliche Formulierung ersetzen, z. B. 'Zugang nur mit gültigem Hochschul-Login möglich.' Ggf. ergänzende Hilfetexte hinterlegen.",
+        "remediation": "Ergänzen Sie bei hochschulspezifischen Fachbegriffen oder Abkürzungen in Eingabefeldern unter 'Allgemein -> Hilfetext' (helptext) eine kurze, allgemeinverständliche Begriffserklärung (z. B. Erklärung von 'ZFK', 'Mittelgeber' oder 'Kostenstelle') und achten Sie auf eine konsistente 'Sie'-Ansprache."
+      },
+      {
+        "rule": "HWG-FEEDBACK-01",
+        "rule_id": "HWG-FEEDBACK-01",
+        "severity": "minor",
+        "message": "[KI-Befund · qwen3.8:27b] Im Workflow-Modell sind keine E-Mail-Knoten (FC_EMAIL) konfiguriert (workflow_emails: [], applicant_addressed_emails_count: 0). Es fehlt somit vollständig eine automatisierte Eingangsbestätigung an die antragstellende Person. Die erforderlichen Informationen – Bestätigung des Eingangs, Benennung der zuständigen Prüfstelle und Beschreibung der nächsten Prozessschritte – werden nach dem Absenden nicht übermittelt. (Betroffen: Workflow (FC_EMAIL-Knoten)) — Vorschlag: Im Formcycle-Workflow mindestens einen FC_EMAIL-Knoten anlegen, der direkt an die E-Mail-Adresse der antragstellenden Person (dynamischer Platzhalter, z. B. [%$EMAIL%]) adressiert ist. Der E-Mail-Text muss enthalten: (1) Bestätigung des Antragseingangs, (2) Benennung der zuständigen Prüfstelle (z. B. 'Zentrale Finanzkasse' oder 'Finanzabteilung'), (3) kurze Beschreibung der nächsten Schritte (z. B. 'Ihr Antrag wird innerhalb von 10 Werktagen geprüft. Sie erhalten eine separate Benachrichtigung über das Ergebnis.').",
+        "remediation": "Hinterlegen Sie im Formcycle-Workflow unter 'Aktionen -> Allgemein -> E-Mail' (FC_EMAIL) eine automatisierte Eingangsbestätigung an die E-Mail-Adresse der antragstellenden Person (z. B. [%tfEmail%]), deren Text den Eingang bestätigt und transparent benennt, welche Organisationseinheit den Antrag im nächsten Schritt prüft."
+      }
+    ],
+    "recommendations": [
+      {
+        "rule": "HWG-UX-02",
+        "rule_id": "HWG-UX-02",
+        "severity": "recommendation",
+        "message": "[KI-Befund · qwen3.8:27b] Das Formular umfasst 29 Eingabefelder (Schwellenwert: ≥ 25), der Komplexitätsschwellenwert ist somit erreicht. Es ist jedoch keine Zwischenspeicher-Funktion (submitNoCheck-Schaltfläche mit Fortsetzungs-Link [%$URL_FORM%] per E-Mail) vorhanden (has_save_resume_mechanism: false). Antragstellende können die umfangreiche Bearbeitung nicht unterbrechen und später nahtlos fortsetzen. (Betroffen: Master-Formular.xfp (Gesamtformular)) — Vorschlag: Eine Schaltfläche 'Zwischenspeichern' (mit submitNoCheck, d. h. ohne Pflichtfeldvalidierung) ergänzen, die per Workflow-Knoten FC_EMAIL einen Fortsetzungs-Link ([%$URL_FORM%]) an die E-Mail-Adresse der antragstellenden Person versendet. Den Button-Text antragstellendenorientieren, z. B. 'Zwischenspeichern und Fortsetzungslink per E-Mail erhalten'.",
+        "remediation": "Empfehlung (ohne Punktabzug): Legen Sie in der Schaltflächenleiste (XButtonList) eine Schaltfläche 'Zwischenspeichern' mit der Aktion 'absenden' OHNE Pflichtfeldprüfung (submitNoCheck, nicht 'absenden + prüfen'!) an und versenden Sie im Workflow über eine E-Mail-Aktion ('Aktionen -> Allgemein -> E-Mail' / FC_EMAIL) den Fortsetzungs-Link ([%$URL_FORM%])."
+      }
+    ],
+    "passed": [
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-02 (25 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-UX-01 (Affordanzgerechte kompakte Feldbreiten eingehalten)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen)",
+      "HWG-LANG-02 (Die deterministische Satzlängenanalyse ergab keine Sätze mit mehr als 25 Wörtern (sentences_over_25_words_count: 0). Eine semantische Prüfung der sichtbaren Texte (txtDecline, Fieldset-Labels, Feldbezeichnungen) zeigt keine verschachtelten Passivkonstruktionen oder komplexe Behörden-Syntax. Die vorhandenen Passivformen (z. B. 'wird Ihnen dieses Formular nicht angezeigt') sind einfache, kurze Passivsätze innerhalb der Wortgrenze und nicht verschachtelt.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UPLOAD-01": "Keine Dateiupload-Elemente im Formular vorhanden.",
+      "HWG-WF-02": "Keine automatisierten Workflow-E-Mails im Prozessmodell vorhanden.",
+      "HWG-BTN-01": "[KI-Prüfung · qwen3.8:27b] Im Formularextrakt sind keine Schaltflächen hinterlegt (buttons: []). Es existieren keine für Antragstellende sichtbaren Aktionsschaltflächen, die auf das Action-Verb-Pattern geprüft werden könnten. Die Regel ist daher nicht anwendbar."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "http://localhost:11434/v1",
+      "model": "qwen3.8:27b",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'qwen3.8:27b' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 29,
+    "provenance": {
+      "engine_version": "1.6.1",
+      "registry_version": "1.6.1",
+      "prompt_version": "1.6.0",
+      "input_sha256": "015a636f1f06079e74cc02f2f330f6f565c21aa9aba4d3df1e8d0ffb23bac4a1",
+      "stage1_ms": 1.208,
+      "prompt_sha256": "664ebb5f24b428a056704df18ab90fe5e626627e324195ba31fb14fbf76d15cb",
+      "model": "qwen3.8:27b",
+      "api_base": "http://localhost:11434/v1",
+      "llm_latency_ms": 53351.5,
+      "llm_raw_response": "{\n  \"form_name\": \"Master-Formular.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"tfMasterSucheName\", \"fsMasterAntragsteller\", \"fsMasterAntragsteller1\", \"fsMasterAntragsteller2\"],\n      \"finding\": \"Das Feld 'tfMasterSucheName' trägt das Label 'Person (SucheName)', wobei 'SucheName' ein technischer Feldbezeichner ist, der als sichtbarer Bestandteil des Labels erscheint – ein klarer Verstoß gegen das Anti-Pattern 'Technische Feldbezeichner als sichtbares Label'. Zusätzlich enthalten die Fieldset-Labels 'Persönliche Angaben (Shibboleth-Anmeldung)', 'Persönliche Angaben (Systemanmeldung / LDAP)' und 'Persönliche Angaben aus Suchfeld (autocomplete)' technische Implementierungsbegriffe (Shibboleth, LDAP, autocomplete), die für Antragstellende nicht selbsterklärend sind und als sperrige Rollenzusätze/Technikbezeichnungen wirken.\",\n      \"remediation_suggestion\": \"Label von 'tfMasterSucheName' auf 'Person' oder 'Name der Person' ändern und den technischen Bezeichner 'SucheName' entfernen. Fieldset-Labels auf neutrale, antragstellendenorientierte Bezeichnungen umstellen, z. B. 'Persönliche Angaben (über Hochschullogin)', 'Persönliche Angaben (über Systemlogin)' bzw. 'Persönliche Angaben (aus Personensuche)'. Technische Protokollnamen (Shibboleth, LDAP, autocomplete) aus den sichtbaren Labels entfernen.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"txt1\", \"txtDecline\"],\n      \"finding\": \"Das Element 'txt1' enthält den vollständigen Entwicklerkommentar 'Fieldset wird per JavaScript eingeblendet, wenn Shibboleh/LDAP-Member oder FormS-Admin oder FormS-Postfach-SB, ansonsten ausgeblendet (hide)'. Der deterministische Marker '(hide)' sowie die Beschreibung interner Show/Hide-Logik mit Systemrollen (FormS-Admin, FormS-Postfach-SB) sind eindeutig eine interne Konfigurationsnotiz, die nicht an Antragstellende gerichtet ist. In 'txtDecline' ist der Klammerzusatz '(nur mit Shibboleh-Anmeldung = SAML-HSLU)' eine technische Konfigurationsangabe (Authentifizierungsprotokoll und interne Kurzbezeichnung), die als Entwicklerhinweis erkennbar ist und keine antragstellendenorientierte Information darstellt.\",\n      \"remediation_suggestion\": \"Das Element 'txt1' vollständig aus dem Frontend entfernen oder durch eine neutrale, antragstellendenorientierte Erläuterung ersetzen (z. B. 'Diese Angaben werden automatisch aus Ihrem Hochschullogin übernommen.'). Den Klammerzusatz in 'txtDecline' entfernen; falls eine Erläuterung zum Login erforderlich ist, einen verständlichen Hilfetext hinterlegen, z. B. 'Zugang über den offiziellen Hochschul-Login (SSO) erforderlich.'\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Im Formularextrakt sind keine Schaltflächen hinterlegt (buttons: []). Es existieren keine für Antragstellende sichtbaren Aktionsschaltflächen, die auf das Action-Verb-Pattern geprüft werden könnten. Die Regel ist daher nicht anwendbar.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Bei späterer Ergänzung von Absende- oder Prozessschaltflächen sicherstellen, dass diese ein konkretes Vollverb mit Zielobjekt enthalten (z. B. 'Antrag einreichen', 'Bedarfsmeldung absenden').\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"RECOMMENDATION\",\n      \"affected_elements\": [\"Master-Formular.xfp (Gesamtformular)\"],\n      \"finding\": \"Das Formular umfasst 29 Eingabefelder (Schwellenwert: ≥ 25), der Komplexitätsschwellenwert ist somit erreicht. Es ist jedoch keine Zwischenspeicher-Funktion (submitNoCheck-Schaltfläche mit Fortsetzungs-Link [%$URL_FORM%] per E-Mail) vorhanden (has_save_resume_mechanism: false). Antragstellende können die umfangreiche Bearbeitung nicht unterbrechen und später nahtlos fortsetzen.\",\n      \"remediation_suggestion\": \"Eine Schaltfläche 'Zwischenspeichern' (mit submitNoCheck, d. h. ohne Pflichtfeldvalidierung) ergänzen, die per Workflow-Knoten FC_EMAIL einen Fortsetzungs-Link ([%$URL_FORM%]) an die E-Mail-Adresse der antragstellenden Person versendet. Den Button-Text antragstellendenorientieren, z. B. 'Zwischenspeichern und Fortsetzungslink per E-Mail erhalten'.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"fsMasterAntragsteller\", \"fsMasterAntragsteller1\", \"fsMasterAntragsteller2\", \"txtDecline\"],\n      \"finding\": \"Die Fieldset-Labels enthalten unerklärte technische Fachbegriffe: 'Shibboleth-Anmeldung' (fsMasterAntragsteller), 'LDAP' (fsMasterAntragsteller1) und 'autocomplete' (fsMasterAntragsteller2). Keines dieser Elemente verfügt über einen Hilfetext (helptext ist durchgehend leer). In 'txtDecline' erscheinen zusätzlich 'Shibboleh-Anmeldung' (Fehlschreibung) und 'SAML-HSLU' (internes Kurzzeichen) ohne Erläuterung. Diese Begriffe sind für Antragstellende ohne IT-Vorkenntnisse nicht verständlich und werden weder durch einen Hilfetext noch durch den unmittelbaren Kontext erklärt.\",\n      \"remediation_suggestion\": \"Fieldset-Labels in antragstellendenverständliche Sprache umformulieren, z. B. 'Persönliche Angaben (automatisch aus Ihrem Hochschullogin)', 'Persönliche Angaben (automatisch aus Ihrem Systemlogin)', 'Persönliche Angaben (aus der Personensuche)'. In 'txtDecline' die technischen Begriffe durch eine verständliche Formulierung ersetzen, z. B. 'Zugang nur mit gültigem Hochschul-Login möglich.' Ggf. ergänzende Hilfetexte hinterlegen.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Die deterministische Satzlängenanalyse ergab keine Sätze mit mehr als 25 Wörtern (sentences_over_25_words_count: 0). Eine semantische Prüfung der sichtbaren Texte (txtDecline, Fieldset-Labels, Feldbezeichnungen) zeigt keine verschachtelten Passivkonstruktionen oder komplexe Behörden-Syntax. Die vorhandenen Passivformen (z. B. 'wird Ihnen dieses Formular nicht angezeigt') sind einfache, kurze Passivsätze innerhalb der Wortgrenze und nicht verschachtelt.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Bei zukünftigen Textergänzungen die Obergrenze von 25 Wörtern pro Satz und die Vermeidung verschachtelter Passivkonstruktionen beachten.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"Workflow (FC_EMAIL-Knoten)\"],\n      \"finding\": \"Im Workflow-Modell sind keine E-Mail-Knoten (FC_EMAIL) konfiguriert (workflow_emails: [], applicant_addressed_emails_count: 0). Es fehlt somit vollständig eine automatisierte Eingangsbestätigung an die antragstellende Person. Die erforderlichen Informationen – Bestätigung des Eingangs, Benennung der zuständigen Prüfstelle und Beschreibung der nächsten Prozessschritte – werden nach dem Absenden nicht übermittelt.\",\n      \"remediation_suggestion\": \"Im Formcycle-Workflow mindestens einen FC_EMAIL-Knoten anlegen, der direkt an die E-Mail-Adresse der antragstellenden Person (dynamischer Platzhalter, z. B. [%$EMAIL%]) adressiert ist. Der E-Mail-Text muss enthalten: (1) Bestätigung des Antragseingangs, (2) Benennung der zuständigen Prüfstelle (z. B. 'Zentrale Finanzkasse' oder 'Finanzabteilung'), (3) kurze Beschreibung der nächsten Schritte (z. B. 'Ihr Antrag wird innerhalb von 10 Werktagen geprüft. Sie erhalten eine separate Benachrichtigung über das Ergebnis.').\"\n    }\n  ]\n}"
+    },
+    "critical_count": 2,
+    "release_status": "red_blocked",
+    "release_label": "Kritisch unzureichend (Gesperrt)",
+    "is_releasable": false
+  }
+}

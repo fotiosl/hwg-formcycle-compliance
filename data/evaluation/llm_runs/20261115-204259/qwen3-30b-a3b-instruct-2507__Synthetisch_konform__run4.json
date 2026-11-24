@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "model": "qwen3-30b-a3b-instruct-2507",
+    "form": "Synthetisch konform",
+    "run": 4,
+    "wall_ms": 7076.2,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "PASS",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 100,
+    "release_status": "green_compliant",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'qwen3-30b-a3b-instruct-2507' abgeschlossen.",
+    "llm_latency_ms": 7072.9,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "synthetic_compliant_form.xfp",
+    "violations": [],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (7 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Beschriftungen ohne Pipe-Zeichen, Pfeile und sichtbare Code-Reste)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-UPLOAD-01 (Alle Dateiuploads technisch und im Hilfetext konsistent spezifiziert)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-UX-01 (Affordanzgerechte kompakte Feldbreiten eingehalten)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 1/1 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Alle Feldbezeichnungen für persönliche Stammdaten entsprechen den standardisierten Mustern: 'Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' und 'Telefonnummer' sind korrekt und konsistent verwendet. Es gibt keine Sammelfelder oder technischen Bezeichner.)",
+      "HWG-UI-01 (Keine sichtbaren Entwickler-Notizen oder Code-Artefakte wurden erkannt. Die Liste der sichtbaren UI-Elemente enthält keine generischen Marker wie 'TODO', 'display:none' oder 'lorem ipsum'. Keine Kandidaten für interne Notizen wurden identifiziert.)",
+      "HWG-BTN-01 (Die Schaltfläche 'Antrag einreichen' enthält ein konkretes Vollverb im Infinitiv ('einreichen') mit dem Zielobjekt 'Antrag', was der Regel entspricht. Es handelt sich um eine aktionsorientierte, eindeutige Beschriftung.)",
+      "HWG-LANG-01 (Die Begriffe 'DSGVO', 'Studierendensekretariat' und 'Vorgangsnummer' sind in den Hinweistexten enthalten. 'DSGVO' ist ein allgemein bekannter Begriff und wird im Kontext klar verständlich verwendet. 'Studierendensekretariat' ist eine offizielle Einrichtung der Hochschule und im Kontext nachvollziehbar. 'Vorgangsnummer' ist ein standardisierter Begriff im Hochschulverwaltungsumfeld. Keine unerklärten Fachbegriffe ohne Hilfetext gefunden.)",
+      "HWG-LANG-02 (Der Text 'Weiterer Ablauf: Nach dem Absenden wird Ihr Antrag geprüft. Die reguläre Bearbeitungsdauer beträgt ca. 10 Werktage. Sie erhalten den schriftlichen Bescheid per E-Mail.' enthält drei Sätze mit 10, 10 und 7 Wörtern – alle unter der Grenze von 25 Wörtern. Es gibt keine verschachtelten Passivkonstruktionen oder Behördensyntax.)",
+      "HWG-FEEDBACK-01 (Die Workflow-E-Mail ist an die antragstellende Person (via [%tfEmail%]) adressiert. Sie enthält eine automatisierte Eingangsbestätigung, nennt die zuständige Stelle ('Studierendensekretariat der HWG Ludwigshafen') und informiert über die nächsten Schritte ('Über die weiteren Prozessschritte und die Entscheidung werden Sie per E-Mail informiert').)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UX-02": "[KI-Prüfung · qwen3-30b-a3b-instruct-2507] Das Formular umfasst nur 1 Seite und 9 Eingabefelder, was unter den Schwellenwerten von 3 Seiten oder 25 Eingabefeldern liegt. Daher ist die Empfehlung zum Zwischenspeichern nicht anwendbar."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'qwen3-30b-a3b-instruct-2507' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 100,
+    "provenance": {
+      "engine_version": "1.7.0",
+      "registry_version": "1.7.0",
+      "prompt_version": "1.6.6",
+      "input_sha256": "525816e6377865052a3d67ec4635aaa8f4f20b55ed8d240e83fce756d2f9cf93",
+      "stage1_ms": 0.675,
+      "prompt_sha256": "ea7073a0ed4c6c36c2483a9fe044915e214de6589571901cff98c2725f3ee0f0",
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 7072.9,
+      "llm_raw_response": "{\n  \"form_name\": \"synthetic_compliant_form.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"selAnrede\",\n        \"tfVorname\",\n        \"tfNachname\",\n        \"tfEmail\",\n        \"tfTelefon\"\n      ],\n      \"finding\": \"Alle Feldbezeichnungen für persönliche Stammdaten entsprechen den standardisierten Mustern: 'Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' und 'Telefonnummer' sind korrekt und konsistent verwendet. Es gibt keine Sammelfelder oder technischen Bezeichner.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die Feldbezeichnungen entsprechen den HWG-Standardvorgaben.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Keine sichtbaren Entwickler-Notizen oder Code-Artefakte wurden erkannt. Die Liste der sichtbaren UI-Elemente enthält keine generischen Marker wie 'TODO', 'display:none' oder 'lorem ipsum'. Keine Kandidaten für interne Notizen wurden identifiziert.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Das Formular ist frei von sichtbaren Entwicklerkommentaren oder Code-Artefakten.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"btnSubmit\"\n      ],\n      \"finding\": \"Die Schaltfläche 'Antrag einreichen' enthält ein konkretes Vollverb im Infinitiv ('einreichen') mit dem Zielobjekt 'Antrag', was der Regel entspricht. Es handelt sich um eine aktionsorientierte, eindeutige Beschriftung.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die Schaltfläche erfüllt die Anforderungen an die Aktionsschaltflächen-Semantik.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Das Formular umfasst nur 1 Seite und 9 Eingabefelder, was unter den Schwellenwerten von 3 Seiten oder 25 Eingabefeldern liegt. Daher ist die Empfehlung zum Zwischenspeichern nicht anwendbar.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die Komplexität des Formulars liegt unter dem Schwellenwert für die Empfehlung.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"txtDatenschutzHinweis\",\n        \"txtVerfahrensablauf\"\n      ],\n      \"finding\": \"Die Begriffe 'DSGVO', 'Studierendensekretariat' und 'Vorgangsnummer' sind in den Hinweistexten enthalten. 'DSGVO' ist ein allgemein bekannter Begriff und wird im Kontext klar verständlich verwendet. 'Studierendensekretariat' ist eine offizielle Einrichtung der Hochschule und im Kontext nachvollziehbar. 'Vorgangsnummer' ist ein standardisierter Begriff im Hochschulverwaltungsumfeld. Keine unerklärten Fachbegriffe ohne Hilfetext gefunden.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Alle Fachbegriffe sind im Kontext verständlich oder durch die allgemeine Verbreitung bekannt.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"txtVerfahrensablauf\"\n      ],\n      \"finding\": \"Der Text 'Weiterer Ablauf: Nach dem Absenden wird Ihr Antrag geprüft. Die reguläre Bearbeitungsdauer beträgt ca. 10 Werktage. Sie erhalten den schriftlichen Bescheid per E-Mail.' enthält drei Sätze mit 10, 10 und 7 Wörtern – alle unter der Grenze von 25 Wörtern. Es gibt keine verschachtelten Passivkonstruktionen oder Behördensyntax.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die Formulierung ist prägnant und barrierearm.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"E-Mail Eingangsbestätigung an Antragstellende\"\n      ],\n      \"finding\": \"Die Workflow-E-Mail ist an die antragstellende Person (via [%tfEmail%]) adressiert. Sie enthält eine automatisierte Eingangsbestätigung, nennt die zuständige Stelle ('Studierendensekretariat der HWG Ludwigshafen') und informiert über die nächsten Schritte ('Über die weiteren Prozessschritte und die Entscheidung werden Sie per E-Mail informiert').\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die E-Mail erfüllt alle Anforderungen an Prozesstransparenz.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 0,
+    "release_status": "green_compliant",
+    "release_label": "Konform (Freigabefähig)",
+    "is_releasable": true
+  }
+}

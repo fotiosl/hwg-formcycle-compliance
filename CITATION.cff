@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "Bitte zitieren Sie die zugehörige Bachelorarbeit, wenn Sie diese Artefakte verwenden."
+title: "Formular-Standard und KI-gestützte Compliance-Prüfung für Formcycle – Artefakte zur Bachelorarbeit"
+type: software
+authors:
+  - family-names: Logaras
+    given-names: Fotios
+    affiliation: "Hochschule für Wirtschaft und Gesellschaft Ludwigshafen"
+version: "1.7.0"
+doi: 10.5281/zenodo.24513486
+date-released: 2026-11-24
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/fotiosl/hwg-formcycle-compliance"
+keywords:
+  - Formcycle
+  - Online-Formulare
+  - Barrierefreiheit
+  - Compliance-Prüfung
+  - Large Language Model
+preferred-citation:
+  type: thesis
+  thesis-type: Bachelorarbeit
+  title: "Konzeption eines einheitlichen Formular-Standards für die HWG Ludwigshafen und prototypische Umsetzung einer KI-gestützten Compliance-Prüfung in Formcycle"
+  authors:
+    - family-names: Logaras
+      given-names: Fotios
+  institution:
+    name: "Hochschule für Wirtschaft und Gesellschaft Ludwigshafen"
+  year: 2026

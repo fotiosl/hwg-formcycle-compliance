@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "model": "qwen3.8-27b",
+    "form": "Synthetisch konform",
+    "run": 4,
+    "wall_ms": 178245.9,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "PASS",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 100,
+    "release_status": "green_compliant",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'qwen3.8-27b' abgeschlossen.",
+    "llm_latency_ms": 178242.5,
+    "attempts": 4,
+    "transport_error": false
+  },
+  "result": {
+    "form": "synthetic_compliant_form.xfp",
+    "violations": [],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (7 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Saubere Label-Syntax ohne störende HTML-Fragmente)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-UPLOAD-01 (Alle Dateiuploads technisch und im Hilfetext konsistent spezifiziert)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-UX-01 (Affordanzgerechte kompakte Feldbreiten eingehalten)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 1/1 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Die Labels 'Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' und 'Telefonnummer' entsprechen den canonical patterns; keine Sammelfelder, mehrdeutigen Kurzbezeichnungen oder technischen Feldbezeichner.)",
+      "HWG-UI-01 (In den sichtbaren UI-Elementen wurden keine Entwickler-Notizen, Code-Artefakte, TODO/fixme-Marker, CSS- oder Skriptreste oder redaktionelle Arbeitsnotizen festgestellt.)",
+      "HWG-BTN-01 (Die sichtbare Absende-Schaltfläche 'Antrag einreichen' enthält ein konkretes Vollverb im Infinitiv mit Zielobjekt und beschreibt die Transaktion eindeutig.)",
+      "HWG-LANG-01 (Die Begriffe 'IBAN', 'DSGVO' und 'HWG' sind im jeweiligen Kontext (Bankverbindung, Datenschutzerklärung, Hochschule) verständlich; keine internen Organisationskürzel ohne Erklärung. Die Sie-Ansprache ist durchgängig.)",
+      "HWG-LANG-02 (Keine Sätze mit mehr als 25 Wörtern; die vorhandenen Passivkonstruktionen sind einfach und nicht verschachtelt.)",
+      "HWG-FEEDBACK-01 (Die an [%tfEmail%] adressierte E-Mail bestätigt den Eingang, benennt das Studierendensekretariat der HWG Ludwigshafen als Prüfstelle und informiert über die Prüfung sowie die weitere Benachrichtigung über Prozessschritte und Entscheidung.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UX-02": "[KI-Prüfung · qwen3.8-27b] Der Komplexitätsschwellenwert ist nicht erreicht (1 Seite, 9 Eingabefelder), daher ist die Empfehlung nicht anwendbar."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "qwen3.8-27b",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'qwen3.8-27b' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 100,
+    "provenance": {
+      "engine_version": "1.6.0",
+      "registry_version": "1.6.0",
+      "prompt_version": "1.6.0",
+      "input_sha256": "525816e6377865052a3d67ec4635aaa8f4f20b55ed8d240e83fce756d2f9cf93",
+      "stage1_ms": 0.638,
+      "prompt_sha256": "3fc2458536ecf6f8ddf89d179ec341a30795fdd45f1c45d4c9a198d13b55e6fe",
+      "model": "qwen3.8-27b",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 178242.5,
+      "llm_raw_response": "\n\n{\n  \"form_name\": \"synthetic_compliant_form.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"selAnrede\",\n        \"tfVorname\",\n        \"tfNachname\",\n        \"tfEmail\",\n        \"tfTelefon\"\n      ],\n      \"finding\": \"Die Labels 'Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' und 'Telefonnummer' entsprechen den canonical patterns; keine Sammelfelder, mehrdeutigen Kurzbezeichnungen oder technischen Feldbezeichner.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"txtFormTitle\",\n        \"fsPersoenlicheAngaben\",\n        \"selAnrede\",\n        \"tfVorname\",\n        \"tfNachname\",\n        \"tfEmail\",\n        \"tfTelefon\",\n        \"fsAnschriftBank\",\n        \"tfPLZ\",\n        \"tfOrt\",\n        \"tfIBAN\",\n        \"uplNachweise\",\n        \"fsDatenschutzAblauf\",\n        \"txtDatenschutzHinweis\",\n        \"txtVerfahrensablauf\"\n      ],\n      \"finding\": \"In den sichtbaren UI-Elementen wurden keine Entwickler-Notizen, Code-Artefakte, TODO/fixme-Marker, CSS- oder Skriptreste oder redaktionelle Arbeitsnotizen festgestellt.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"btnSubmit\"\n      ],\n      \"finding\": \"Die sichtbare Absende-Schaltfläche 'Antrag einreichen' enthält ein konkretes Vollverb im Infinitiv mit Zielobjekt und beschreibt die Transaktion eindeutig.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Der Komplexitätsschwellenwert ist nicht erreicht (1 Seite, 9 Eingabefelder), daher ist die Empfehlung nicht anwendbar.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich, da der Komplexitätsschwellenwert nicht erreicht ist.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"tfIBAN\",\n        \"txtDatenschutzHinweis\",\n        \"txtVerfahrensablauf\"\n      ],\n      \"finding\": \"Die Begriffe 'IBAN', 'DSGVO' und 'HWG' sind im jeweiligen Kontext (Bankverbindung, Datenschutzerklärung, Hochschule) verständlich; keine internen Organisationskürzel ohne Erklärung. Die Sie-Ansprache ist durchgängig.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"uplNachweise\",\n        \"txtDatenschutzHinweis\",\n        \"txtVerfahrensablauf\"\n      ],\n      \"finding\": \"Keine Sätze mit mehr als 25 Wörtern; die vorhandenen Passivkonstruktionen sind einfach und nicht verschachtelt.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"E-Mail Eingangsbestätigung an Antragstellende\"\n      ],\n      \"finding\": \"Die an [%tfEmail%] adressierte E-Mail bestätigt den Eingang, benennt das Studierendensekretariat der HWG Ludwigshafen als Prüfstelle und informiert über die Prüfung sowie die weitere Benachrichtigung über Prozessschritte und Entscheidung.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 0,
+    "release_status": "green_compliant",
+    "release_label": "Konform (Freigabefähig)",
+    "is_releasable": true
+  }
+}

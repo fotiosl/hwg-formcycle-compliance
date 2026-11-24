@@ -1,0 +1,1786 @@
+{
+  "registry_version": "1.7.0",
+  "note": "Nur Stufe 1 (deterministisch); semantische Regeln sind hier nicht enthalten.",
+  "views": {
+    "unique_25": {
+      "label": "25 fachlich eigenständige Formulare",
+      "n": 25,
+      "width_700px": 13,
+      "width_850px_only": 12,
+      "no_fieldset_at_all": 13,
+      "wf02_no_id": 18,
+      "wf02_partial": 1,
+      "no_workflow_emails": 3,
+      "multi_inbox_workflows": 17,
+      "release_status": {
+        "red_blocked": 25
+      },
+      "stage1_score_median": 30,
+      "stage1_score_max": 43,
+      "per_rule": {
+        "HWG-A11Y-01": {
+          "violations": 17,
+          "not_applicable": 0,
+          "applicable": 25,
+          "share_of_all_pct": 68.0,
+          "share_of_applicable_pct": 68.0
+        },
+        "HWG-A11Y-02": {
+          "violations": 0,
+          "not_applicable": 1,
+          "applicable": 24,
+          "share_of_all_pct": 0.0,
+          "share_of_applicable_pct": 0.0
+        },
+        "HWG-A11Y-03": {
+          "violations": 7,
+          "not_applicable": 0,
+          "applicable": 25,
+          "share_of_all_pct": 28.0,
+          "share_of_applicable_pct": 28.0
+        },
+        "HWG-BTN-02": {
+          "violations": 6,
+          "not_applicable": 9,
+          "applicable": 16,
+          "share_of_all_pct": 24.0,
+          "share_of_applicable_pct": 37.5
+        },
+        "HWG-CD-01": {
+          "violations": 13,
+          "not_applicable": 0,
+          "applicable": 25,
+          "share_of_all_pct": 52.0,
+          "share_of_applicable_pct": 52.0
+        },
+        "HWG-CD-02": {
+          "violations": 25,
+          "not_applicable": 0,
+          "applicable": 25,
+          "share_of_all_pct": 100.0,
+          "share_of_applicable_pct": 100.0
+        },
+        "HWG-CD-03": {
+          "violations": 13,
+          "not_applicable": 0,
+          "applicable": 25,
+          "share_of_all_pct": 52.0,
+          "share_of_applicable_pct": 52.0
+        },
+        "HWG-CD-04": {
+          "violations": 24,
+          "not_applicable": 0,
+          "applicable": 25,
+          "share_of_all_pct": 96.0,
+          "share_of_applicable_pct": 96.0
+        },
+        "HWG-DSGVO-01": {
+          "violations": 22,
+          "not_applicable": 0,
+          "applicable": 25,
+          "share_of_all_pct": 88.0,
+          "share_of_applicable_pct": 88.0
+        },
+        "HWG-LANG-02": {
+          "violations": 6,
+          "not_applicable": 0,
+          "applicable": 25,
+          "share_of_all_pct": 24.0,
+          "share_of_applicable_pct": 24.0
+        },
+        "HWG-STAMM-01": {
+          "violations": 10,
+          "not_applicable": 3,
+          "applicable": 22,
+          "share_of_all_pct": 40.0,
+          "share_of_applicable_pct": 45.5
+        },
+        "HWG-UI-01": {
+          "violations": 1,
+          "not_applicable": 0,
+          "applicable": 25,
+          "share_of_all_pct": 4.0,
+          "share_of_applicable_pct": 4.0
+        },
+        "HWG-UPLOAD-01": {
+          "violations": 15,
+          "not_applicable": 10,
+          "applicable": 15,
+          "share_of_all_pct": 60.0,
+          "share_of_applicable_pct": 100.0
+        },
+        "HWG-UX-01": {
+          "violations": 0,
+          "not_applicable": 19,
+          "applicable": 6,
+          "share_of_all_pct": 0.0,
+          "share_of_applicable_pct": 0.0
+        },
+        "HWG-UX-02": {
+          "violations": 0,
+          "not_applicable": 3,
+          "applicable": 22,
+          "share_of_all_pct": 0.0,
+          "share_of_applicable_pct": 0.0
+        },
+        "HWG-VAL-01": {
+          "violations": 18,
+          "not_applicable": 0,
+          "applicable": 25,
+          "share_of_all_pct": 72.0,
+          "share_of_applicable_pct": 72.0
+        },
+        "HWG-WF-01": {
+          "violations": 22,
+          "not_applicable": 0,
+          "applicable": 25,
+          "share_of_all_pct": 88.0,
+          "share_of_applicable_pct": 88.0
+        },
+        "HWG-WF-02": {
+          "violations": 19,
+          "not_applicable": 3,
+          "applicable": 22,
+          "share_of_all_pct": 76.0,
+          "share_of_applicable_pct": 86.4
+        }
+      }
+    },
+    "prod_13": {
+      "label": "13 Produktivformulare",
+      "n": 13,
+      "width_700px": 7,
+      "width_850px_only": 6,
+      "no_fieldset_at_all": 5,
+      "wf02_no_id": 8,
+      "wf02_partial": 1,
+      "no_workflow_emails": 1,
+      "multi_inbox_workflows": 12,
+      "release_status": {
+        "red_blocked": 13
+      },
+      "stage1_score_median": 30,
+      "stage1_score_max": 43,
+      "per_rule": {
+        "HWG-A11Y-01": {
+          "violations": 7,
+          "not_applicable": 0,
+          "applicable": 13,
+          "share_of_all_pct": 53.8,
+          "share_of_applicable_pct": 53.8
+        },
+        "HWG-A11Y-03": {
+          "violations": 4,
+          "not_applicable": 0,
+          "applicable": 13,
+          "share_of_all_pct": 30.8,
+          "share_of_applicable_pct": 30.8
+        },
+        "HWG-BTN-02": {
+          "violations": 4,
+          "not_applicable": 2,
+          "applicable": 11,
+          "share_of_all_pct": 30.8,
+          "share_of_applicable_pct": 36.4
+        },
+        "HWG-CD-01": {
+          "violations": 7,
+          "not_applicable": 0,
+          "applicable": 13,
+          "share_of_all_pct": 53.8,
+          "share_of_applicable_pct": 53.8
+        },
+        "HWG-CD-02": {
+          "violations": 13,
+          "not_applicable": 0,
+          "applicable": 13,
+          "share_of_all_pct": 100.0,
+          "share_of_applicable_pct": 100.0
+        },
+        "HWG-CD-03": {
+          "violations": 6,
+          "not_applicable": 0,
+          "applicable": 13,
+          "share_of_all_pct": 46.2,
+          "share_of_applicable_pct": 46.2
+        },
+        "HWG-CD-04": {
+          "violations": 13,
+          "not_applicable": 0,
+          "applicable": 13,
+          "share_of_all_pct": 100.0,
+          "share_of_applicable_pct": 100.0
+        },
+        "HWG-DSGVO-01": {
+          "violations": 12,
+          "not_applicable": 0,
+          "applicable": 13,
+          "share_of_all_pct": 92.3,
+          "share_of_applicable_pct": 92.3
+        },
+        "HWG-LANG-02": {
+          "violations": 4,
+          "not_applicable": 0,
+          "applicable": 13,
+          "share_of_all_pct": 30.8,
+          "share_of_applicable_pct": 30.8
+        },
+        "HWG-STAMM-01": {
+          "violations": 5,
+          "not_applicable": 2,
+          "applicable": 11,
+          "share_of_all_pct": 38.5,
+          "share_of_applicable_pct": 45.5
+        },
+        "HWG-UPLOAD-01": {
+          "violations": 10,
+          "not_applicable": 3,
+          "applicable": 10,
+          "share_of_all_pct": 76.9,
+          "share_of_applicable_pct": 100.0
+        },
+        "HWG-UX-01": {
+          "violations": 0,
+          "not_applicable": 10,
+          "applicable": 3,
+          "share_of_all_pct": 0.0,
+          "share_of_applicable_pct": 0.0
+        },
+        "HWG-VAL-01": {
+          "violations": 11,
+          "not_applicable": 0,
+          "applicable": 13,
+          "share_of_all_pct": 84.6,
+          "share_of_applicable_pct": 84.6
+        },
+        "HWG-WF-01": {
+          "violations": 12,
+          "not_applicable": 0,
+          "applicable": 13,
+          "share_of_all_pct": 92.3,
+          "share_of_applicable_pct": 92.3
+        },
+        "HWG-WF-02": {
+          "violations": 9,
+          "not_applicable": 1,
+          "applicable": 12,
+          "share_of_all_pct": 69.2,
+          "share_of_applicable_pct": 75.0
+        }
+      }
+    },
+    "all_34": {
+      "label": "34 Exportarchive inkl. Dubletten",
+      "n": 34,
+      "width_700px": 18,
+      "width_850px_only": 16,
+      "no_fieldset_at_all": 16,
+      "wf02_no_id": 24,
+      "wf02_partial": 2,
+      "no_workflow_emails": 3,
+      "multi_inbox_workflows": 26,
+      "release_status": {
+        "red_blocked": 34
+      },
+      "stage1_score_median": 30.0,
+      "stage1_score_max": 43,
+      "per_rule": {
+        "HWG-A11Y-01": {
+          "violations": 22,
+          "not_applicable": 0,
+          "applicable": 34,
+          "share_of_all_pct": 64.7,
+          "share_of_applicable_pct": 64.7
+        },
+        "HWG-A11Y-02": {
+          "violations": 0,
+          "not_applicable": 1,
+          "applicable": 33,
+          "share_of_all_pct": 0.0,
+          "share_of_applicable_pct": 0.0
+        },
+        "HWG-A11Y-03": {
+          "violations": 10,
+          "not_applicable": 0,
+          "applicable": 34,
+          "share_of_all_pct": 29.4,
+          "share_of_applicable_pct": 29.4
+        },
+        "HWG-BTN-02": {
+          "violations": 9,
+          "not_applicable": 10,
+          "applicable": 24,
+          "share_of_all_pct": 26.5,
+          "share_of_applicable_pct": 37.5
+        },
+        "HWG-CD-01": {
+          "violations": 18,
+          "not_applicable": 0,
+          "applicable": 34,
+          "share_of_all_pct": 52.9,
+          "share_of_applicable_pct": 52.9
+        },
+        "HWG-CD-02": {
+          "violations": 34,
+          "not_applicable": 0,
+          "applicable": 34,
+          "share_of_all_pct": 100.0,
+          "share_of_applicable_pct": 100.0
+        },
+        "HWG-CD-03": {
+          "violations": 16,
+          "not_applicable": 0,
+          "applicable": 34,
+          "share_of_all_pct": 47.1,
+          "share_of_applicable_pct": 47.1
+        },
+        "HWG-CD-04": {
+          "violations": 33,
+          "not_applicable": 0,
+          "applicable": 34,
+          "share_of_all_pct": 97.1,
+          "share_of_applicable_pct": 97.1
+        },
+        "HWG-DSGVO-01": {
+          "violations": 31,
+          "not_applicable": 0,
+          "applicable": 34,
+          "share_of_all_pct": 91.2,
+          "share_of_applicable_pct": 91.2
+        },
+        "HWG-LANG-02": {
+          "violations": 8,
+          "not_applicable": 0,
+          "applicable": 34,
+          "share_of_all_pct": 23.5,
+          "share_of_applicable_pct": 23.5
+        },
+        "HWG-STAMM-01": {
+          "violations": 13,
+          "not_applicable": 3,
+          "applicable": 31,
+          "share_of_all_pct": 38.2,
+          "share_of_applicable_pct": 41.9
+        },
+        "HWG-UI-01": {
+          "violations": 1,
+          "not_applicable": 0,
+          "applicable": 34,
+          "share_of_all_pct": 2.9,
+          "share_of_applicable_pct": 2.9
+        },
+        "HWG-UPLOAD-01": {
+          "violations": 22,
+          "not_applicable": 12,
+          "applicable": 22,
+          "share_of_all_pct": 64.7,
+          "share_of_applicable_pct": 100.0
+        },
+        "HWG-UX-01": {
+          "violations": 0,
+          "not_applicable": 26,
+          "applicable": 8,
+          "share_of_all_pct": 0.0,
+          "share_of_applicable_pct": 0.0
+        },
+        "HWG-UX-02": {
+          "violations": 0,
+          "not_applicable": 3,
+          "applicable": 31,
+          "share_of_all_pct": 0.0,
+          "share_of_applicable_pct": 0.0
+        },
+        "HWG-VAL-01": {
+          "violations": 25,
+          "not_applicable": 0,
+          "applicable": 34,
+          "share_of_all_pct": 73.5,
+          "share_of_applicable_pct": 73.5
+        },
+        "HWG-WF-01": {
+          "violations": 31,
+          "not_applicable": 0,
+          "applicable": 34,
+          "share_of_all_pct": 91.2,
+          "share_of_applicable_pct": 91.2
+        },
+        "HWG-WF-02": {
+          "violations": 26,
+          "not_applicable": 3,
+          "applicable": 31,
+          "share_of_all_pct": 76.5,
+          "share_of_applicable_pct": 83.9
+        }
+      }
+    }
+  },
+  "forms": [
+    {
+      "file": "data/raw_forms/prod/01_Veranstaltungsmanagement.xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 9,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-STAMM-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "critical",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-STAMM-01": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 23,
+      "emails_with_id": 0,
+      "inboxes": 5
+    },
+    {
+      "file": "data/raw_forms/prod/A Externe Weiterbildung.xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 35,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-BTN-02",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-STAMM-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-STAMM-01": "major",
+        "HWG-BTN-02": "minor",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 7,
+      "emails_total": 18,
+      "emails_with_id": 0,
+      "inboxes": 8
+    },
+    {
+      "file": "data/raw_forms/prod/A Neu Beschaffungsantrag.xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 27,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-STAMM-01",
+        "HWG-VAL-01",
+        "HWG-WF-01"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "major",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-STAMM-01": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor"
+      },
+      "not_applicable": [
+        "HWG-UPLOAD-01",
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 12,
+      "emails_with_id": 12,
+      "inboxes": 9
+    },
+    {
+      "file": "data/raw_forms/prod/Auslagenerstattung _20260929.xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 39,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 11,
+      "emails_total": 14,
+      "emails_with_id": 0,
+      "inboxes": 7
+    },
+    {
+      "file": "data/raw_forms/prod/Bedarfsmeldung für Digitalisierungsmaßnahmen (online).xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 17,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "critical",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-STAMM-01",
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 14,
+      "emails_with_id": 0,
+      "inboxes": 5
+    },
+    {
+      "file": "data/raw_forms/prod/FB1-GiP_Praktikum_final_20251115.xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 36,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-03",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-03": "minor",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-BTN-02"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 20,
+      "emails_total": 30,
+      "emails_with_id": 0,
+      "inboxes": 9
+    },
+    {
+      "file": "data/raw_forms/prod/FB1_PraktikumBMC20251217_final.xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 28,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-03",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-STAMM-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-03": "minor",
+        "HWG-STAMM-01": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-BTN-02"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 19,
+      "emails_total": 20,
+      "emails_with_id": 0,
+      "inboxes": 9
+    },
+    {
+      "file": "data/raw_forms/prod/HaushaltVergabevermerk_20251111.xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 32,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-BTN-02",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-BTN-02": "minor",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 12,
+      "emails_total": 13,
+      "emails_with_id": 13,
+      "inboxes": 5
+    },
+    {
+      "file": "data/raw_forms/prod/KI-Beschaffung.xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 14,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-LANG-02",
+        "HWG-STAMM-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "critical",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-STAMM-01": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor",
+        "HWG-LANG-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UPLOAD-01",
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 8,
+      "emails_with_id": 0,
+      "inboxes": 5
+    },
+    {
+      "file": "data/raw_forms/prod/Personal_Stellenausschreibung_final.xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 30,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-03",
+        "HWG-BTN-02",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-LANG-02",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-03": "minor",
+        "HWG-BTN-02": "minor",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor",
+        "HWG-LANG-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 21,
+      "emails_total": 19,
+      "emails_with_id": 18,
+      "inboxes": 5
+    },
+    {
+      "file": "data/raw_forms/prod/Personal_Vertragsaenderung_20260623_final.xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 30,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-03",
+        "HWG-BTN-02",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-LANG-02",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-03": "minor",
+        "HWG-BTN-02": "minor",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor",
+        "HWG-LANG-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 22,
+      "emails_total": 29,
+      "emails_with_id": 0,
+      "inboxes": 7
+    },
+    {
+      "file": "data/raw_forms/prod/ZFK Antragsübersicht.xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 43,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-LANG-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "major",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-DSGVO-01": "critical",
+        "HWG-LANG-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-STAMM-01",
+        "HWG-UPLOAD-01",
+        "HWG-UX-01",
+        "HWG-WF-02"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 0,
+      "emails_with_id": 0,
+      "inboxes": 0
+    },
+    {
+      "file": "data/raw_forms/prod/ZFK-Fördermittel (20260227).xfp",
+      "system": "prod",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 35,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-UPLOAD-01",
+        "HWG-WF-01"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-WF-01": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 18,
+      "emails_total": 60,
+      "emails_with_id": 60,
+      "inboxes": 12
+    },
+    {
+      "file": "data/raw_forms/test/adminformulare/Authentifizierung Landes-IDP (SAML 2.0).xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "Authentifizierungsbeispiel",
+      "score": 39,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "critical",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-DSGVO-01": "critical"
+      },
+      "not_applicable": [
+        "HWG-A11Y-02",
+        "HWG-BTN-02",
+        "HWG-UPLOAD-01",
+        "HWG-UX-01",
+        "HWG-UX-02",
+        "HWG-WF-02"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 0,
+      "emails_with_id": 0,
+      "inboxes": 0
+    },
+    {
+      "file": "data/raw_forms/test/adminformulare/Master-Formular.xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "Kopiervorlage",
+      "score": 43,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-A11Y-03",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-UI-01",
+        "HWG-VAL-01"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-A11Y-03": "minor",
+        "HWG-VAL-01": "major",
+        "HWG-UI-01": "critical"
+      },
+      "not_applicable": [
+        "HWG-BTN-02",
+        "HWG-UPLOAD-01",
+        "HWG-WF-02"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 4,
+      "emails_total": 0,
+      "emails_with_id": 0,
+      "inboxes": 0
+    },
+    {
+      "file": "data/raw_forms/test/adminformulare/SG1_Genehmigung_Anzeige_Nebentätigkeit.xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 30,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-BTN-02",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "critical",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-BTN-02": "minor",
+        "HWG-DSGVO-01": "critical",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UPLOAD-01",
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 11,
+      "emails_with_id": 0,
+      "inboxes": 1
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/01_Veranstaltungsmanagement.xfp",
+      "system": "test",
+      "duplicate_of_prod": true,
+      "status_note": "",
+      "score": 9,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-STAMM-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "critical",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-STAMM-01": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 20,
+      "emails_with_id": 0,
+      "inboxes": 5
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/3 IT Systeme .xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 25,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "critical",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-DSGVO-01": "critical",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UPLOAD-01",
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 28,
+      "emails_with_id": 0,
+      "inboxes": 9
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/A Neu Beschaffungsantrag.xfp",
+      "system": "test",
+      "duplicate_of_prod": true,
+      "status_note": "",
+      "score": 24,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-STAMM-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "major",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-STAMM-01": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UPLOAD-01",
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 13,
+      "emails_with_id": 0,
+      "inboxes": 9
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/AFörderung Antrag-Sprints für Drittmittelanträge.xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 25,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-STAMM-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "critical",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-STAMM-01": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-BTN-02",
+        "HWG-UPLOAD-01",
+        "HWG-UX-01",
+        "HWG-UX-02"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 8,
+      "emails_with_id": 0,
+      "inboxes": 1
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/Antrag auf Förderung Forschungsprojekte_Promotionsvorhaben.xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 25,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-STAMM-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "critical",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-STAMM-01": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-BTN-02",
+        "HWG-UPLOAD-01",
+        "HWG-UX-01",
+        "HWG-UX-02"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 8,
+      "emails_with_id": 0,
+      "inboxes": 1
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/Antrag auf Förderung für Durchführung von F&T-Veranstaltungen.xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 25,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-STAMM-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "critical",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-STAMM-01": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-BTN-02",
+        "HWG-UPLOAD-01",
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 8,
+      "emails_with_id": 0,
+      "inboxes": 1
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/Auslagenerstattung _20260915.xfp",
+      "system": "test",
+      "duplicate_of_prod": true,
+      "status_note": "",
+      "score": 39,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 11,
+      "emails_total": 14,
+      "emails_with_id": 0,
+      "inboxes": 7
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/Bedarfsanforderung Veranstaltungsmanagement.xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 16,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-STAMM-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "major",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-STAMM-01": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 15,
+      "emails_with_id": 0,
+      "inboxes": 3
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/ExtWeiterbildung.xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 38,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-STAMM-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-STAMM-01": "major",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-BTN-02",
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 8,
+      "emails_total": 18,
+      "emails_with_id": 0,
+      "inboxes": 3
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/FB1-GiP_Praktikum_final-20251115.xfp",
+      "system": "test",
+      "duplicate_of_prod": true,
+      "status_note": "",
+      "score": 36,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-03",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-03": "minor",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-BTN-02"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 20,
+      "emails_total": 29,
+      "emails_with_id": 0,
+      "inboxes": 9
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/HaushaltVergabevermerk3000_20251110.xfp",
+      "system": "test",
+      "duplicate_of_prod": true,
+      "status_note": "",
+      "score": 32,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-BTN-02",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-BTN-02": "minor",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 12,
+      "emails_total": 13,
+      "emails_with_id": 13,
+      "inboxes": 5
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/KI-Beschaffung.xfp",
+      "system": "test",
+      "duplicate_of_prod": true,
+      "status_note": "",
+      "score": 14,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-LANG-02",
+        "HWG-STAMM-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "critical",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-STAMM-01": "major",
+        "HWG-DSGVO-01": "critical",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor",
+        "HWG-LANG-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UPLOAD-01",
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 8,
+      "emails_with_id": 0,
+      "inboxes": 5
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/Personal_Stellenausschreibung_20260727.xfp",
+      "system": "test",
+      "duplicate_of_prod": true,
+      "status_note": "",
+      "score": 30,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-03",
+        "HWG-BTN-02",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-LANG-02",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-03": "minor",
+        "HWG-BTN-02": "minor",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor",
+        "HWG-LANG-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 21,
+      "emails_total": 18,
+      "emails_with_id": 17,
+      "inboxes": 4
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/Personal_Vertragsaenderung_20251119_final.xfp",
+      "system": "test",
+      "duplicate_of_prod": true,
+      "status_note": "",
+      "score": 41,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-03",
+        "HWG-BTN-02",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-UPLOAD-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-03": "minor",
+        "HWG-BTN-02": "minor",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 21,
+      "emails_total": 25,
+      "emails_with_id": 0,
+      "inboxes": 6
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/RKA_Antrag auf Dienstreise (LF 20261006).xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "",
+      "score": 15,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-A11Y-03",
+        "HWG-BTN-02",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-LANG-02",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-A11Y-03": "minor",
+        "HWG-BTN-02": "minor",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor",
+        "HWG-LANG-02": "minor"
+      },
+      "not_applicable": [],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 32,
+      "emails_total": 44,
+      "emails_with_id": 0,
+      "inboxes": 7
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/TEST-FB1-BNM_Praktikum_20260309(Test-Version).xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "Testversion",
+      "score": 36,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-03",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-03": "minor",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-BTN-02"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 20,
+      "emails_total": 28,
+      "emails_with_id": 0,
+      "inboxes": 9
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/Wohungsplattform-Formular (WIP).xfp",
+      "system": "test",
+      "duplicate_of_prod": false,
+      "status_note": "Entwurf (WIP)",
+      "score": 14,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-02",
+        "HWG-CD-03",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-LANG-02",
+        "HWG-UPLOAD-01",
+        "HWG-VAL-01",
+        "HWG-WF-01",
+        "HWG-WF-02"
+      ],
+      "violation_severities": {
+        "HWG-CD-02": "critical",
+        "HWG-CD-03": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-VAL-01": "major",
+        "HWG-WF-01": "minor",
+        "HWG-WF-02": "minor",
+        "HWG-LANG-02": "minor"
+      },
+      "not_applicable": [
+        "HWG-STAMM-01",
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "850px"
+      ],
+      "fieldset_count": 0,
+      "emails_total": 14,
+      "emails_with_id": 0,
+      "inboxes": 1
+    },
+    {
+      "file": "data/raw_forms/test/fachformulare/ZFK-Fördermittel.xfp",
+      "system": "test",
+      "duplicate_of_prod": true,
+      "status_note": "",
+      "score": 35,
+      "release_status": "red_blocked",
+      "violations": [
+        "HWG-A11Y-01",
+        "HWG-CD-01",
+        "HWG-CD-02",
+        "HWG-CD-04",
+        "HWG-DSGVO-01",
+        "HWG-UPLOAD-01",
+        "HWG-WF-01"
+      ],
+      "violation_severities": {
+        "HWG-CD-01": "major",
+        "HWG-CD-02": "major",
+        "HWG-CD-04": "major",
+        "HWG-A11Y-01": "critical",
+        "HWG-DSGVO-01": "critical",
+        "HWG-UPLOAD-01": "major",
+        "HWG-WF-01": "minor"
+      },
+      "not_applicable": [
+        "HWG-UX-01"
+      ],
+      "widths": [
+        "700px"
+      ],
+      "fieldset_count": 18,
+      "emails_total": 60,
+      "emails_with_id": 60,
+      "inboxes": 12
+    }
+  ]
+}

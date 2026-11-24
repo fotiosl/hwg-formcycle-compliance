@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "model": "qwen3.8-27b",
+    "form": "Synthetisch konform",
+    "run": 3,
+    "wall_ms": 143851.6,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "PASS",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 100,
+    "release_status": "green_compliant",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'qwen3.8-27b' abgeschlossen.",
+    "llm_latency_ms": 143848.2,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "synthetic_compliant_form.xfp",
+    "violations": [],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (7 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Beschriftungen ohne Pipe-Zeichen, Pfeile und sichtbare Code-Reste)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-UPLOAD-01 (Alle Dateiuploads technisch und im Hilfetext konsistent spezifiziert)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-UX-01 (Affordanzgerechte kompakte Feldbreiten eingehalten)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 1/1 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Die vorhandenen persönlichen Stammdatenfelder selAnrede, tfVorname, tfNachname, tfEmail und tfTelefon verwenden die kanonischen Bezeichnungen 'Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' und 'Telefonnummer'. Es sind keine mehrdeutigen Sammelfelder, sperrigen Rollenzusätze oder technischen Labels vorhanden.)",
+      "HWG-UI-01 (In den sichtbaren Elementen (z. B. txtFormTitle, txtDatenschutzHinweis, txtVerfahrensablauf, uplNachweise) wurden keine Entwickler-Notizen, Code-Artefakte oder redaktionellen Arbeitsmarker gefunden. metrics.suspected_dev_notes ist leer und keine der deterministischen Marker ist in den Texten enthalten.)",
+      "HWG-BTN-01 (Die für Antragstellende sichtbare Schaltfläche btnSubmit trägt das Label 'Antrag einreichen' und beschreibt mit dem Vollverb 'einreichen' und dem Zielobjekt 'Antrag' die ausgelöste Transaktion eindeutig.)",
+      "HWG-LANG-01 (Außerhalb des Headers (txtFormTitle) sind keine unerklärten Hochschulfachbegriffe, internen Organisationskürzel oder Amtsdeutsch in Feldern oder Hinweistexten enthalten. Die Ansprache ist durchgängig im 'Sie' (z. B. 'Ihre personenbezogenen Daten', 'Sie erhalten').)",
+      "HWG-LANG-02 (Keine Sätze mit mehr als 25 Wörtern (metrics.sentences_over_25_words_count = 0). Die sichtbaren Anleitungstexte und Hilfetexte (uplNachweise, txtDatenschutzHinweis, txtVerfahrensablauf) enthalten keine verschachtelten Passiv- oder Behördenkonstruktionen.)",
+      "HWG-FEEDBACK-01 (Die Workflow-E-Mail 'E-Mail Eingangsbestätigung an Antragstellende' ist an den dynamischen Empfänger [%tfEmail%] adressiert, bestätigt den Eingang ('Ihr Antrag ist eingegangen'), benennt das Studierendensekretariat der HWG Ludwigshafen als Prüfstelle und nennt die Prüfung als nächsten Schritt sowie die weitere Information per E-Mail.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UX-02": "[KI-Prüfung · qwen3.8-27b] Der Komplexitätsschwellenwert ist nicht erreicht (metrics.ux02_complexity_threshold_reached = false; 1 Seite, 9 Eingabefelder), daher ist die Empfehlung zum Zwischenspeichern mit Fortsetzungs-Link nicht anwendbar."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "qwen3.8-27b",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'qwen3.8-27b' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 100,
+    "provenance": {
+      "engine_version": "1.7.0",
+      "registry_version": "1.7.0",
+      "prompt_version": "1.6.6",
+      "input_sha256": "525816e6377865052a3d67ec4635aaa8f4f20b55ed8d240e83fce756d2f9cf93",
+      "stage1_ms": 0.813,
+      "prompt_sha256": "ea7073a0ed4c6c36c2483a9fe044915e214de6589571901cff98c2725f3ee0f0",
+      "model": "qwen3.8-27b",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 143848.2,
+      "llm_raw_response": "\n\n{\n  \"form_name\": \"synthetic_compliant_form.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Die vorhandenen persönlichen Stammdatenfelder selAnrede, tfVorname, tfNachname, tfEmail und tfTelefon verwenden die kanonischen Bezeichnungen 'Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' und 'Telefonnummer'. Es sind keine mehrdeutigen Sammelfelder, sperrigen Rollenzusätze oder technischen Labels vorhanden.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"In den sichtbaren Elementen (z. B. txtFormTitle, txtDatenschutzHinweis, txtVerfahrensablauf, uplNachweise) wurden keine Entwickler-Notizen, Code-Artefakte oder redaktionellen Arbeitsmarker gefunden. metrics.suspected_dev_notes ist leer und keine der deterministischen Marker ist in den Texten enthalten.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Die für Antragstellende sichtbare Schaltfläche btnSubmit trägt das Label 'Antrag einreichen' und beschreibt mit dem Vollverb 'einreichen' und dem Zielobjekt 'Antrag' die ausgelöste Transaktion eindeutig.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Der Komplexitätsschwellenwert ist nicht erreicht (metrics.ux02_complexity_threshold_reached = false; 1 Seite, 9 Eingabefelder), daher ist die Empfehlung zum Zwischenspeichern mit Fortsetzungs-Link nicht anwendbar.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Außerhalb des Headers (txtFormTitle) sind keine unerklärten Hochschulfachbegriffe, internen Organisationskürzel oder Amtsdeutsch in Feldern oder Hinweistexten enthalten. Die Ansprache ist durchgängig im 'Sie' (z. B. 'Ihre personenbezogenen Daten', 'Sie erhalten').\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Keine Sätze mit mehr als 25 Wörtern (metrics.sentences_over_25_words_count = 0). Die sichtbaren Anleitungstexte und Hilfetexte (uplNachweise, txtDatenschutzHinweis, txtVerfahrensablauf) enthalten keine verschachtelten Passiv- oder Behördenkonstruktionen.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Die Workflow-E-Mail 'E-Mail Eingangsbestätigung an Antragstellende' ist an den dynamischen Empfänger [%tfEmail%] adressiert, bestätigt den Eingang ('Ihr Antrag ist eingegangen'), benennt das Studierendensekretariat der HWG Ludwigshafen als Prüfstelle und nennt die Prüfung als nächsten Schritt sowie die weitere Information per E-Mail.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 0,
+    "release_status": "green_compliant",
+    "release_label": "Konform (Freigabefähig)",
+    "is_releasable": true
+  }
+}

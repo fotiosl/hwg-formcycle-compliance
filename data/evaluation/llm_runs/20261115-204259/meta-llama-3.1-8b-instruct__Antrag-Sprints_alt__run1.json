@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "model": "meta-llama-3.1-8b-instruct",
+    "form": "Antrag-Sprints (alt)",
+    "run": 1,
+    "wall_ms": 6506.8,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "VIOLATION",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "VIOLATION",
+      "HWG-LANG-02": "VIOLATION",
+      "HWG-FEEDBACK-01": "VIOLATION"
+    },
+    "score": 3,
+    "release_status": "red_blocked",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'meta-llama-3.1-8b-instruct' abgeschlossen.",
+    "llm_latency_ms": 6502.7,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "AFörderung Antrag-Sprints für Drittmittelanträge.xfp",
+    "violations": [
+      {
+        "rule": "HWG-CD-02",
+        "severity": "critical",
+        "message": "Kein offizielles HWG-Header-Banner (XImage mit gültiger Bilddatei) innerhalb des Header-Containers (XHeader) vorhanden.",
+        "rule_id": "HWG-CD-02",
+        "remediation": "Platzieren Sie in der Kopfzeile ('header1' / XHeader) ein Element 'Bild' (XImage) und wählen Sie im Bereich 'Bilder' die freigegebene HWG-Logodatei aus. Setzen Sie im Bereich 'Darstellung' das Feld 'Höhe (in px)' auf '60' (imageheight = '60') und die 'Ausrichtung' auf rechtsbündig (textalign = 'right') und hinterlegen Sie im Bereich 'Label' im Feld 'Alt Text' (alt) eine institutionsbezogene Bezeichnung wie 'Das Logo der HWG LU' oder 'Hochschule für Wirtschaft und Gesellschaft Ludwigshafen'."
+      },
+      {
+        "rule": "HWG-CD-03",
+        "severity": "major",
+        "message": "Im Footer (XFooter) ist 'Logo anzeigen' (showlogo='1') aktiviert ('Powered by XIMA Formcycle').",
+        "rule_id": "HWG-CD-03",
+        "remediation": "Wählen Sie im Formcycle-Designer das Element 'Fußzeile' ('footer1' / XFooter) aus und entfernen Sie im Bereich 'Darstellung' den Haken bei 'Logo anzeigen' (showlogo = '0'). Damit entfällt der Herstellerhinweis 'powered by XIMA® formcycle'."
+      },
+      {
+        "rule": "HWG-CD-04",
+        "severity": "major",
+        "message": "Kein Formulartitel als <h1> innerhalb des Kopfbereichs (XHeader) vorhanden.",
+        "rule_id": "HWG-CD-04",
+        "remediation": "Ziehen Sie im Formcycle-Designer ein Element 'Text' (XSpan) in die Kopfzeile ('header1' / XHeader), geben Sie im Bereich 'Werte' den Formulartitel ein und formatieren Sie ihn im Editor über 'Format' (Absatzformat) genau einmal als 'Überschrift 1' (im HTML <h1>Antrag auf ...</h1>), nicht als 'Überschrift 2' oder 'Normal'."
+      },
+      {
+        "rule": "HWG-A11Y-01",
+        "severity": "critical",
+        "message": "Keine semantischen XFieldSet-Gruppierungen für 13 Eingabefelder vorhanden.",
+        "rule_id": "HWG-A11Y-01",
+        "remediation": "Ziehen Sie im Formcycle-Designer ein Element 'Fieldset' (XFieldSet) auf die Seite, vergeben Sie im Bereich 'Label' im Feld 'Text' (legend) einen sprechenden Abschnittstitel (z. B. 'Persönliche Angaben') und ordnen Sie alle zusammengehörigen Eingabefelder darin an. Belassen Sie keine Eingabefeldblöcke ungruppiert direkt auf der Seite (XPage) oder in einfachen Containern (XContainer)."
+      },
+      {
+        "rule": "HWG-STAMM-01",
+        "severity": "major",
+        "message": "Inkonsistente Stammdaten-Abfolge: 'Name Antragstellende/r' (tfName) vor 'Vorname Antragstellende/r' (tfVorname), 'Telefonnummer' (tfTelefonnummer) vor 'E-Mail' (tfEmail). Erwartet: Anrede -> Vorname -> Nachname -> E-Mail-Adresse -> Telefonnummer.",
+        "rule_id": "HWG-STAMM-01",
+        "remediation": "Ordnen Sie persönliche Stammdaten innerhalb jedes Fieldsets (XFieldSet) in der kanonischen Reihenfolge an: Anrede -> Vorname -> Nachname -> E-Mail-Adresse (bzw. E-Mail) -> Telefonnummer. Kapseln Sie getrennte Personen- oder Rollenblöcke (z. B. Antragstellende vs. Projektpartner) in eigene Fieldsets."
+      },
+      {
+        "rule": "HWG-DSGVO-01",
+        "severity": "critical",
+        "message": "Das Formular erhebt Eingaben, aber weder die Footer-Datenschutzerklärung (privacyPolicyShow='1') noch ein sichtbarer, auf die Datenschutzerklärung verlinkter Art.-13-Hinweis ist vorhanden.",
+        "rule_id": "HWG-DSGVO-01",
+        "remediation": "Aktivieren Sie im Fußzeilen-Element ('footer1' / XFooter) im Bereich 'Datenschutzerklärung' die Option 'Anzeigen' (privacyPolicyShow = '1') und wählen Sie unter 'Inhalt' das Template 'Datenschutzerklärung_HWGLU', oder fügen Sie vor der Absende-Schaltfläche ein Text-Element ('Text' / XSpan) mit Hinweis nach Art. 13 DSGVO und aktivem Link zur HWG-Datenschutzerklärung (https://www.hwg-lu.de/datenschutzerklaerung) ein."
+      },
+      {
+        "rule": "HWG-WF-01",
+        "severity": "minor",
+        "message": "Nicht-standardisierte Ad-hoc-Workflow-Status gefunden (3): ['Kritischer Fall', 'Kritischer Fall Rückmeldung', 'Angenommen'].",
+        "rule_id": "HWG-WF-01",
+        "remediation": "Legen Sie im Workflow-Designer unter 'Status' über 'Neuer Status' Status an, deren Name mit einer der kanonischen Phasen beginnt ('Eingegangen', 'In Prüfung', 'Nachforderung ausstehend', 'Genehmigt', 'Abgelehnt', 'Archiviert'; gleichwertig sind 'In Bearbeitung' und 'Abgeschlossen'), und ziehen Sie diese Status aus der Elementauswahl (Kategorie 'Status') als Endpunkte ans Ende der Verarbeitungsketten (im Export FC_CHANGE_STATE). Fachliche Zusätze nach der Phase sind zulässig (z. B. 'In Prüfung Finanzabteilung'); der Systemstatus 'Eingegangen' ist bereits angelegt."
+      },
+      {
+        "rule": "HWG-WF-02",
+        "severity": "minor",
+        "message": "Fehlender dynamischer Vorgangsplatzhalter ([%$RECORD_ID%]) in 8/8 automatisierten Workflow-E-Mails (FC_EMAIL).",
+        "rule_id": "HWG-WF-02",
+        "remediation": "Binden Sie im Formcycle-Workflow in sämtlichen Aktionen vom Typ 'E-Mail' (FC_EMAIL) im Feld 'Betreff' oder im Inhalt ('HTML') den dynamischen Vorgangsplatzhalter [%$RECORD_ID%] als eindeutige Vorgangsnummer ein."
+      },
+      {
+        "rule": "HWG-BTN-01",
+        "rule_id": "HWG-BTN-01",
+        "severity": "major",
+        "message": "[KI-Befund · meta-llama-3.1-8b-instruct] Die Schaltflächen 'senden' und 'Kritischer Fall' enthalten keine eindeutige Handlung und beschreiben keine konkrete Transaktion. (Betroffen: btnSenden, btnKritisch) — Vorschlag: Die Schaltflächen sollten umbenannt werden, um eine eindeutige Handlung zu beschreiben.",
+        "remediation": "Wählen Sie im Formcycle-Designer das Element 'Schaltflächen' (XButtonList bzw. XButton) aus und beschriften Sie jede Aktionsschaltfläche im Bereich 'Schaltflächen' in der Spalte 'Text' (value) nach dem Action-Verb-Muster (z. B. 'Antrag einreichen', 'Kritischen Fall einreichen' oder 'Rückmeldung übermitteln') anstelle von reinen Zuständen ('Kritischer Fall') oder generischen Ein-Wort-Begriffen ('senden')."
+      },
+      {
+        "rule": "HWG-LANG-01",
+        "rule_id": "HWG-LANG-01",
+        "severity": "major",
+        "message": "[KI-Befund · meta-llama-3.1-8b-instruct] Einige Fachbegriffe und Amtsdeutsch in Eingabefeldern und Hinweistexten sind nicht erläutert. (Betroffen: txtTitel, txtBestaetigung, tfName, tfVorname) — Vorschlag: Hilfetexte sollten hinzugefügt werden, um die Fachbegriffe und Amtsdeutsch zu erklären.",
+        "remediation": "Ergänzen Sie bei hochschulspezifischen Fachbegriffen oder Abkürzungen in Eingabefeldern im Bereich 'Hilfe' (helptext) eine kurze, allgemeinverständliche Begriffserklärung (z. B. Erklärung von 'ZFK', 'Mittelgeber' oder 'Kostenstelle') und achten Sie auf eine konsistente 'Sie'-Ansprache."
+      },
+      {
+        "rule": "HWG-LANG-02",
+        "rule_id": "HWG-LANG-02",
+        "severity": "minor",
+        "message": "[KI-Befund · meta-llama-3.1-8b-instruct] Einige Sätze in den Text- und Hilfetextfeldern enthalten mehr als 25 Wörter. (Betroffen: txtTitel, txtBestaetigung, edInhaltBeschreibung, edNameFoerderprogramm) — Vorschlag: Die Sätze sollten umstrukturiert werden, um sie prägnanter zu formulieren.",
+        "remediation": "Kürzen Sie überlange Schachtelsätze in Text-Elementen ('Text' / XSpan) und Hilfetexten (Bereich 'Hilfe') auf maximal 20–25 Wörter pro Satz und formulieren Sie handlungsorientierte Aktivsätze."
+      },
+      {
+        "rule": "HWG-FEEDBACK-01",
+        "rule_id": "HWG-FEEDBACK-01",
+        "severity": "minor",
+        "message": "[KI-Befund · meta-llama-3.1-8b-instruct] Einige Workflow-E-Mails enthalten keine Informationen über die zuständige Prüfstelle und die nächsten Schritte. (Betroffen: workflow_emails) — Vorschlag: Die Workflow-E-Mails sollten umstrukturiert werden, um die zuständige Prüfstelle und die nächsten Schritte zu nennen.",
+        "remediation": "Hinterlegen Sie im Formcycle-Workflow in der Verarbeitungskette des Absende-Ereignisses eine Aktion 'E-Mail' (FC_EMAIL) als automatisierte Eingangsbestätigung, deren Feld 'E-Mail an' die E-Mail-Adresse der antragstellenden Person enthält (z. B. den Platzhalter [%tfEmail%]) und deren Inhalt ('HTML') den Eingang bestätigt, die prüfende Organisationseinheit nennt und beschreibt, was als Nächstes geschieht."
+      }
+    ],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-A11Y-02 (12 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Beschriftungen ohne Pipe-Zeichen, Pfeile und sichtbare Code-Reste)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-STAMM-02 (Alle Feldbezeichnungen entsprechen den standardisierten Bezeichnungen für persönliche Stammdaten.)",
+      "HWG-UI-01 (Keine Entwickler-Notizen oder Code-Artefakte im Frontend gefunden.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UPLOAD-01": "Keine Dateiupload-Elemente im Formular vorhanden.",
+      "HWG-UX-01": "Keine typischen Kompaktfelder (PLZ, Hausnummer) im Formular vorhanden.",
+      "HWG-UX-02": "[KI-Prüfung · meta-llama-3.1-8b-instruct] Das Formular umfasst weniger als 3 Seiten und weniger als 25 Eingabefelder."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "meta-llama-3.1-8b-instruct",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'meta-llama-3.1-8b-instruct' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 3,
+    "provenance": {
+      "engine_version": "1.7.0",
+      "registry_version": "1.7.0",
+      "prompt_version": "1.6.6",
+      "input_sha256": "fd6d7df7a4d701b24e3911d90336a1ed404a40513fb8ea2f082e17bb1ec957c8",
+      "stage1_ms": 0.986,
+      "prompt_sha256": "8a24514fa3e5c9b550e877269515286ea17374abc424a6508f66b3c84b5ddf82",
+      "model": "meta-llama-3.1-8b-instruct",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 6502.7,
+      "llm_raw_response": "{\n  \"form_name\": \"AFörderung Antrag-Sprints für Drittmittelanträge.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"tfName\", \"tfVorname\", \"tfTelefonnummer\", \"tfEmail\"],\n      \"finding\": \"Alle Feldbezeichnungen entsprechen den standardisierten Bezeichnungen für persönliche Stammdaten.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"txtTitel\", \"txtBestaetigung\", \"tfName\", \"tfVorname\", \"tfTelefonnummer\", \"tfEmail\", \"edInhaltBeschreibung\", \"edNameFoerderprogramm\", \"tfEinreichungsfrist\", \"selFoerderprojektvolumen\", \"edBeschreibungAntragsverfahren\", \"tfHoeheZuschuss\", \"edAusgabenplanZuschuss\", \"edAktuellerStand\", \"edBegruendungKritisch\"],\n      \"finding\": \"Keine Entwickler-Notizen oder Code-Artefakte im Frontend gefunden.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"btnSenden\", \"btnKritisch\"],\n      \"finding\": \"Die Schaltflächen 'senden' und 'Kritischer Fall' enthalten keine eindeutige Handlung und beschreiben keine konkrete Transaktion.\",\n      \"remediation_suggestion\": \"Die Schaltflächen sollten umbenannt werden, um eine eindeutige Handlung zu beschreiben.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Das Formular umfasst weniger als 3 Seiten und weniger als 25 Eingabefelder.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"txtTitel\", \"txtBestaetigung\", \"tfName\", \"tfVorname\", \"tfTelefonnummer\", \"tfEmail\", \"edInhaltBeschreibung\", \"edNameFoerderprogramm\", \"tfEinreichungsfrist\", \"selFoerderprojektvolumen\", \"edBeschreibungAntragsverfahren\", \"tfHoeheZuschuss\", \"edAusgabenplanZuschuss\", \"edAktuellerStand\", \"edBegruendungKritisch\"],\n      \"finding\": \"Einige Fachbegriffe und Amtsdeutsch in Eingabefeldern und Hinweistexten sind nicht erläutert.\",\n      \"remediation_suggestion\": \"Hilfetexte sollten hinzugefügt werden, um die Fachbegriffe und Amtsdeutsch zu erklären.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"txtTitel\", \"txtBestaetigung\", \"edInhaltBeschreibung\", \"edNameFoerderprogramm\", \"edBeschreibungAntragsverfahren\", \"edAusgabenplanZuschuss\", \"edAktuellerStand\", \"edBegruendungKritisch\"],\n      \"finding\": \"Einige Sätze in den Text- und Hilfetextfeldern enthalten mehr als 25 Wörter.\",\n      \"remediation_suggestion\": \"Die Sätze sollten umstrukturiert werden, um sie prägnanter zu formulieren.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"workflow_emails\"],\n      \"finding\": \"Einige Workflow-E-Mails enthalten keine Informationen über die zuständige Prüfstelle und die nächsten Schritte.\",\n      \"remediation_suggestion\": \"Die Workflow-E-Mails sollten umstrukturiert werden, um die zuständige Prüfstelle und die nächsten Schritte zu nennen.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 3,
+    "release_status": "red_blocked",
+    "release_label": "Kritisch unzureichend (Gesperrt)",
+    "is_releasable": false
+  }
+}

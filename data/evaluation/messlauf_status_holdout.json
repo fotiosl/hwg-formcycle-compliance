@@ -1,0 +1,20 @@
+{
+  "finished_at": "2026-11-16 06:52",
+  "python": "3.13.17",
+  "stand": {
+    "registry": "1.7.0",
+    "engine": "1.7.0",
+    "prompt": "1.6.6",
+    "git_commit": "e956dc0",
+    "git_tag": "messlauf-final-v1.7.0",
+    "uncommitted_changes": false
+  },
+  "steps": [
+    {
+      "step": "holdout",
+      "return_code": 0,
+      "duration_s": 330,
+      "log": "data\\evaluation\\messlauf_1_holdout.log"
+    }
+  ]
+}

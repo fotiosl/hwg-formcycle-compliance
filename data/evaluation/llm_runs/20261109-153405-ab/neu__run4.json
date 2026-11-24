@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "arm": "neu",
+    "run": 4,
+    "model": "deepseek-v4-flash-0731",
+    "form": "Master-Formular (Vorlage)",
+    "registry_version": "1.6.4",
+    "prompt_version": "1.6.2",
+    "prompt_sha256": "063c16fc763faef4b188828e7ff632c492c9134cecf51fc981955bd4470f7e96",
+    "score": 29,
+    "release_status": "red_blocked",
+    "llm_status": "ok",
+    "statuses": {
+      "HWG-STAMM-02": "VIOLATION",
+      "HWG-UI-01": "VIOLATION",
+      "HWG-BTN-01": "NOT_APPLICABLE",
+      "HWG-UX-02": "RECOMMENDATION",
+      "HWG-LANG-01": "VIOLATION",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "VIOLATION"
+    }
+  },
+  "result": {
+    "form": "Master-Formular.xfp",
+    "violations": [
+      {
+        "rule": "HWG-CD-01",
+        "severity": "major",
+        "message": "Layout-Container weichen vom 850px-Standard ab (gefunden: 700px).",
+        "rule_id": "HWG-CD-01",
+        "remediation": "Wählen Sie im Formcycle-Designer sämtliche Layout-Container (Kopfzeile 'header1' / XHeader, alle Seiten 'p1'… / XPage sowie Fußzeile 'footer1' / XFooter) einzeln aus und setzen Sie im Reiter 'Layout' das Feld 'Max. Breite' (maxwidth) durchgängig auf '850px'. Setzen Sie zudem bei Kopf- und Fußzeile (XHeader/XFooter) das Feld 'Min. Breite' (minwidth) auf '300px' (auf Seitenebene XPage ist '300px' oder '0px' zulässig)."
+      },
+      {
+        "rule": "HWG-CD-02",
+        "severity": "major",
+        "message": "HWG-Header-Logo weicht von den Vorgaben ab: Höhe ist '50' statt 60px, barrierefreier Alternativtext (alt) fehlt oder unvollständig.",
+        "rule_id": "HWG-CD-02",
+        "remediation": "Platzieren Sie im Kopfbereich ('header1' / XHeader) das offizielle HWG-Logo als Bild-Element ('Bild' / XImage) mit gültiger Bilddatei. Setzen Sie im Eigenschaften-Bereich das Feld 'Höhe (in px)' auf '60' (imageheight = '60'), das Feld 'Ausrichtung' auf 'Rechts' (textalign = 'right') und hinterlegen Sie explizit im Feld 'Alternativtext' (alt) eine institutionsbezogene Bezeichnung wie 'Das Logo der HWG LU' oder 'Hochschule für Wirtschaft und Gesellschaft Ludwigshafen'."
+      },
+      {
+        "rule": "HWG-A11Y-01",
+        "severity": "critical",
+        "message": "Semantische Abschnittsgruppierung unvollständig: XFieldSet ohne aussagekräftige Legende (mind. 3 Buchstaben): fsMasterInhalt.",
+        "rule_id": "HWG-A11Y-01",
+        "remediation": "Ziehen Sie im Formcycle-Designer unter 'Layout-Elemente' das Element 'Gruppierung (Fieldset)' (XFieldSet) auf die Seite, vergeben Sie unter 'Allgemein -> Legende' (legend) einen sprechenden Abschnittstitel (z. B. 'Persönliche Angaben') und ordnen Sie alle zusammengehörigen Eingabefelder darin an. Belassen Sie keine Eingabefeldblöcke ungruppiert direkt auf der Seite (XPage) oder in einfachen Containern (XContainer)."
+      },
+      {
+        "rule": "HWG-A11Y-03",
+        "severity": "minor",
+        "message": "HTML-Störfragmente (<br>, <span>, &nbsp;, doppelte Entities oder '|') in 3 Label(s): [tfMasterFachbereichSudiengang, tfMasterFachbereichSudiengang1, tfMasterFachbereichSudiengang2].",
+        "rule_id": "HWG-A11Y-03",
+        "remediation": "Bereinigen Sie bei Eingabefeldern unter 'Allgemein -> Beschriftung' (label) bzw. bei Gruppierungen unter 'Allgemein -> Legende' (legend) manuelle Zeilenumbrüche (<br>), kopierte Formatierungs-Tags (<span>, <b>, <strong>, Inline-Styles), geschützte Leerzeichen (&nbsp;), doppelt maskierte Entities sowie technische Trenner ('|'). Lagern Sie erläuternde Zusatzhinweise unter 'Allgemein' in das dedizierte Feld 'Hilfetext' (helptext) aus."
+      },
+      {
+        "rule": "HWG-VAL-01",
+        "severity": "major",
+        "message": "Strukturierte Eingabefelder ohne gültigen Validator / Regex gefunden: tfMasterMatrikelnummer (Matrikelnummer: Typ 'text' ohne 6–7-stelligen Regex), tfMasterMatrikelnummer1 (Matrikelnummer: Typ 'text' ohne 6–7-stelligen Regex), tfMasterMatrikelnummer2 (Matrikelnummer: Typ 'text' ohne 6–7-stelligen Regex).",
+        "rule_id": "HWG-VAL-01",
+        "remediation": "Wählen Sie das Textfeld ('Textfeld' / XTextField) im Formcycle-Designer aus und stellen Sie im Bereich 'Einschränkungen -> Datentyp' (datatype) den passenden Validator ein (Trennen Sie kombinierte 2-in-1-Felder wie 'E-Mail/Telefon' stets in separate Einzelfelder auf!):\n• E-Mail, Postleitzahl, Datum & Geldbeträge: Nutzen Sie den nativen Datentyp 'E-Mail' (email), 'Postleitzahl (DE)' (plzDE), 'Datum (TT.MM.JJJJ)' (dateDE) bzw. 'Fließkommazahl / Währung' (formattedNumber / float).\n• Telefonnummer (Empfehlung Regex, da Formcycles Typ 'phone' kein '+' für Ländervorwahlen wie +49 erlaubt): Datentyp 'Regulärer Ausdruck' (regexp) und unter 'Einschränkungen -> Regulärer Ausdruck' (vrule) das Muster ^(\\+[0-9]{1,3}|0)[0-9\\s\\-/]{6,20}$\n• IBAN (DE, leerzeichentolerant): Datentyp 'Regulärer Ausdruck' (regexp) mit Muster ^[A-Z]{2}[0-9]{2}(?:\\s?[0-9]{4}){4}\\s?[0-9]{2}$ im Feld 'Regulärer Ausdruck' (vrule)\n• Matrikelnummer (HWG, 6–7 Ziffern): Datentyp 'Regulärer Ausdruck' (regexp) mit Muster ^[0-9]{6,7}$ im Feld 'Regulärer Ausdruck' (vrule)\nHinterlegen Sie im Feld 'Fehlermeldung' (vrulemismatch) stets einen verständlichen Hinweistext."
+      },
+      {
+        "rule": "HWG-UI-01",
+        "severity": "critical",
+        "message": "[KI-Befund · deepseek-v4-flash-0731] Das Element 'txt1' enthält den Text 'Fieldset wird per JavaScript eingeblendet, wenn Shibboleh/LDAP-Member oder FormS-Admin oder FormS-Postfach-SB, ansonsten ausgeblendet (hide)'. Dies ist eine interne Entwickler-Notiz, die für Antragstellende nicht bestimmt ist und gegen die Selbstbeschreibungsfähigkeit verstößt. Der Marker wurde deterministisch erkannt. (Betroffen: txt1) — Vorschlag: Entfernen Sie diesen Text aus dem sichtbaren Formular oder ersetzen Sie ihn durch einen für Antragstellende verständlichen Hinweis, z. B. 'Dieses Feld wird nur für bestimmte Nutzergruppen angezeigt.'",
+        "rule_id": "HWG-UI-01",
+        "remediation": "Entfernen Sie alle technischen Implementierungs- und Redaktionshinweise aus sichtbaren Text-Elementen ('Text' / XSpan) und Feld-Beschriftungen. Hinterlegen Sie interne Notizen ausschließlich im Entwickler-Feld 'Kommentar' (comment) der Komponente oder beschränken Sie interne Bearbeiterblöcke unter 'Zugriff -> Sichtbarkeit (Status)' (viewstatus) auf nachgelagerte Workflow-Status."
+      },
+      {
+        "rule": "HWG-STAMM-02",
+        "rule_id": "HWG-STAMM-02",
+        "severity": "minor",
+        "message": "[KI-Befund · deepseek-v4-flash-0731] Die E-Mail-Felder sind mit 'E-Mail' beschriftet, was den kanonischen Mustern entspricht. Allerdings sind die Feldnamen 'tfMasterHSEmail' etc. technische Bezeichner, die jedoch nicht als sichtbares Label verwendet werden. Die sichtbaren Labels sind korrekt. Es gibt keine Sammelfelder oder mehrdeutige Bezeichnungen. Daher liegt kein Verstoß vor. (Betroffen: tfMasterHSEmail, tfMasterHSEmail1, tfMasterHSEmail2) — Vorschlag: Keine Änderung erforderlich.",
+        "remediation": "Nutzen Sie für persönliche Stammdaten im Feld 'Beschriftung' (label) ausschließlich die kanonischen Standardbezeichnungen ('Anrede', 'Vorname', 'Nachname', 'E-Mail-Adresse' bzw. 'E-Mail' oder 'Hochschul-E-Mail', 'Telefonnummer', 'Matrikelnummer') ohne sperrige Rollenzusätze oder technische Kürzel."
+      },
+      {
+        "rule": "HWG-LANG-01",
+        "rule_id": "HWG-LANG-01",
+        "severity": "major",
+        "message": "[KI-Befund · deepseek-v4-flash-0731] Mehrere Elemente enthalten unerklärte Fachbegriffe oder interne Kürzel: 'Shibboleth', 'LDAP', 'FormS-Admin', 'FormS-Postfach-SB', 'SAML-HSLU' in txtDecline und Fieldset-Labels; 'Fachbereichen|Studiengang' ist mehrdeutig und nicht erklärt. Diese Begriffe sind für Antragstellende ohne Hilfetext nicht verständlich. (Betroffen: txtDecline, fsMasterAntragsteller, fsMasterAntragsteller1, fsMasterAntragsteller2) — Vorschlag: Fügen Sie für jedes betroffene Element einen verständlichen Hilfetext hinzu, der die Begriffe erläutert, oder ersetzen Sie die internen Bezeichnungen durch allgemein verständliche Formulierungen. Beispiel: Statt 'Shibboleth-Anmeldung' 'Anmeldung mit Ihrem Hochschulzugang'.",
+        "remediation": "Ergänzen Sie bei hochschulspezifischen Fachbegriffen oder Abkürzungen in Eingabefeldern unter 'Allgemein -> Hilfetext' (helptext) eine kurze, allgemeinverständliche Begriffserklärung (z. B. Erklärung von 'ZFK', 'Mittelgeber' oder 'Kostenstelle') und achten Sie auf eine konsistente 'Sie'-Ansprache."
+      },
+      {
+        "rule": "HWG-FEEDBACK-01",
+        "rule_id": "HWG-FEEDBACK-01",
+        "severity": "minor",
+        "message": "[KI-Befund · deepseek-v4-flash-0731] Es sind keine Workflow-E-Mail-Knoten vorhanden (workflow_emails ist leer). Daher gibt es keine automatisierte Eingangsbestätigung an die antragstellende Person, was gegen die Prozesstransparenz verstößt. (Betroffen: workflow_emails) — Vorschlag: Richten Sie im Workflow einen FC_EMAIL-Knoten ein, der an die im Formular erfasste E-Mail-Adresse eine Eingangsbestätigung sendet, die die zuständige Prüfstelle und die nächsten Schritte nennt.",
+        "remediation": "Hinterlegen Sie im Formcycle-Workflow unter 'Aktionen -> Allgemein -> E-Mail' (FC_EMAIL) eine automatisierte Eingangsbestätigung an die E-Mail-Adresse der antragstellenden Person (z. B. [%tfEmail%]), deren Text den Eingang bestätigt und transparent benennt, welche Organisationseinheit den Antrag im nächsten Schritt prüft."
+      }
+    ],
+    "recommendations": [
+      {
+        "rule": "HWG-UX-02",
+        "rule_id": "HWG-UX-02",
+        "severity": "recommendation",
+        "message": "[KI-Befund · deepseek-v4-flash-0731] Das Formular überschreitet den Komplexitätsschwellenwert (29 Eingabefelder, 1 Seite), und es ist kein Mechanismus zum Zwischenspeichern mit E-Mail-Link vorhanden (has_save_resume_mechanism=false). Daher wird die Empfehlung ausgesprochen. (Betroffen: Master-Formular.xfp) — Vorschlag: Implementieren Sie eine 'Zwischenspeichern'-Schaltfläche mit submitNoCheck und versenden Sie einen Fortsetzungs-Link ([%$URL_FORM%]) per E-Mail an die antragstellende Person.",
+        "remediation": "Empfehlung (ohne Punktabzug): Legen Sie in der Schaltflächenleiste (XButtonList) eine Schaltfläche 'Zwischenspeichern' mit der Aktion 'absenden' OHNE Pflichtfeldprüfung (submitNoCheck, nicht 'absenden + prüfen'!) an und versenden Sie im Workflow über eine E-Mail-Aktion ('Aktionen -> Allgemein -> E-Mail' / FC_EMAIL) den Fortsetzungs-Link ([%$URL_FORM%])."
+      }
+    ],
+    "passed": [
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-02 (25 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-UX-01 (Affordanzgerechte kompakte Feldbreiten eingehalten)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen)",
+      "HWG-LANG-02 (Die deterministische Analyse ergab keine Sätze mit mehr als 25 Wörtern. Auch semantisch wurden keine verschachtelten Passiv- oder Behördenkonstruktionen in den sichtbaren Texten festgestellt.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UPLOAD-01": "Keine Dateiupload-Elemente im Formular vorhanden.",
+      "HWG-WF-02": "Keine automatisierten Workflow-E-Mails im Prozessmodell vorhanden.",
+      "HWG-BTN-01": "[KI-Prüfung · deepseek-v4-flash-0731] Im Formularextrakt sind keine Schaltflächen mit applicant_visible=true und role != 'pagination' vorhanden. Die Regel betrifft nur sichtbare Aktionsschaltflächen, daher keine Anwendung."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "deepseek-v4-flash-0731",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'deepseek-v4-flash-0731' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 29,
+    "provenance": {
+      "engine_version": "1.6.2",
+      "registry_version": "1.6.4",
+      "prompt_version": "1.6.2",
+      "input_sha256": "015a636f1f06079e74cc02f2f330f6f565c21aa9aba4d3df1e8d0ffb23bac4a1",
+      "stage1_ms": 1.228,
+      "prompt_sha256": "063c16fc763faef4b188828e7ff632c492c9134cecf51fc981955bd4470f7e96",
+      "model": "deepseek-v4-flash-0731",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 12702.8,
+      "llm_raw_response": "{\n  \"form_name\": \"Master-Formular.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"tfMasterHSEmail\", \"tfMasterHSEmail1\", \"tfMasterHSEmail2\"],\n      \"finding\": \"Die E-Mail-Felder sind mit 'E-Mail' beschriftet, was den kanonischen Mustern entspricht. Allerdings sind die Feldnamen 'tfMasterHSEmail' etc. technische Bezeichner, die jedoch nicht als sichtbares Label verwendet werden. Die sichtbaren Labels sind korrekt. Es gibt keine Sammelfelder oder mehrdeutige Bezeichnungen. Daher liegt kein Verstoß vor.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"txt1\"],\n      \"finding\": \"Das Element 'txt1' enthält den Text 'Fieldset wird per JavaScript eingeblendet, wenn Shibboleh/LDAP-Member oder FormS-Admin oder FormS-Postfach-SB, ansonsten ausgeblendet (hide)'. Dies ist eine interne Entwickler-Notiz, die für Antragstellende nicht bestimmt ist und gegen die Selbstbeschreibungsfähigkeit verstößt. Der Marker wurde deterministisch erkannt.\",\n      \"remediation_suggestion\": \"Entfernen Sie diesen Text aus dem sichtbaren Formular oder ersetzen Sie ihn durch einen für Antragstellende verständlichen Hinweis, z. B. 'Dieses Feld wird nur für bestimmte Nutzergruppen angezeigt.'\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Im Formularextrakt sind keine Schaltflächen mit applicant_visible=true und role != 'pagination' vorhanden. Die Regel betrifft nur sichtbare Aktionsschaltflächen, daher keine Anwendung.\",\n      \"remediation_suggestion\": \"Keine Maßnahme erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"RECOMMENDATION\",\n      \"affected_elements\": [\"Master-Formular.xfp\"],\n      \"finding\": \"Das Formular überschreitet den Komplexitätsschwellenwert (29 Eingabefelder, 1 Seite), und es ist kein Mechanismus zum Zwischenspeichern mit E-Mail-Link vorhanden (has_save_resume_mechanism=false). Daher wird die Empfehlung ausgesprochen.\",\n      \"remediation_suggestion\": \"Implementieren Sie eine 'Zwischenspeichern'-Schaltfläche mit submitNoCheck und versenden Sie einen Fortsetzungs-Link ([%$URL_FORM%]) per E-Mail an die antragstellende Person.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"txtDecline\", \"fsMasterAntragsteller\", \"fsMasterAntragsteller1\", \"fsMasterAntragsteller2\", \"tfMasterFachbereichSudiengang\", \"tfMasterFachbereichSudiengang1\", \"tfMasterFachbereichSudiengang2\"],\n      \"finding\": \"Mehrere Elemente enthalten unerklärte Fachbegriffe oder interne Kürzel: 'Shibboleth', 'LDAP', 'FormS-Admin', 'FormS-Postfach-SB', 'SAML-HSLU' in txtDecline und Fieldset-Labels; 'Fachbereichen|Studiengang' ist mehrdeutig und nicht erklärt. Diese Begriffe sind für Antragstellende ohne Hilfetext nicht verständlich.\",\n      \"remediation_suggestion\": \"Fügen Sie für jedes betroffene Element einen verständlichen Hilfetext hinzu, der die Begriffe erläutert, oder ersetzen Sie die internen Bezeichnungen durch allgemein verständliche Formulierungen. Beispiel: Statt 'Shibboleth-Anmeldung' 'Anmeldung mit Ihrem Hochschulzugang'.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Die deterministische Analyse ergab keine Sätze mit mehr als 25 Wörtern. Auch semantisch wurden keine verschachtelten Passiv- oder Behördenkonstruktionen in den sichtbaren Texten festgestellt.\",\n      \"remediation_suggestion\": \"Keine Maßnahme erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"workflow_emails\"],\n      \"finding\": \"Es sind keine Workflow-E-Mail-Knoten vorhanden (workflow_emails ist leer). Daher gibt es keine automatisierte Eingangsbestätigung an die antragstellende Person, was gegen die Prozesstransparenz verstößt.\",\n      \"remediation_suggestion\": \"Richten Sie im Workflow einen FC_EMAIL-Knoten ein, der an die im Formular erfasste E-Mail-Adresse eine Eingangsbestätigung sendet, die die zuständige Prüfstelle und die nächsten Schritte nennt.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 2,
+    "release_status": "red_blocked",
+    "release_label": "Kritisch unzureichend (Gesperrt)",
+    "is_releasable": false
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "model": "qwen3-30b-a3b-instruct-2507",
+    "form": "Auslagenerstattung (Prod)",
+    "run": 2,
+    "wall_ms": 13380.5,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "VIOLATION",
+      "HWG-UX-02": "RECOMMENDATION",
+      "HWG-LANG-01": "PASS",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 31,
+    "release_status": "red_blocked",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'qwen3-30b-a3b-instruct-2507' abgeschlossen.",
+    "llm_latency_ms": 13374.0,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "Auslagenerstattung _20260929.xfp",
+    "violations": [
+      {
+        "rule": "HWG-CD-01",
+        "severity": "major",
+        "message": "Layout-Container weichen vom 850px-Standard ab (gefunden: 700px).",
+        "rule_id": "HWG-CD-01",
+        "remediation": "Öffnen Sie im Formcycle-Designer im Eigenschaftsbereich den Reiter 'Formular' und setzen Sie im Bereich 'Darstellung' die 'Maximale Breite' auf 850 (Pixel). Im Export steht dieser Wert als maxwidth = '850px' an Kopfzeile, Seiten und Fußzeile. Die Mindestbreite von Kopf- und Fußzeile (minwidth = '300px') steht in allen Exporten, ohne dass der Designer dafür ein eigenes Feld anbietet; an den Seiten steht die 'Minimale Breite' des Formulars (zulässig '300px' oder '0px')."
+      },
+      {
+        "rule": "HWG-CD-02",
+        "severity": "major",
+        "message": "HWG-Header-Logo weicht von den Vorgaben ab: Höhe ist '50' statt 60px, barrierefreier Alternativtext (alt) fehlt oder unvollständig.",
+        "rule_id": "HWG-CD-02",
+        "remediation": "Platzieren Sie in der Kopfzeile ('header1' / XHeader) ein Element 'Bild' (XImage) und wählen Sie im Bereich 'Bilder' die freigegebene HWG-Logodatei aus. Setzen Sie im Bereich 'Darstellung' das Feld 'Höhe (in px)' auf '60' (imageheight = '60') und die 'Ausrichtung' auf rechtsbündig (textalign = 'right') und hinterlegen Sie im Bereich 'Label' im Feld 'Alt Text' (alt) eine institutionsbezogene Bezeichnung wie 'Das Logo der HWG LU' oder 'Hochschule für Wirtschaft und Gesellschaft Ludwigshafen'."
+      },
+      {
+        "rule": "HWG-CD-04",
+        "severity": "major",
+        "message": "Formulartitel im Header (XHeader) ist nicht als Überschrift erster Ordnung (<h1>) ausgezeichnet (nur H2/Fließtext gefunden).",
+        "rule_id": "HWG-CD-04",
+        "remediation": "Ziehen Sie im Formcycle-Designer ein Element 'Text' (XSpan) in die Kopfzeile ('header1' / XHeader), geben Sie im Bereich 'Werte' den Formulartitel ein und formatieren Sie ihn im Editor über 'Format' (Absatzformat) genau einmal als 'Überschrift 1' (im HTML <h1>Antrag auf ...</h1>), nicht als 'Überschrift 2' oder 'Normal'."
+      },
+      {
+        "rule": "HWG-DSGVO-01",
+        "severity": "critical",
+        "message": "Das Formular erhebt Eingaben, aber weder die Footer-Datenschutzerklärung (privacyPolicyShow='1') noch ein sichtbarer, auf die Datenschutzerklärung verlinkter Art.-13-Hinweis ist vorhanden.",
+        "rule_id": "HWG-DSGVO-01",
+        "remediation": "Aktivieren Sie im Fußzeilen-Element ('footer1' / XFooter) im Bereich 'Datenschutzerklärung' die Option 'Anzeigen' (privacyPolicyShow = '1') und wählen Sie unter 'Inhalt' das Template 'Datenschutzerklärung_HWGLU', oder fügen Sie vor der Absende-Schaltfläche ein Text-Element ('Text' / XSpan) mit Hinweis nach Art. 13 DSGVO und aktivem Link zur HWG-Datenschutzerklärung (https://www.hwg-lu.de/datenschutzerklaerung) ein."
+      },
+      {
+        "rule": "HWG-UPLOAD-01",
+        "severity": "major",
+        "message": "2 Upload-Element(e) unvollständig oder widersprüchlich spezifiziert: uplAuslageRechnung (Größenlimit im Hilfetext/Label fehlt), uplAuslageZahlungsnachweis (Größenlimit im Hilfetext/Label fehlt).",
+        "rule_id": "HWG-UPLOAD-01",
+        "remediation": "Wählen Sie das Upload-Element ('Upload' / XUpload) im Formcycle-Designer aus: (1) Setzen Sie unter 'Bedingungen' die zulässigen 'Dateiendungen' (fileextension, z. B. '.pdf, .jpg, .png') und die 'Max. Größe' in Kilobyte (maxfilesize, z. B. '10240' für 10 MB). (2) Nennen Sie exakt dieselben Formate und dasselbe Größenlimit im Label oder im Bereich 'Hilfe' (z. B. 'Erlaubte Dateiformate: PDF, JPG, PNG; max. 10 MB')."
+      },
+      {
+        "rule": "HWG-VAL-01",
+        "severity": "major",
+        "message": "Strukturierte Eingabefelder ohne gültigen Validator / Regex gefunden: tf1 (Telefon: unvalidierter Freitext), tfBankIBAN (IBAN: leeres/fehlendes Regex-Muster), tfKontiFKMail (E-Mail: Typ 'text').",
+        "rule_id": "HWG-VAL-01",
+        "remediation": "Wählen Sie das Eingabefeld ('Eingabefeld' / XTextField) im Formcycle-Designer aus und stellen Sie im Bereich 'Bedingungen' den passenden 'Datentyp' (datatype) ein (Trennen Sie kombinierte 2-in-1-Felder wie 'E-Mail/Telefon' stets in separate Einzelfelder auf!):\n• E-Mail, Postleitzahl, Datum und Telefonnummer: Datentyp 'E-Mail' (email; alternativ 'E-Mail (Traditionell o. Umlaute)', traditionalEmail), 'Postleitzahl (Deutschland)' (plzDE), 'Datum (TT.MM.YYYY)' (dateDE) bzw. 'Telefonnummer' (phone). 'Telefonnummer' akzeptiert Ländervorwahlen wie '+49 621 …', sofern nach der Vorwahl ein Leerzeichen, Punkt oder Bindestrich folgt.\n• Geldbeträge: Datentyp 'Zahl' (formattedNumber) mit Einheit und Nachkommastellen.\n• IBAN (DE, leerzeichentolerant): Datentyp 'Regulärer Ausdruck' (regexp) mit dem Muster ^[A-Z]{2}[0-9]{2}(?:\\s?[0-9]{4}){4}\\s?[0-9]{2}$ (vrule)\n• Matrikelnummer (HWG, derzeit 6 Ziffern; das Muster lässt eine 7. Ziffer für spätere Nummern zu): Datentyp 'Regulärer Ausdruck' (regexp) mit dem Muster ^[0-9]{6,7}$ (vrule)\nHinterlegen Sie im Feld 'Fehlertext' (vrulemismatch) stets einen verständlichen Hinweistext."
+      },
+      {
+        "rule": "HWG-WF-01",
+        "severity": "minor",
+        "message": "Nicht-standardisierte Ad-hoc-Workflow-Status gefunden (6): ['Antrag kontiert  - warten auf Auszahlung', 'Antrag  bearbeitet', 'Kontierung abgelehnt', 'Haushaltsnachforderung', 'Nachreichung beendet - warten auf Auszahlung', 'Antrag Archiviert'].",
+        "rule_id": "HWG-WF-01",
+        "remediation": "Legen Sie im Workflow-Designer unter 'Status' über 'Neuer Status' Status an, deren Name mit einer der kanonischen Phasen beginnt ('Eingegangen', 'In Prüfung', 'Nachforderung ausstehend', 'Genehmigt', 'Abgelehnt', 'Archiviert'; gleichwertig sind 'In Bearbeitung' und 'Abgeschlossen'), und ziehen Sie diese Status aus der Elementauswahl (Kategorie 'Status') als Endpunkte ans Ende der Verarbeitungsketten (im Export FC_CHANGE_STATE). Fachliche Zusätze nach der Phase sind zulässig (z. B. 'In Prüfung Finanzabteilung'); der Systemstatus 'Eingegangen' ist bereits angelegt."
+      },
+      {
+        "rule": "HWG-WF-02",
+        "severity": "minor",
+        "message": "Fehlender dynamischer Vorgangsplatzhalter ([%$RECORD_ID%]) in 14/14 automatisierten Workflow-E-Mails (FC_EMAIL).",
+        "rule_id": "HWG-WF-02",
+        "remediation": "Binden Sie im Formcycle-Workflow in sämtlichen Aktionen vom Typ 'E-Mail' (FC_EMAIL) im Feld 'Betreff' oder im Inhalt ('HTML') den dynamischen Vorgangsplatzhalter [%$RECORD_ID%] als eindeutige Vorgangsnummer ein."
+      },
+      {
+        "rule": "HWG-BTN-01",
+        "rule_id": "HWG-BTN-01",
+        "severity": "major",
+        "message": "[KI-Befund · qwen3-30b-a3b-instruct-2507] Die Schaltfläche 'btnAntagstellerSenden' mit dem Label 'senden' ist für Antragstellende sichtbar (applicant_visible == true), aber das Label enthält kein konkretes Vollverb im Infinitiv mit Zielobjekt. Stattdessen ist es ein generisches, handlungsloses Ein-Wort-Label ('senden'), das die ausgelöste Transaktion nicht eindeutig beschreibt. Dies verstößt gegen die Regel, dass sichtbare Aktionsschaltflächen stets ein konkretes Vollverb im Infinitiv mit Zielobjekt enthalten müssen (z. B. 'Antrag einreichen', 'Unterlagen absenden'). (Betroffen: btnAntagstellerSenden) — Vorschlag: Ändern Sie das Label der Schaltfläche 'btnAntagstellerSenden' in 'Antrag einreichen' oder 'Unterlagen absenden', um eine eindeutige Handlung zu beschreiben und die Selbstbeschreibungsfähigkeit zu gewährleisten.",
+        "remediation": "Wählen Sie im Formcycle-Designer das Element 'Schaltflächen' (XButtonList bzw. XButton) aus und beschriften Sie jede Aktionsschaltfläche im Bereich 'Schaltflächen' in der Spalte 'Text' (value) nach dem Action-Verb-Muster (z. B. 'Antrag einreichen', 'Kritischen Fall einreichen' oder 'Rückmeldung übermitteln') anstelle von reinen Zuständen ('Kritischer Fall') oder generischen Ein-Wort-Begriffen ('senden')."
+      }
+    ],
+    "recommendations": [
+      {
+        "rule": "HWG-UX-02",
+        "rule_id": "HWG-UX-02",
+        "severity": "recommendation",
+        "message": "[KI-Befund · qwen3-30b-a3b-instruct-2507] Das Formular erfüllt die Komplexitätsschwellenwerte: Es umfasst 3 Seiten und 49 Eingabefelder, was die Anforderung von 'min_pages >= 3' und 'min_input_fields >= 25' erfüllt. Es ist jedoch keine Schaltfläche zum Zwischenspeichern (Aktion 'speichern' oder 'absenden' ohne Prüfung, submitNoCheck) vorhanden, und es wird kein Fortsetzungs-Link ([%$FORM_PROCESS_LINK%]) per E-Mail an die antragstellende Person versandt. Daher fehlt die empfohlene Funktion zur nahtlosen Fortsetzung der Bearbeitung. — Vorschlag: Fügen Sie eine sichtbare Schaltfläche 'Zwischenspeichern' hinzu, die die Aktion 'speichern' (ohne Prüfung der Mussfelder) auslöst. Stellen Sie sicher, dass nach dem Speichern eine E-Mail mit dem Fortsetzungs-Link ([%$FORM_PROCESS_LINK%]) an die antragstellende Person gesendet wird.",
+        "remediation": "Empfehlung (ohne Punktabzug): Legen Sie im Element 'Schaltflächen' im Bereich 'Schaltflächen' eine Zeile mit dem Text 'Zwischenspeichern' und der Aktion 'speichern' an; sie speichert den Zwischenstand ohne Prüfung der Mussfelder und ist laut Formcycle-Handbuch der vorgesehene Weg, ein Formular später weiter auszufüllen. Ziehen Sie im Workflow-Designer das Ereignis dieser Schaltfläche in den Workflow und versenden Sie in dieser Verarbeitungskette über eine Aktion 'E-Mail' an die antragstellende Person den Fortsetzungs-Link [%$FORM_PROCESS_LINK%], der den gespeicherten Vorgang wieder öffnet. Erlauben Sie beim Status, mit dem diese Verarbeitungskette endet, unter 'Formularanmeldung für externen Aufruf' die Option 'Externen Aufruf erlauben'; sonst lässt sich der Vorgang außerhalb des Postfachs nicht öffnen. Eine Schaltfläche mit der Aktion 'absenden' ohne Prüfung (submitNoCheck) wird ebenfalls erkannt; das Handbuch empfiehlt sie für spätere Zwischenspeicherungen."
+      }
+    ],
+    "passed": [
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-A11Y-01 (4 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (22 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Beschriftungen ohne Pipe-Zeichen, Pfeile und sichtbare Code-Reste)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-BTN-02 (Einheitliche Mehrseiten-Navigation 'Weiter' / 'Zurück' bzw. 'weiter' / 'zurück' eingehalten)",
+      "HWG-UX-01 (Affordanzgerechte kompakte Feldbreiten eingehalten)",
+      "HWG-STAMM-02 (Alle Feldbezeichnungen für persönliche Stammdaten entsprechen den standardisierten Mustern: 'Anrede', 'Vorname', 'Nachname', 'E-Mail', 'Telefonnummer', 'Straße', 'PLZ', 'Ort', 'Abteilung / Fachbereich / Institut', 'Art des Kontos', 'IBAN', 'Name der Bank', 'Adresse / Sitz der Bank', 'SWIFT- / BIC-Code', 'Nationaler Bankcode / Routing-Nummer', 'Betrag', 'Währung', 'Sonstige Währung', 'Erstattung der vorgelegten Kosten für', 'Bitte laden Sie hier Ihre Rechnung hoch', 'Hinweis zur Ihrer Rechnung', 'Nachweis der Zahlung', 'Verwalten Sie das Budget aus dem die Auslage erstattet werden soll?', 'Kostenstelle vorgeben (für Führungskraft)', 'Suchfeld: Bitte die Kontaktdaten und die E-Mail-Adresse Ihrer Führungskraft über den Nachnamen suchen', 'Suchfeld: Bitte die Kontaktdaten und die E-Mail-Adresse der Budgetverwaltung über den Nachnamen suchen', 'Vorname', 'Nachname', 'E-Mail Adresse'. Keine Sammelfelder oder technischen Bezeichner wie 'tf1' oder 'txtMail2' sind sichtbar.)",
+      "HWG-UI-01 (Keine sichtbaren Entwickler-Notizen, Code-Artefakte oder interne Arbeitshinweise wurden in den UI-Elementen identifiziert. Die Liste der sichtbaren Texte enthält keine Marker wie 'TODO', 'fixme', 'display:none', 'lorem ipsum' oder Fachbegriffe wie 'javascript', 'shibboleth', 'ldap', 'saml', 'admin', 'ticket', 'intern:', 'noch anpassen', 'platzhalter'. Alle sichtbaren Texte sind sachlich und an Nutzende gerichtet.)",
+      "HWG-LANG-01 (Alle Fachbegriffe und Kürzel in Formularfeldern und Hinweistexten (außer im Header) sind entweder durch verständliche Bezeichnungen erklärt oder enthalten einen Hilfetext. Beispiele: 'Art des Kontos', 'IBAN', 'SWIFT- / BIC-Code', 'Nationaler Bankcode / Routing-Nummer', 'Budgetverwaltung', 'Führungskraft', 'Haushaltabteilung' sind in der Regel verständlich formuliert. Der Hinweis 'Suchfeld: Bitte die Kontaktdaten und die E-Mail-Adresse Ihrer Führungskraft über den Nachnamen suchen' ist klar und enthält keine unerklärten Fachbegriffe. Die Ansprache erfolgt durchgängig in der 'Sie'-Form.)",
+      "HWG-LANG-02 (Keine Sätze mit mehr als 25 Wörtern wurden in den Anleitungstexten, Rich-Text-Blöcken oder Hilfetexten identifiziert. Die längsten Sätze sind prägnant formuliert, enthalten keine verschachtelten Passivkonstruktionen oder Behördenjargon. Beispiele: 'Bitte laden Sie hier Ihre Rechnung hoch (.pdf, .jpeg, .jpg, .png).' (6 Wörter), 'Hinweis zur Ihrer Rechnung: Wenn aus der Rechnung nicht eindeutig hervorgeht, dass der Betrag bereits beglichen wurde, muss ein Kontoauszug, Kreditkartenabrechnung o.ä. beigefügt werden, um die tatsächliche Zahlung nachzuweisen.' (24 Wörter). Alle Sätze sind aktiv formuliert und klar verständlich.)",
+      "HWG-FEEDBACK-01 (Alle Workflow-E-Mails werden an dynamische Empfänger-Platzhalter adressiert (z. B. [%tfZahlungEmail%], [%tfKontiFKMail%]). Die Eingangsbestätigung wird direkt an die antragstellende Person gesendet. Die zuständige Prüfstelle (z. B. 'Budgetverwaltung', 'Führungskraft', 'Haushaltsteam') wird in mehreren E-Mails explizit genannt. Die nächsten Schritte (z. B. 'Bitte kontieren Sie den Antrag', 'Bitte reichen Sie die Unterlagen ein', 'Bitte bearbeiten Sie den Antrag weiter') sind klar beschrieben. Die E-Mail 'Ihr Antrag auf Auslagenerstattung wird bald archiviert' informiert über den nächsten Schritt (Link zur Prüfung).)"
+    ],
+    "not_applicable": {},
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'qwen3-30b-a3b-instruct-2507' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 31,
+    "provenance": {
+      "engine_version": "1.7.0",
+      "registry_version": "1.7.0",
+      "prompt_version": "1.6.6",
+      "input_sha256": "dc8a0d9b587bb9183025ab057397b7d1ca14392b85f535658402b71af886821e",
+      "stage1_ms": 1.896,
+      "prompt_sha256": "763a52dd51e846649ce3892b0bd5b92c00682a1da53949c6c89f9dd31f29a8bf",
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 13374.0,
+      "llm_raw_response": "{\n  \"form_name\": \"Auslagenerstattung _20260929.xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"selZahlungAnrede\",\n        \"tfZahlungVorname\",\n        \"tfZahlungNachname\",\n        \"tfZahlungEmail\",\n        \"tf1\",\n        \"tfZahlungStrasse\",\n        \"tfPLZ\",\n        \"tfOrt\",\n        \"tfZahlungAbteilung\",\n        \"selArtKonto\",\n        \"tfBankIBAN\",\n        \"tfBankBIC1\",\n        \"tfBankBIC2\",\n        \"tfBankBIC\",\n        \"tfBankBIC3\",\n        \"tfAuslageBetrag\",\n        \"selWaehrung\",\n        \"tfSonstigeWaehrung\",\n        \"edAuslageGrund\",\n        \"uplAuslageRechnung\",\n        \"txtAuslageHinweis\",\n        \"uplAuslageZahlungsnachweis\",\n        \"selKontiBudgetverwaltung\",\n        \"tfKoStKontiBudgetverwaltung\",\n        \"txtJaFuehrungskraft\",\n        \"txtNeinBudgetverwaltung\",\n        \"tfKontFKVorname\",\n        \"tfKontiFKNachname\",\n        \"tfKontiFKMail\"\n      ],\n      \"finding\": \"Alle Feldbezeichnungen für persönliche Stammdaten entsprechen den standardisierten Mustern: 'Anrede', 'Vorname', 'Nachname', 'E-Mail', 'Telefonnummer', 'Straße', 'PLZ', 'Ort', 'Abteilung / Fachbereich / Institut', 'Art des Kontos', 'IBAN', 'Name der Bank', 'Adresse / Sitz der Bank', 'SWIFT- / BIC-Code', 'Nationaler Bankcode / Routing-Nummer', 'Betrag', 'Währung', 'Sonstige Währung', 'Erstattung der vorgelegten Kosten für', 'Bitte laden Sie hier Ihre Rechnung hoch', 'Hinweis zur Ihrer Rechnung', 'Nachweis der Zahlung', 'Verwalten Sie das Budget aus dem die Auslage erstattet werden soll?', 'Kostenstelle vorgeben (für Führungskraft)', 'Suchfeld: Bitte die Kontaktdaten und die E-Mail-Adresse Ihrer Führungskraft über den Nachnamen suchen', 'Suchfeld: Bitte die Kontaktdaten und die E-Mail-Adresse der Budgetverwaltung über den Nachnamen suchen', 'Vorname', 'Nachname', 'E-Mail Adresse'. Keine Sammelfelder oder technischen Bezeichner wie 'tf1' oder 'txtMail2' sind sichtbar.\",\n      \"remediation_suggestion\": \"Keine Korrektur notwendig. Alle Feldbezeichnungen entsprechen den HWG-Standardvorgaben.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Keine sichtbaren Entwickler-Notizen, Code-Artefakte oder interne Arbeitshinweise wurden in den UI-Elementen identifiziert. Die Liste der sichtbaren Texte enthält keine Marker wie 'TODO', 'fixme', 'display:none', 'lorem ipsum' oder Fachbegriffe wie 'javascript', 'shibboleth', 'ldap', 'saml', 'admin', 'ticket', 'intern:', 'noch anpassen', 'platzhalter'. Alle sichtbaren Texte sind sachlich und an Nutzende gerichtet.\",\n      \"remediation_suggestion\": \"Keine Korrektur notwendig. Die Benutzeroberfläche ist frei von Entwickler-Notizen und Code-Artefakten.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\n        \"btnAntagstellerSenden\"\n      ],\n      \"finding\": \"Die Schaltfläche 'btnAntagstellerSenden' mit dem Label 'senden' ist für Antragstellende sichtbar (applicant_visible == true), aber das Label enthält kein konkretes Vollverb im Infinitiv mit Zielobjekt. Stattdessen ist es ein generisches, handlungsloses Ein-Wort-Label ('senden'), das die ausgelöste Transaktion nicht eindeutig beschreibt. Dies verstößt gegen die Regel, dass sichtbare Aktionsschaltflächen stets ein konkretes Vollverb im Infinitiv mit Zielobjekt enthalten müssen (z. B. 'Antrag einreichen', 'Unterlagen absenden').\",\n      \"remediation_suggestion\": \"Ändern Sie das Label der Schaltfläche 'btnAntagstellerSenden' in 'Antrag einreichen' oder 'Unterlagen absenden', um eine eindeutige Handlung zu beschreiben und die Selbstbeschreibungsfähigkeit zu gewährleisten.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"RECOMMENDATION\",\n      \"affected_elements\": [],\n      \"finding\": \"Das Formular erfüllt die Komplexitätsschwellenwerte: Es umfasst 3 Seiten und 49 Eingabefelder, was die Anforderung von 'min_pages >= 3' und 'min_input_fields >= 25' erfüllt. Es ist jedoch keine Schaltfläche zum Zwischenspeichern (Aktion 'speichern' oder 'absenden' ohne Prüfung, submitNoCheck) vorhanden, und es wird kein Fortsetzungs-Link ([%$FORM_PROCESS_LINK%]) per E-Mail an die antragstellende Person versandt. Daher fehlt die empfohlene Funktion zur nahtlosen Fortsetzung der Bearbeitung.\",\n      \"remediation_suggestion\": \"Fügen Sie eine sichtbare Schaltfläche 'Zwischenspeichern' hinzu, die die Aktion 'speichern' (ohne Prüfung der Mussfelder) auslöst. Stellen Sie sicher, dass nach dem Speichern eine E-Mail mit dem Fortsetzungs-Link ([%$FORM_PROCESS_LINK%]) an die antragstellende Person gesendet wird.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Alle Fachbegriffe und Kürzel in Formularfeldern und Hinweistexten (außer im Header) sind entweder durch verständliche Bezeichnungen erklärt oder enthalten einen Hilfetext. Beispiele: 'Art des Kontos', 'IBAN', 'SWIFT- / BIC-Code', 'Nationaler Bankcode / Routing-Nummer', 'Budgetverwaltung', 'Führungskraft', 'Haushaltabteilung' sind in der Regel verständlich formuliert. Der Hinweis 'Suchfeld: Bitte die Kontaktdaten und die E-Mail-Adresse Ihrer Führungskraft über den Nachnamen suchen' ist klar und enthält keine unerklärten Fachbegriffe. Die Ansprache erfolgt durchgängig in der 'Sie'-Form.\",\n      \"remediation_suggestion\": \"Keine Korrektur notwendig. Alle Begriffe sind verständlich formuliert oder durch Hilfetexte erläutert.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Keine Sätze mit mehr als 25 Wörtern wurden in den Anleitungstexten, Rich-Text-Blöcken oder Hilfetexten identifiziert. Die längsten Sätze sind prägnant formuliert, enthalten keine verschachtelten Passivkonstruktionen oder Behördenjargon. Beispiele: 'Bitte laden Sie hier Ihre Rechnung hoch (.pdf, .jpeg, .jpg, .png).' (6 Wörter), 'Hinweis zur Ihrer Rechnung: Wenn aus der Rechnung nicht eindeutig hervorgeht, dass der Betrag bereits beglichen wurde, muss ein Kontoauszug, Kreditkartenabrechnung o.ä. beigefügt werden, um die tatsächliche Zahlung nachzuweisen.' (24 Wörter). Alle Sätze sind aktiv formuliert und klar verständlich.\",\n      \"remediation_suggestion\": \"Keine Korrektur notwendig. Alle Texte sind prägnant und barrierearm formuliert.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"E-Mail\",\n        \"E-Mail\",\n        \"E-Mail\",\n        \"E-Mail\",\n        \"E-Mail\",\n        \"E-Mail\",\n        \"E-Mail\",\n        \"E-Mail\",\n        \"E-Mail\",\n        \"E-Mail Archivdateien\",\n        \"E-Mail Antrag archiviert\",\n        \"E-Mail\",\n        \"E-Mail Archivdateien\",\n        \"E-Mail Antrag archiviert\"\n      ],\n      \"finding\": \"Alle Workflow-E-Mails werden an dynamische Empfänger-Platzhalter adressiert (z. B. [%tfZahlungEmail%], [%tfKontiFKMail%]). Die Eingangsbestätigung wird direkt an die antragstellende Person gesendet. Die zuständige Prüfstelle (z. B. 'Budgetverwaltung', 'Führungskraft', 'Haushaltsteam') wird in mehreren E-Mails explizit genannt. Die nächsten Schritte (z. B. 'Bitte kontieren Sie den Antrag', 'Bitte reichen Sie die Unterlagen ein', 'Bitte bearbeiten Sie den Antrag weiter') sind klar beschrieben. Die E-Mail 'Ihr Antrag auf Auslagenerstattung wird bald archiviert' informiert über den nächsten Schritt (Link zur Prüfung).\",\n      \"remediation_suggestion\": \"Keine Korrektur notwendig. Die Workflow-E-Mails erfüllen alle Anforderungen an Prozesstransparenz und Benutzerbindung.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 1,
+    "release_status": "red_blocked",
+    "release_label": "Kritisch unzureichend (Gesperrt)",
+    "is_releasable": false
+  }
+}

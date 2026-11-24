@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "model": "qwen3.8-27b",
+    "form": "Antrag-Sprints (saniert)",
+    "run": 5,
+    "wall_ms": 153925.5,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "PASS",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 100,
+    "release_status": "green_compliant",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'qwen3.8-27b' abgeschlossen.",
+    "llm_latency_ms": 153920.5,
+    "attempts": 3,
+    "transport_error": false
+  },
+  "result": {
+    "form": "AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp",
+    "violations": [],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (12 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Saubere Label-Syntax ohne störende HTML-Fragmente)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 8/8 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Die sichtbaren Labels für persönliche Stammdaten verwenden die kanonischen Bezeichnungen Vorname, Nachname, E-Mail und Telefonnummer; es gibt keine mehrdeutigen Sammelfelder oder technischen Kürzel.)",
+      "HWG-UI-01 (In den sichtbaren UI-Elementen wurden keine Entwickler-Notizen, Code-Artefakte oder redaktionellen Arbeitsnotizen gefunden; metrics.suspected_dev_notes ist leer.)",
+      "HWG-BTN-01 (Die für Antragstellenden sichtbaren Schaltflächen Antrag einreichen und Kritischen Fall einreichen enthalten jeweils ein konkretes Vollverb im Infinitiv mit Zielobjekt.)",
+      "HWG-LANG-01 (Fachbegriffe wie Mittelgeber, ZFK und verausgabt sind durch Hilfetexte erklärt; die Ansprache ist durchgängig im Sie-Modus, soweit eine direkte Ansprache erfolgt.)",
+      "HWG-LANG-02 (Keine Sätze mit mehr als 25 Wörtern wurden festgestellt; die sichtbaren Labels und Hilfetexte enthalten keine verschachtelten Passiv- oder Behördenkonstruktionen.)",
+      "HWG-FEEDBACK-01 (Die E-Mail an [%tfEmail%] bestätigt den Eingang des Antrags, benennt über die Signatur das ZFK-Team als zuständige Stelle und informiert über die Prüfung sowie die zeitnahe Rückmeldung.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UPLOAD-01": "Keine Dateiupload-Elemente im Formular vorhanden.",
+      "HWG-UX-01": "Keine typischen Kompaktfelder (PLZ, Hausnummer) im Formular vorhanden.",
+      "HWG-UX-02": "[KI-Prüfung · qwen3.8-27b] Der Komplexitätsschwellenwert ist nicht erreicht, da das Formular eine Seite und 16 Eingabefelder umfasst; die Empfehlung für Zwischenspeichern mit Fortsetzungslink ist daher nicht anwendbar."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "qwen3.8-27b",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'qwen3.8-27b' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 100,
+    "provenance": {
+      "engine_version": "1.6.0",
+      "registry_version": "1.6.0",
+      "prompt_version": "1.6.0",
+      "input_sha256": "281f8c2b6863668b3ed66ae189302fd354b656ce17785c025fb06665e9732d88",
+      "stage1_ms": 1.084,
+      "prompt_sha256": "014d018ad6614adeff8603fb7277bf83aa952064b7d6d1e939687e5019dbe174",
+      "model": "qwen3.8-27b",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 153920.5,
+      "llm_raw_response": "\n\n{\n  \"form_name\": \"AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"tfVorname\",\n        \"tfName\",\n        \"tfEmail\",\n        \"tfTelefonnummer\"\n      ],\n      \"finding\": \"Die sichtbaren Labels für persönliche Stammdaten verwenden die kanonischen Bezeichnungen Vorname, Nachname, E-Mail und Telefonnummer; es gibt keine mehrdeutigen Sammelfelder oder technischen Kürzel.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"txtTitel\",\n        \"fsPersoenlicheAngaben\",\n        \"tfVorname\",\n        \"tfName\",\n        \"tfEmail\",\n        \"tfTelefonnummer\",\n        \"fsAntragInformationen\",\n        \"edInhaltBeschreibung\",\n        \"edNameFoerderprogramm\",\n        \"tfEinreichungsfrist\",\n        \"selFoerderprojektvolumen\",\n        \"edBeschreibungAntragsverfahren\",\n        \"tfHoeheZuschuss\",\n        \"edAusgabenplanZuschuss\",\n        \"edAktuellerStand\",\n        \"edBegruendungKritisch\"\n      ],\n      \"finding\": \"In den sichtbaren UI-Elementen wurden keine Entwickler-Notizen, Code-Artefakte oder redaktionellen Arbeitsnotizen gefunden; metrics.suspected_dev_notes ist leer.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"btnSenden\",\n        \"btnKritisch\"\n      ],\n      \"finding\": \"Die für Antragstellenden sichtbaren Schaltflächen Antrag einreichen und Kritischen Fall einreichen enthalten jeweils ein konkretes Vollverb im Infinitiv mit Zielobjekt.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Der Komplexitätsschwellenwert ist nicht erreicht, da das Formular eine Seite und 16 Eingabefelder umfasst; die Empfehlung für Zwischenspeichern mit Fortsetzungslink ist daher nicht anwendbar.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"edNameFoerderprogramm\",\n        \"selFoerderprojektvolumen\",\n        \"tfHoeheZuschuss\",\n        \"edAusgabenplanZuschuss\"\n      ],\n      \"finding\": \"Fachbegriffe wie Mittelgeber, ZFK und verausgabt sind durch Hilfetexte erklärt; die Ansprache ist durchgängig im Sie-Modus, soweit eine direkte Ansprache erfolgt.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"edInhaltBeschreibung\",\n        \"edNameFoerderprogramm\",\n        \"selFoerderprojektvolumen\",\n        \"tfHoeheZuschuss\",\n        \"edAusgabenplanZuschuss\",\n        \"edAktuellerStand\",\n        \"edBegruendungKritisch\"\n      ],\n      \"finding\": \"Keine Sätze mit mehr als 25 Wörtern wurden festgestellt; die sichtbaren Labels und Hilfetexte enthalten keine verschachtelten Passiv- oder Behördenkonstruktionen.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"E-Mail Antragsteller\"\n      ],\n      \"finding\": \"Die E-Mail an [%tfEmail%] bestätigt den Eingang des Antrags, benennt über die Signatur das ZFK-Team als zuständige Stelle und informiert über die Prüfung sowie die zeitnahe Rückmeldung.\",\n      \"remediation_suggestion\": \"Keine Änderung erforderlich.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 0,
+    "release_status": "green_compliant",
+    "release_label": "Konform (Freigabefähig)",
+    "is_releasable": true
+  }
+}

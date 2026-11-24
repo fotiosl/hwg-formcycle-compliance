@@ -1,0 +1,175 @@
+{
+  "engine_registry_version": "1.6.0",
+  "passed": 20,
+  "total": 28,
+  "tests": [
+    {
+      "id": "P1",
+      "description": "Referenzformular ohne Verstoß in Stufe 1 (AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp)",
+      "passed": true,
+      "observed": "Score 100, Status pending_ai_review"
+    },
+    {
+      "id": "P2",
+      "description": "Referenzformular ohne Verstoß in Stufe 1 (synthetic_compliant_form.xfp)",
+      "passed": true,
+      "observed": "Score 100, Status pending_ai_review"
+    },
+    {
+      "id": "A",
+      "description": "Ohne KI-Prüfung keine Freigabe trotz 100 Punkten in Stufe 1",
+      "passed": true,
+      "observed": "Score 100, Status pending_ai_review"
+    },
+    {
+      "id": "B",
+      "description": "Nutzerhinweis 'Bitte aktivieren Sie JavaScript' erzeugt keinen Stufe-1-Verstoß HWG-UI-01",
+      "passed": true,
+      "observed": "Verstöße: keine"
+    },
+    {
+      "id": "C1",
+      "description": "Unsichtbarer Datenschutztext mit beliebigem Link erfüllt HWG-DSGVO-01 nicht",
+      "passed": true,
+      "observed": "HWG-DSGVO-01 erkannt"
+    },
+    {
+      "id": "C2",
+      "description": "Umbenannte Personenfelder machen HWG-DSGVO-01 nicht unanwendbar",
+      "passed": true,
+      "observed": "HWG-DSGVO-01 erkannt"
+    },
+    {
+      "id": "D",
+      "description": "Fieldset mit Legende '.' erfüllt HWG-A11Y-01 nicht",
+      "passed": true,
+      "observed": "HWG-A11Y-01 erkannt"
+    },
+    {
+      "id": "E",
+      "description": "Regex '[0-9]*.*' (akzeptiert beliebigen Text) gilt nicht als Validierung",
+      "passed": true,
+      "observed": "HWG-VAL-01 erkannt"
+    },
+    {
+      "id": "F",
+      "description": "Archiv mit zweiter (konformer) .fcp-Datei wird abgewiesen",
+      "passed": true,
+      "observed": "abgewiesen (Archiv 'test.xfp' enthält 2 Maskenmodelle (.fcp); erwartet wird genau eines.)"
+    },
+    {
+      "id": "G",
+      "description": "Server nimmt keine .json-Uploads mit selbst deklarierten Workflow-Daten an",
+      "passed": true,
+      "observed": "Es werden nur Formcycle-Exportarchive (.xfp) angenommen."
+    },
+    {
+      "id": "H1",
+      "description": "Leere KI-Antwort führt nicht zur Freigabe",
+      "passed": true,
+      "observed": "Status pending_ai_review, offen 6"
+    },
+    {
+      "id": "H2",
+      "description": "Unzulässiger Status RECOMMENDATION für HWG-BTN-01 wird nicht als bestanden gewertet",
+      "passed": true,
+      "observed": "HWG-BTN-01 offen: True, Status pending_ai_review"
+    },
+    {
+      "id": "H3",
+      "description": "VIOLATION bleibt VIOLATION, auch wenn die Begründung 'keine Korrektur erforderlich' enthält",
+      "passed": true,
+      "observed": "HWG-BTN-01 Verstoß"
+    },
+    {
+      "id": "I",
+      "description": "Vorgangsnummer nur im HTML-Kommentar erfüllt HWG-WF-02 nicht",
+      "passed": true,
+      "observed": "HWG-WF-02 erkannt"
+    },
+    {
+      "id": "J",
+      "description": "Feste externe Empfängeradresse gilt nicht als Eingangsbestätigung (HWG-FEEDBACK-01)",
+      "passed": true,
+      "observed": "HWG-FEEDBACK-01 erkannt"
+    },
+    {
+      "id": "K",
+      "description": "PLZ-Feld mit Klasse col-12 gilt nicht als kompakt (HWG-UX-01)",
+      "passed": true,
+      "observed": "HWG-UX-01 erkannt"
+    },
+    {
+      "id": "L1",
+      "description": "Nicht freigegebener Endpunkt wird abgelehnt",
+      "passed": true,
+      "observed": "Status rejected, Anfrage gesendet: False"
+    },
+    {
+      "id": "L2",
+      "description": "Serverschlüssel wird nicht an einen vom Client gewählten Endpunkt gesendet",
+      "passed": true,
+      "observed": "Anfrage gesendet: True, Authorization-Header: keiner"
+    },
+    {
+      "id": "M",
+      "description": "Archiv mit übergroßem Eintrag wird abgewiesen",
+      "passed": true,
+      "observed": "abgewiesen (Archiveintrag 'files/x.fcp' überschreitet die zulässige Größe.)"
+    },
+    {
+      "id": "N1",
+      "description": "Fremdes Bild mit HWG-Alternativtext gilt nicht als HWG-Logo (HWG-CD-02)",
+      "passed": false,
+      "observed": "HWG-CD-02 umgangen"
+    },
+    {
+      "id": "N2",
+      "description": "Platzhalter-Legende 'Abc' gilt nicht als aussagekräftige Legende (HWG-A11Y-01)",
+      "passed": false,
+      "observed": "HWG-A11Y-01 umgangen"
+    },
+    {
+      "id": "N3",
+      "description": "Vorgangsnummer nur in unsichtbarem HTML erfüllt HWG-WF-02 nicht",
+      "passed": false,
+      "observed": "HWG-WF-02 umgangen"
+    },
+    {
+      "id": "N4",
+      "description": "Geldbetrag mit Datentyp 'posmoney' gilt als validiert (kein Fehlalarm bei HWG-VAL-01)",
+      "passed": false,
+      "observed": "HWG-VAL-01 Fehlalarm"
+    },
+    {
+      "id": "N5",
+      "description": "Aufzählung mit Zeilenumbrüchen gilt nicht als überlanger Satz (kein Fehlalarm bei HWG-LANG-02)",
+      "passed": false,
+      "observed": "HWG-LANG-02 Fehlalarm"
+    },
+    {
+      "id": "N6",
+      "description": "Server liefert keine Dateien außer Dashboard und API aus (z. B. server.py)",
+      "passed": false,
+      "observed": "server.py ausgeliefert"
+    },
+    {
+      "id": "S1",
+      "description": "Statusliste bei abgeschalteter statusabhängiger Sichtbarkeit blendet die Felder nicht aus (HWG-DSGVO-01 bleibt anwendbar)",
+      "passed": false,
+      "observed": "HWG-DSGVO-01 übersprungen"
+    },
+    {
+      "id": "S2",
+      "description": "Datenschutzhinweis, der erst nach dem Absenden sichtbar ist, erfüllt HWG-DSGVO-01 nicht",
+      "passed": true,
+      "observed": "HWG-DSGVO-01 erkannt"
+    },
+    {
+      "id": "T1",
+      "description": "Formatierungs-Tags und geschütztes Leerzeichen in einer Beschriftung verändern die Ansage nicht (kein Fehlalarm bei HWG-A11Y-03)",
+      "passed": false,
+      "observed": "HWG-A11Y-03 Fehlalarm"
+    }
+  ]
+}

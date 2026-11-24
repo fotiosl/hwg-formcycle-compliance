@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "model": "qwen3-30b-a3b-instruct-2507",
+    "form": "Antrag-Sprints (saniert)",
+    "run": 3,
+    "wall_ms": 9495.8,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "VIOLATION",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 92,
+    "release_status": "green_compliant",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'qwen3-30b-a3b-instruct-2507' abgeschlossen.",
+    "llm_latency_ms": 9491.7,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp",
+    "violations": [
+      {
+        "rule": "HWG-LANG-01",
+        "rule_id": "HWG-LANG-01",
+        "severity": "major",
+        "message": "[KI-Befund · qwen3-30b-a3b-instruct-2507] Die Felder 'Benennung des Förderprogramms bzw. Mittelgebers', 'Wie viel Geld beantragen Sie beim Fördermittelgeber?', 'Wie viel Geld möchten Sie beim ZFK beantragen?' und 'Wofür sollen die beantragten Gelder verausgabt werden?' enthalten Hochschul- und Amtsjargon (z. B. 'Mittelgeber', 'ZFK', 'verausgabt'), der nicht durch verständliche Hilfetexte erläutert ist. Obwohl der Hilfetext bei 'edNameFoerderprogramm' die Bedeutung von 'Mittelgeber' erklärt, fehlen vergleichbare Erklärungen für 'ZFK' und 'verausgabt'. Zudem ist 'verausgabt' als Synonym für 'ausgegeben' in einem Hilfetext nur unzureichend erklärt. (Betroffen: edNameFoerderprogramm, selFoerderprojektvolumen, tfHoeheZuschuss, edAusgabenplanZuschuss) — Vorschlag: Ersetze 'Mittelgeber' durch 'Fördermittelgeber' oder füge einen verständlichen Hilfetext hinzu. Erklären Sie 'ZFK' als 'Zentrum für Forschung und Kooperation' im Hilfetext. Ersetze 'verausgabt' durch 'verwendet' oder 'eingesetzt' und erläutere dies im Hilfetext. Beispiel: 'verausgabt = ausgegeben oder eingesetzt'.",
+        "remediation": "Ergänzen Sie bei hochschulspezifischen Fachbegriffen oder Abkürzungen in Eingabefeldern im Bereich 'Hilfe' (helptext) eine kurze, allgemeinverständliche Begriffserklärung (z. B. Erklärung von 'ZFK', 'Mittelgeber' oder 'Kostenstelle') und achten Sie auf eine konsistente 'Sie'-Ansprache."
+      }
+    ],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (12 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Beschriftungen ohne Pipe-Zeichen, Pfeile und sichtbare Code-Reste)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 8/8 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Die Feldbezeichnungen 'Vorname', 'Nachname', 'E-Mail' und 'Telefonnummer' entsprechen den standardisierten, semantisch klaren Bezeichnungen gemäß HWG-STAMM-02. Keine Sammelfelder oder mehrdeutigen Labels wie 'Name' oder technische Kürzel wie 'tf1' sind vorhanden.)",
+      "HWG-UI-01 (Keine sichtbaren Entwickler-Notizen, Code-Artefakte oder interne Arbeitshinweise wurden in den UI-Elementen erkannt. Die Prüfung der deterministischen Marker und der LLM-basierten semantischen Analyse ergab keine Hinweise auf interne Entwicklerkommentare.)",
+      "HWG-BTN-01 (Alle für Antragstellende sichtbaren Schaltflächen ('Antrag einreichen', 'Kritischen Fall einreichen') enthalten ein konkretes Vollverb im Infinitiv mit Zielobjekt, was der Regel entspricht. Die unsichtbaren Schaltflächen ('Rückmeldung übermitteln', 'Antrag ablehnen', 'Antrag annehmen') sind nicht für Antragstellende sichtbar und werden daher nicht geprüft.)",
+      "HWG-LANG-02 (Keine Sätze im Formular überschreiten die maximale Länge von 25 Wörtern. Alle Anleitungstexte und Hilfetexte sind prägnant formuliert und enthalten keine verschachtelten Passivkonstruktionen oder Behördenjargon. Die Texte sind aktiv, klar und verständlich.)",
+      "HWG-FEEDBACK-01 (Die automatisierte Workflow-E-Mail an die antragstellende Person (E-Mail Antragsteller) enthält eine Eingangsbestätigung, nennt die zuständige Prüfstelle (ZFK-Team) und informiert über den nächsten Schritt (Prüfung, zeitnahe Rückmeldung). Die E-Mail ist an den dynamischen Empfänger [%tfEmail%] adressiert und erfüllt somit alle Anforderungen der Regel.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UPLOAD-01": "Keine Dateiupload-Elemente im Formular vorhanden.",
+      "HWG-UX-01": "Keine typischen Kompaktfelder (PLZ, Hausnummer) im Formular vorhanden.",
+      "HWG-UX-02": "[KI-Prüfung · qwen3-30b-a3b-instruct-2507] Das Formular umfasst nur 1 Seite und 16 Eingabefelder, was unter den Schwellenwerten von 3 Seiten oder 25 Eingabefeldern liegt. Daher ist die Empfehlung zur Implementierung eines Zwischenspeichermechanismus nicht anwendbar."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'qwen3-30b-a3b-instruct-2507' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 92,
+    "provenance": {
+      "engine_version": "1.7.0",
+      "registry_version": "1.7.0",
+      "prompt_version": "1.6.6",
+      "input_sha256": "281f8c2b6863668b3ed66ae189302fd354b656ce17785c025fb06665e9732d88",
+      "stage1_ms": 0.935,
+      "prompt_sha256": "11d4960e5d932a508ee3ef5d39fdc2dbc596db742896a6ecdbd72bc29e198b08",
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 9491.7,
+      "llm_raw_response": "{\n  \"form_name\": \"AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"tfVorname\",\n        \"tfName\",\n        \"tfEmail\",\n        \"tfTelefonnummer\"\n      ],\n      \"finding\": \"Die Feldbezeichnungen 'Vorname', 'Nachname', 'E-Mail' und 'Telefonnummer' entsprechen den standardisierten, semantisch klaren Bezeichnungen gemäß HWG-STAMM-02. Keine Sammelfelder oder mehrdeutigen Labels wie 'Name' oder technische Kürzel wie 'tf1' sind vorhanden.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die Stammdatenfelder sind bereits konform.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Keine sichtbaren Entwickler-Notizen, Code-Artefakte oder interne Arbeitshinweise wurden in den UI-Elementen erkannt. Die Prüfung der deterministischen Marker und der LLM-basierten semantischen Analyse ergab keine Hinweise auf interne Entwicklerkommentare.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Das Frontend ist frei von Code-Artefakten und internen Notizen.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"btnSenden\",\n        \"btnKritisch\"\n      ],\n      \"finding\": \"Alle für Antragstellende sichtbaren Schaltflächen ('Antrag einreichen', 'Kritischen Fall einreichen') enthalten ein konkretes Vollverb im Infinitiv mit Zielobjekt, was der Regel entspricht. Die unsichtbaren Schaltflächen ('Rückmeldung übermitteln', 'Antrag ablehnen', 'Antrag annehmen') sind nicht für Antragstellende sichtbar und werden daher nicht geprüft.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die Aktionsschaltflächen sind semantisch korrekt beschriftet.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Das Formular umfasst nur 1 Seite und 16 Eingabefelder, was unter den Schwellenwerten von 3 Seiten oder 25 Eingabefeldern liegt. Daher ist die Empfehlung zur Implementierung eines Zwischenspeichermechanismus nicht anwendbar.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die Komplexität des Formulars liegt unter dem Schwellenwert für die Empfehlung.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\n        \"edNameFoerderprogramm\",\n        \"selFoerderprojektvolumen\",\n        \"tfHoeheZuschuss\",\n        \"edAusgabenplanZuschuss\"\n      ],\n      \"finding\": \"Die Felder 'Benennung des Förderprogramms bzw. Mittelgebers', 'Wie viel Geld beantragen Sie beim Fördermittelgeber?', 'Wie viel Geld möchten Sie beim ZFK beantragen?' und 'Wofür sollen die beantragten Gelder verausgabt werden?' enthalten Hochschul- und Amtsjargon (z. B. 'Mittelgeber', 'ZFK', 'verausgabt'), der nicht durch verständliche Hilfetexte erläutert ist. Obwohl der Hilfetext bei 'edNameFoerderprogramm' die Bedeutung von 'Mittelgeber' erklärt, fehlen vergleichbare Erklärungen für 'ZFK' und 'verausgabt'. Zudem ist 'verausgabt' als Synonym für 'ausgegeben' in einem Hilfetext nur unzureichend erklärt.\",\n      \"remediation_suggestion\": \"Ersetze 'Mittelgeber' durch 'Fördermittelgeber' oder füge einen verständlichen Hilfetext hinzu. Erklären Sie 'ZFK' als 'Zentrum für Forschung und Kooperation' im Hilfetext. Ersetze 'verausgabt' durch 'verwendet' oder 'eingesetzt' und erläutere dies im Hilfetext. Beispiel: 'verausgabt = ausgegeben oder eingesetzt'.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Keine Sätze im Formular überschreiten die maximale Länge von 25 Wörtern. Alle Anleitungstexte und Hilfetexte sind prägnant formuliert und enthalten keine verschachtelten Passivkonstruktionen oder Behördenjargon. Die Texte sind aktiv, klar und verständlich.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die Formulierungen sind bereits barrierearm und prägnant.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"E-Mail Antragsteller\"\n      ],\n      \"finding\": \"Die automatisierte Workflow-E-Mail an die antragstellende Person (E-Mail Antragsteller) enthält eine Eingangsbestätigung, nennt die zuständige Prüfstelle (ZFK-Team) und informiert über den nächsten Schritt (Prüfung, zeitnahe Rückmeldung). Die E-Mail ist an den dynamischen Empfänger [%tfEmail%] adressiert und erfüllt somit alle Anforderungen der Regel.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die E-Mail-Bestätigungen sind bereits prozesstransparent und an die Antragstellende gerichtet.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 0,
+    "release_status": "green_compliant",
+    "release_label": "Konform (Freigabefähig)",
+    "is_releasable": true
+  }
+}

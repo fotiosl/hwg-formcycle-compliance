@@ -1,0 +1,96 @@
+{
+  "created": "20261107-231923",
+  "registry_version": "1.6.3",
+  "runs": 5,
+  "api_base": "https://chat-ai.academiccloud.de/v1",
+  "skipped_models": [],
+  "models": {
+    "deepseek-v4-flash-0731": {
+      "label": "DeepSeek V4 Flash",
+      "runs_total": 30,
+      "synthetic_tp": 25,
+      "synthetic_fp": 0,
+      "synthetic_fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "consistency": 1.0,
+      "complete_valid_share": 1.0,
+      "latency_median_s": 11.53195,
+      "transport_errors": 0,
+      "invalid_responses": 0
+    }
+  },
+  "reference_model": "deepseek-v4-flash-0731",
+  "hybrid_rows": [
+    {
+      "form": "Synthetisch konform",
+      "score_min": 100,
+      "score_max": 100,
+      "status": "green_compliant",
+      "semantic_violations": {},
+      "runs": 5
+    },
+    {
+      "form": "Synthetisch fehlerhaft",
+      "score_min": 0,
+      "score_max": 0,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-STAMM-02": 5,
+        "HWG-UI-01": 5,
+        "HWG-BTN-01": 5,
+        "HWG-LANG-01": 5,
+        "HWG-FEEDBACK-01": 5
+      },
+      "runs": 5
+    },
+    {
+      "form": "Auslagenerstattung (Prod)",
+      "score_min": 14,
+      "score_max": 14,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-BTN-01": 5,
+        "HWG-LANG-01": 5,
+        "HWG-FEEDBACK-01": 5
+      },
+      "runs": 5
+    },
+    {
+      "form": "Antrag-Sprints (alt)",
+      "score_min": 3,
+      "score_max": 3,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-STAMM-02": 5,
+        "HWG-BTN-01": 5,
+        "HWG-LANG-01": 5,
+        "HWG-FEEDBACK-01": 5
+      },
+      "runs": 5
+    },
+    {
+      "form": "Antrag-Sprints (saniert)",
+      "score_min": 89,
+      "score_max": 89,
+      "status": "green_compliant",
+      "semantic_violations": {
+        "HWG-LANG-01": 5,
+        "HWG-FEEDBACK-01": 5
+      },
+      "runs": 5
+    },
+    {
+      "form": "Master-Formular (Vorlage)",
+      "score_min": 35,
+      "score_max": 35,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-UI-01": 5,
+        "HWG-LANG-01": 5
+      },
+      "runs": 5
+    }
+  ]
+}

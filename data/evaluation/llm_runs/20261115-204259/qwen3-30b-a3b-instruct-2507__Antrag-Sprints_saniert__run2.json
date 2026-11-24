@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "model": "qwen3-30b-a3b-instruct-2507",
+    "form": "Antrag-Sprints (saniert)",
+    "run": 2,
+    "wall_ms": 10473.7,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "PASS",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "PASS",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 100,
+    "release_status": "green_compliant",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'qwen3-30b-a3b-instruct-2507' abgeschlossen.",
+    "llm_latency_ms": 10469.8,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp",
+    "violations": [],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (12 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Beschriftungen ohne Pipe-Zeichen, Pfeile und sichtbare Code-Reste)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 8/8 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Die Feldbezeichnungen 'Vorname', 'Nachname', 'E-Mail' und 'Telefonnummer' entsprechen den standardisierten Bezeichnungen gemäß HWG-STAMM-02. Es werden keine Sammelfelder oder technischen Kürzel verwendet, und die Bezeichnungen sind konsistent mit den vorgegebenen Kanonischen Mustern.)",
+      "HWG-UI-01 (Keine sichtbaren Entwickler-Notizen, Code-Artefakte oder interne Arbeitshinweise wurden in den UI-Elementen identifiziert. Die Prüfung der sichtbaren Texte (label, text, heading, rtevalue, value) ergab keine Übereinstimmung mit deterministischen Marker-Regeln (z. B. TODO, display:none) oder semantische Kandidaten (z. B. 'admin', 'intern:').)",
+      "HWG-BTN-01 (Die sichtbaren Aktionsschaltflächen 'Antrag einreichen' und 'Kritischen Fall einreichen' enthalten jeweils ein konkretes Vollverb im Infinitiv mit Zielobjekt, was der Regel entspricht. Die Schaltflächen sind handlungsorientiert und beschreiben eindeutig die ausgelöste Transaktion.)",
+      "HWG-LANG-01 (Alle Hochschul- und Fachbegriffe (z. B. 'Mittelgeber', 'ZFK', 'Fördermittel', 'Kostenstelle') sind entweder im Kontext verständlich oder durch Hilfetexte erläutert. Der Hilfetext zu 'Mittelgeber' erklärt den Begriff explizit. Der Begriff 'ZFK' wird im Hilfetext zu 'HoeheZuschuss' erklärt. Die Ansprache ist durchgängig 'Sie'-Ansprache.)",
+      "HWG-LANG-02 (Keine Sätze mit mehr als 25 Wörtern wurden erkannt. Die Anleitungstexte und Hilfetexte sind prägnant formuliert und enthalten keine verschachtelten Passivkonstruktionen oder Behördenjargon. Alle Texte sind aktiv, klar und verständlich.)",
+      "HWG-FEEDBACK-01 (Die automatisierte Workflow-E-Mail an die antragstellende Person (E-Mail Antragsteller) enthält eine Eingangsbestätigung, benennt die zuständige Prüfstelle (ZFK-Team) und informiert über den nächsten Schritt (Prüfung, zeitnahe Rückmeldung). Die E-Mail ist an den dynamischen Empfänger [%tfEmail%] adressiert und erfüllt alle Anforderungen.)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UPLOAD-01": "Keine Dateiupload-Elemente im Formular vorhanden.",
+      "HWG-UX-01": "Keine typischen Kompaktfelder (PLZ, Hausnummer) im Formular vorhanden.",
+      "HWG-UX-02": "[KI-Prüfung · qwen3-30b-a3b-instruct-2507] Das Formular umfasst nur 1 Seite und 16 Eingabefelder, was unter den Schwellenwerten von 3 Seiten oder 25 Eingabefeldern liegt. Daher ist die Empfehlung zur Implementierung eines Zwischenspeichermechanismus nicht anwendbar."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'qwen3-30b-a3b-instruct-2507' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 100,
+    "provenance": {
+      "engine_version": "1.7.0",
+      "registry_version": "1.7.0",
+      "prompt_version": "1.6.6",
+      "input_sha256": "281f8c2b6863668b3ed66ae189302fd354b656ce17785c025fb06665e9732d88",
+      "stage1_ms": 0.914,
+      "prompt_sha256": "11d4960e5d932a508ee3ef5d39fdc2dbc596db742896a6ecdbd72bc29e198b08",
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 10469.8,
+      "llm_raw_response": "{\n  \"form_name\": \"AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"tfVorname\",\n        \"tfName\",\n        \"tfEmail\",\n        \"tfTelefonnummer\"\n      ],\n      \"finding\": \"Die Feldbezeichnungen 'Vorname', 'Nachname', 'E-Mail' und 'Telefonnummer' entsprechen den standardisierten Bezeichnungen gemäß HWG-STAMM-02. Es werden keine Sammelfelder oder technischen Kürzel verwendet, und die Bezeichnungen sind konsistent mit den vorgegebenen Kanonischen Mustern.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die Stammdatenfelder sind bereits korrekt benannt.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Keine sichtbaren Entwickler-Notizen, Code-Artefakte oder interne Arbeitshinweise wurden in den UI-Elementen identifiziert. Die Prüfung der sichtbaren Texte (label, text, heading, rtevalue, value) ergab keine Übereinstimmung mit deterministischen Marker-Regeln (z. B. TODO, display:none) oder semantische Kandidaten (z. B. 'admin', 'intern:').\",\n      \"remediation_suggestion\": \"Keine Maßnahme erforderlich. Das Frontend ist frei von Entwickler-Notizen.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"btnSenden\",\n        \"btnKritisch\"\n      ],\n      \"finding\": \"Die sichtbaren Aktionsschaltflächen 'Antrag einreichen' und 'Kritischen Fall einreichen' enthalten jeweils ein konkretes Vollverb im Infinitiv mit Zielobjekt, was der Regel entspricht. Die Schaltflächen sind handlungsorientiert und beschreiben eindeutig die ausgelöste Transaktion.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die Schaltflächen sind semantisch korrekt benannt.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Das Formular umfasst nur 1 Seite und 16 Eingabefelder, was unter den Schwellenwerten von 3 Seiten oder 25 Eingabefeldern liegt. Daher ist die Empfehlung zur Implementierung eines Zwischenspeichermechanismus nicht anwendbar.\",\n      \"remediation_suggestion\": \"Keine Maßnahme erforderlich. Die Komplexität des Formulars liegt unter dem Threshold für die Empfehlung.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"edNameFoerderprogramm\",\n        \"selFoerderprojektvolumen\",\n        \"tfHoeheZuschuss\",\n        \"edAusgabenplanZuschuss\"\n      ],\n      \"finding\": \"Alle Hochschul- und Fachbegriffe (z. B. 'Mittelgeber', 'ZFK', 'Fördermittel', 'Kostenstelle') sind entweder im Kontext verständlich oder durch Hilfetexte erläutert. Der Hilfetext zu 'Mittelgeber' erklärt den Begriff explizit. Der Begriff 'ZFK' wird im Hilfetext zu 'HoeheZuschuss' erklärt. Die Ansprache ist durchgängig 'Sie'-Ansprache.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Alle Fachbegriffe sind durch Hilfetexte oder Kontext erläutert.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Keine Sätze mit mehr als 25 Wörtern wurden erkannt. Die Anleitungstexte und Hilfetexte sind prägnant formuliert und enthalten keine verschachtelten Passivkonstruktionen oder Behördenjargon. Alle Texte sind aktiv, klar und verständlich.\",\n      \"remediation_suggestion\": \"Keine Maßnahme erforderlich. Die Formulierung entspricht den Richtlinien.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\n        \"E-Mail Antragsteller\"\n      ],\n      \"finding\": \"Die automatisierte Workflow-E-Mail an die antragstellende Person (E-Mail Antragsteller) enthält eine Eingangsbestätigung, benennt die zuständige Prüfstelle (ZFK-Team) und informiert über den nächsten Schritt (Prüfung, zeitnahe Rückmeldung). Die E-Mail ist an den dynamischen Empfänger [%tfEmail%] adressiert und erfüllt alle Anforderungen.\",\n      \"remediation_suggestion\": \"Keine Korrektur erforderlich. Die E-Mail-Bestätigung ist vollständig und transparent.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 0,
+    "release_status": "green_compliant",
+    "release_label": "Konform (Freigabefähig)",
+    "is_releasable": true
+  }
+}

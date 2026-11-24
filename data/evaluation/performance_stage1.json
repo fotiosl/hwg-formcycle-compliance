@@ -1,0 +1,11 @@
+{
+  "archives": 34,
+  "runs_per_archive": 20,
+  "median_ms": 1.663967501372099,
+  "p95_ms": 5.194023018702865,
+  "max_ms": 7.905079051852226,
+  "slowest_archive": "RKA_Antrag auf Dienstreise (LF 20261006).xfp",
+  "slowest_archive_median_ms": 7.825445965863764,
+  "hardware": "13th Gen Intel(R) Core(TM) i9-13900K, Linux 6.12.113+deb13-amd64, Python 3.13.5",
+  "measured_at": "2026-11-15 20:17"
+}

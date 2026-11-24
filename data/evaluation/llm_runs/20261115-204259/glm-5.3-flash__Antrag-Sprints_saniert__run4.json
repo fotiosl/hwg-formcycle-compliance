@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "model": "glm-5.3-flash",
+    "form": "Antrag-Sprints (saniert)",
+    "run": 4,
+    "wall_ms": 147080.7,
+    "statuses": {
+      "HWG-STAMM-02": "PASS",
+      "HWG-UI-01": "VIOLATION",
+      "HWG-BTN-01": "PASS",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "VIOLATION",
+      "HWG-LANG-02": "PASS",
+      "HWG-FEEDBACK-01": "PASS"
+    },
+    "score": 77,
+    "release_status": "red_blocked",
+    "llm_status": "ok",
+    "llm_reason": "Semantische Prüfung über Modell 'glm-5.3-flash' abgeschlossen.",
+    "llm_latency_ms": 147076.7,
+    "attempts": 1,
+    "transport_error": false
+  },
+  "result": {
+    "form": "AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp",
+    "violations": [
+      {
+        "rule": "HWG-UI-01",
+        "rule_id": "HWG-UI-01",
+        "severity": "critical",
+        "message": "[KI-Befund · glm-5.3-flash] Im Genehmigungs-E-Mail an die antragstellende Person weist der Link auf https://intranet.hwg-lu.de/intranet/drittmittelanzeige zahlreiche beim Kopieren übernommene Code-Artefakte auf (_ngcontent-ng-c3325460289, _nghost-ng-c580252609, data-hveid, data-ved, decode-data-ved, jslog='197247;track:generic_click,impression,attention;BardVeMetadataKey:…'). Diese Tracking- und Framework-Attribute stammen erkennbar aus einem Browser- bzw. KI-Chat-Export, befinden sich in einem für Antragstellende sichtbaren Text-Element und verletzen das kritische Verbot von Code-Artefakten im Frontend. Die übrigen sichtbaren Formularelemente (Labels, Helptexte) sind frei von Entwickler-Notizen; metrics.suspected_dev_notes ist leer. (Betroffen: E-Mail Antragsteller (Genehmigung, Betreff 'Antrag auf Förderung eines Antrags-Sprints genehmigt – [%tfName%]')) — Vorschlag: Im Formcycle-Designer den Link in der Genehmigungs-E-Mail löschen und neu als sauberes <a href=\"https://intranet.hwg-lu.de/intranet/drittmittelanzeige\">…</a> einfügen, sodass keine kopierten Attribute (_ngcontent*, _nghost*, data-ved, decode-data-ved, jslog, BardVeMetadataKey) im Quelltext verbleiben.",
+        "remediation": "Entfernen Sie technische Implementierungs- und Redaktionshinweise aus sichtbaren Elementen vom Typ 'Text' (XSpan) und aus Beschriftungen. Hinterlegen Sie interne Notizen im Reiter 'Erweitert' im Bereich 'Sonstiges' als 'Bemerkung' (nur im Designer sichtbar) oder machen Sie interne Bearbeiterblöcke im Reiter 'Erweitert' über 'Verfügbar wenn' (Status) nur in nachgelagerten Status verfügbar (im Export viewstatus)."
+      },
+      {
+        "rule": "HWG-LANG-01",
+        "rule_id": "HWG-LANG-01",
+        "severity": "major",
+        "message": "[KI-Befund · glm-5.3-flash] Der programspezifische Förderbegriff 'kritischer Fall' wird im Label von edBegruendungKritisch ('Wieso ist das ein kritischer Fall?') und auf der Schaltfläche btnKritisch ('Kritischen Fall einreichen') ohne Helptext verwendet; nicht erläutert wird, welche Kriterien einen kritischen Fall ausmachen, sodass Antragstellende nicht nachvollziehen können, wann dieser Weg statt 'Antrag einreichen' zu wählen ist. Die übrigen Fachbegriffe sind hingegen erklärt (Mittelgeber über Helptext bei edNameFoerderprogramm und selFoerderprojektvolumen, ZFK über Helptext bei tfHoeheZuschuss, 'verausgabt' über Helptext bei edAusgabenplanZuschuss); der Formulartitel txtTitel im XHeader ist gemäß Regel ausgenommen. Zudem ist die Sie-Ansprache nicht durchgängig: Die Ablehnungs-E-Mail enthält den Tippfehler 'Sehr geehrte Frau / Sehr geehter Herr' und kleinschreibt 'Leider kann ihr Antrag nicht gefördert werden.' (Betroffen: edBegruendungKritisch, btnKritisch, E-Mail Antragsteller (Ablehnung, Betreff 'Antrag auf Förderung eines Antrags-Sprints abgelehnt – [%tfName%]')) — Vorschlag: Für edBegruendungKritisch einen Helptext hinterlegen, der definiert, wann ein Antrag als kritischer Fall gilt (z. B. kurzfristige Einreichungsfrist, überdurchschnittliche Förderhöhe), und denselben Hinweis am Button btnKritisch ergänzen. In der Ablehnungs-E-Mail 'Sehr geehter' in 'Sehr geehrter' korrigieren und 'ihr Antrag' in 'Ihr Antrag' ändern.",
+        "remediation": "Ergänzen Sie bei hochschulspezifischen Fachbegriffen oder Abkürzungen in Eingabefeldern im Bereich 'Hilfe' (helptext) eine kurze, allgemeinverständliche Begriffserklärung (z. B. Erklärung von 'ZFK', 'Mittelgeber' oder 'Kostenstelle') und achten Sie auf eine konsistente 'Sie'-Ansprache."
+      }
+    ],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (12 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Beschriftungen ohne Pipe-Zeichen, Pfeile und sichtbare Code-Reste)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 8/8 Workflow-E-Mails vorhanden)",
+      "HWG-STAMM-02 (Die Stammdatenfelder im FieldSet 'fsPersoenlicheAngaben' tragen durchgängig kanonische Labels: 'Vorname' (tfVorname), 'Nachname' (tfName), 'E-Mail' (tfEmail) und 'Telefonnummer' (tfTelefonnummer). Vor- und Nachname sind getrennt erhoben; es gibt keine Sammelfelder mit Rollenzusätzen und keine technischen Bezeichner als sichtbares Label.)",
+      "HWG-BTN-01 (Beide für Antragstellende sichtbaren Aktionsschaltflächen erfüllen das Action-Verb-Pattern: 'Antrag einreichen' (btnSenden) und 'Kritischen Fall einreichen' (btnKritisch) enthalten jeweils ein Vollverb im Infinitiv mit Zielobjekt. Die übrigen Schaltflächen (btnRueckmeldung 'Rückmeldung übermitteln', btn1 'Antrag ablehnen', btn1 'Antrag annehmen') sind mit applicant_visible == false intern und wurden nicht bewertet.)",
+      "HWG-LANG-02 (Kein sichtbarer Satz in Text- oder Hilfetextfeldern überschreitet 25 Wörter (metrics.sentences_over_25_words_count = 0). Labels und Helptexte sind kurz und überwiegend aktiv formuliert; verschachtelte Passiv- oder Behördensyntax ist nicht erkennbar (der Helptext zu 'Mittelgeber' ist eine einfache Definition, die Frage 'Wofür sollen die beantragten Gelder verausgabt werden?' ist kurz und durch Helptext gestützt).)",
+      "HWG-FEEDBACK-01 (Drei Workflow-E-Mails sind an die antragstellende Person adressiert ([%tfEmail%]; metrics.applicant_addressed_emails_count = 3). Die Eingangsbestätigung bestätigt den Eingang ('Ihr Antrag ist erfolgreich bei uns eingegangen'), nennt die nächsten Prozessschritte ('befindet sich nun in Prüfung. Wir werden Sie zeitnah über die Entscheidung informieren.') und macht die zuständige Stelle über die Signatur 'Ihr ZFK-Team' erkennbar. Auch die Genehmigungs- und Ablehnungs-E-Mails informieren über das Ergebnis und weitere Schritte (z. B. Angabe der Kostenstelle, Fördermittelanzeige).)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UPLOAD-01": "Keine Dateiupload-Elemente im Formular vorhanden.",
+      "HWG-UX-01": "Keine typischen Kompaktfelder (PLZ, Hausnummer) im Formular vorhanden.",
+      "HWG-UX-02": "[KI-Prüfung · glm-5.3-flash] Der Komplexitätsschwellenwert ist nicht erreicht: Das Formular umfasst 1 Seite (XPage) und 16 Eingabefelder (< 25), metrics.ux02_complexity_threshold_reached = false. Die Empfehlung zu Zwischenspeichern und Fortsetzungs-Link ist daher nicht anwendbar; das Fehlen einer Speicher-Mechanik (has_save_resume_mechanism = false) bleibt ohne Abwertung."
+    },
+    "unverified_semantic": [],
+    "llm_evaluation": {
+      "evaluated": true,
+      "status": "ok",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "glm-5.3-flash",
+      "invalid_entries": [],
+      "reason": "Semantische Prüfung über Modell 'glm-5.3-flash' abgeschlossen.",
+      "unverified_rules": []
+    },
+    "score": 77,
+    "provenance": {
+      "engine_version": "1.7.0",
+      "registry_version": "1.7.0",
+      "prompt_version": "1.6.6",
+      "input_sha256": "281f8c2b6863668b3ed66ae189302fd354b656ce17785c025fb06665e9732d88",
+      "stage1_ms": 0.896,
+      "prompt_sha256": "11d4960e5d932a508ee3ef5d39fdc2dbc596db742896a6ecdbd72bc29e198b08",
+      "model": "glm-5.3-flash",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "llm_latency_ms": 147076.7,
+      "llm_raw_response": "{\n  \"form_name\": \"AFörderung Antrag-Sprints für Drittmittelanträge (HWG-Standard).xfp\",\n  \"evaluated_rules\": [\n    {\n      \"rule_id\": \"HWG-STAMM-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"tfVorname\", \"tfName\", \"tfEmail\", \"tfTelefonnummer\"],\n      \"finding\": \"Die Stammdatenfelder im FieldSet 'fsPersoenlicheAngaben' tragen durchgängig kanonische Labels: 'Vorname' (tfVorname), 'Nachname' (tfName), 'E-Mail' (tfEmail) und 'Telefonnummer' (tfTelefonnummer). Vor- und Nachname sind getrennt erhoben; es gibt keine Sammelfelder mit Rollenzusätzen und keine technischen Bezeichner als sichtbares Label.\",\n      \"remediation_suggestion\": \"Keine Anpassung erforderlich; Labels so beibehalten.\"\n    },\n    {\n      \"rule_id\": \"HWG-UI-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"E-Mail Antragsteller (Genehmigung, Betreff 'Antrag auf Förderung eines Antrags-Sprints genehmigt – [%tfName%]')\"],\n      \"finding\": \"Im Genehmigungs-E-Mail an die antragstellende Person weist der Link auf https://intranet.hwg-lu.de/intranet/drittmittelanzeige zahlreiche beim Kopieren übernommene Code-Artefakte auf (_ngcontent-ng-c3325460289, _nghost-ng-c580252609, data-hveid, data-ved, decode-data-ved, jslog='197247;track:generic_click,impression,attention;BardVeMetadataKey:…'). Diese Tracking- und Framework-Attribute stammen erkennbar aus einem Browser- bzw. KI-Chat-Export, befinden sich in einem für Antragstellende sichtbaren Text-Element und verletzen das kritische Verbot von Code-Artefakten im Frontend. Die übrigen sichtbaren Formularelemente (Labels, Helptexte) sind frei von Entwickler-Notizen; metrics.suspected_dev_notes ist leer.\",\n      \"remediation_suggestion\": \"Im Formcycle-Designer den Link in der Genehmigungs-E-Mail löschen und neu als sauberes <a href=\\\"https://intranet.hwg-lu.de/intranet/drittmittelanzeige\\\">…</a> einfügen, sodass keine kopierten Attribute (_ngcontent*, _nghost*, data-ved, decode-data-ved, jslog, BardVeMetadataKey) im Quelltext verbleiben.\"\n    },\n    {\n      \"rule_id\": \"HWG-BTN-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"btnSenden\", \"btnKritisch\"],\n      \"finding\": \"Beide für Antragstellende sichtbaren Aktionsschaltflächen erfüllen das Action-Verb-Pattern: 'Antrag einreichen' (btnSenden) und 'Kritischen Fall einreichen' (btnKritisch) enthalten jeweils ein Vollverb im Infinitiv mit Zielobjekt. Die übrigen Schaltflächen (btnRueckmeldung 'Rückmeldung übermitteln', btn1 'Antrag ablehnen', btn1 'Antrag annehmen') sind mit applicant_visible == false intern und wurden nicht bewertet.\",\n      \"remediation_suggestion\": \"Keine Anpassung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-UX-02\",\n      \"status\": \"NOT_APPLICABLE\",\n      \"affected_elements\": [],\n      \"finding\": \"Der Komplexitätsschwellenwert ist nicht erreicht: Das Formular umfasst 1 Seite (XPage) und 16 Eingabefelder (< 25), metrics.ux02_complexity_threshold_reached = false. Die Empfehlung zu Zwischenspeichern und Fortsetzungs-Link ist daher nicht anwendbar; das Fehlen einer Speicher-Mechanik (has_save_resume_mechanism = false) bleibt ohne Abwertung.\",\n      \"remediation_suggestion\": \"Keine Maßnahme erforderlich. Falls das Formular später auf ≥ 3 Seiten oder ≥ 25 Eingabefelder erweitert wird, sollte eine Schaltfläche 'Zwischenspeichern' (Aktion 'speichern') ergänzt und der Fortsetzungs-Link ([%$FORM_PROCESS_LINK%]) per E-Mail an die antragstellende Person versandt werden.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-01\",\n      \"status\": \"VIOLATION\",\n      \"affected_elements\": [\"edBegruendungKritisch\", \"btnKritisch\", \"E-Mail Antragsteller (Ablehnung, Betreff 'Antrag auf Förderung eines Antrags-Sprints abgelehnt – [%tfName%]')\"],\n      \"finding\": \"Der programspezifische Förderbegriff 'kritischer Fall' wird im Label von edBegruendungKritisch ('Wieso ist das ein kritischer Fall?') und auf der Schaltfläche btnKritisch ('Kritischen Fall einreichen') ohne Helptext verwendet; nicht erläutert wird, welche Kriterien einen kritischen Fall ausmachen, sodass Antragstellende nicht nachvollziehen können, wann dieser Weg statt 'Antrag einreichen' zu wählen ist. Die übrigen Fachbegriffe sind hingegen erklärt (Mittelgeber über Helptext bei edNameFoerderprogramm und selFoerderprojektvolumen, ZFK über Helptext bei tfHoeheZuschuss, 'verausgabt' über Helptext bei edAusgabenplanZuschuss); der Formulartitel txtTitel im XHeader ist gemäß Regel ausgenommen. Zudem ist die Sie-Ansprache nicht durchgängig: Die Ablehnungs-E-Mail enthält den Tippfehler 'Sehr geehrte Frau / Sehr geehter Herr' und kleinschreibt 'Leider kann ihr Antrag nicht gefördert werden.'\",\n      \"remediation_suggestion\": \"Für edBegruendungKritisch einen Helptext hinterlegen, der definiert, wann ein Antrag als kritischer Fall gilt (z. B. kurzfristige Einreichungsfrist, überdurchschnittliche Förderhöhe), und denselben Hinweis am Button btnKritisch ergänzen. In der Ablehnungs-E-Mail 'Sehr geehter' in 'Sehr geehrter' korrigieren und 'ihr Antrag' in 'Ihr Antrag' ändern.\"\n    },\n    {\n      \"rule_id\": \"HWG-LANG-02\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [],\n      \"finding\": \"Kein sichtbarer Satz in Text- oder Hilfetextfeldern überschreitet 25 Wörter (metrics.sentences_over_25_words_count = 0). Labels und Helptexte sind kurz und überwiegend aktiv formuliert; verschachtelte Passiv- oder Behördensyntax ist nicht erkennbar (der Helptext zu 'Mittelgeber' ist eine einfache Definition, die Frage 'Wofür sollen die beantragten Gelder verausgabt werden?' ist kurz und durch Helptext gestützt).\",\n      \"remediation_suggestion\": \"Keine Anpassung erforderlich.\"\n    },\n    {\n      \"rule_id\": \"HWG-FEEDBACK-01\",\n      \"status\": \"PASS\",\n      \"affected_elements\": [\"E-Mail Antragsteller (Eingangsbestätigung, Betreff 'Eingangsbestätigung: Antrag auf Förderung eines Antrags-Sprints – [%tfName%]')\"],\n      \"finding\": \"Drei Workflow-E-Mails sind an die antragstellende Person adressiert ([%tfEmail%]; metrics.applicant_addressed_emails_count = 3). Die Eingangsbestätigung bestätigt den Eingang ('Ihr Antrag ist erfolgreich bei uns eingegangen'), nennt die nächsten Prozessschritte ('befindet sich nun in Prüfung. Wir werden Sie zeitnah über die Entscheidung informieren.') und macht die zuständige Stelle über die Signatur 'Ihr ZFK-Team' erkennbar. Auch die Genehmigungs- und Ablehnungs-E-Mails informieren über das Ergebnis und weitere Schritte (z. B. Angabe der Kostenstelle, Fördermittelanzeige).\",\n      \"remediation_suggestion\": \"Keine Anpassung erforderlich.\"\n    }\n  ]\n}"
+    },
+    "critical_count": 1,
+    "release_status": "red_blocked",
+    "release_label": "Kritisch unzureichend (Gesperrt — Critical-Veto)",
+    "is_releasable": false
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "created": "20261031-173843",
+  "registry_version": "1.6.0",
+  "runs": 5,
+  "api_base": "https://chat-ai.academiccloud.de/v1",
+  "skipped_models": [],
+  "models": {
+    "deepseek-v4-flash-0731": {
+      "label": "DeepSeek V4 Flash",
+      "runs_total": 30,
+      "synthetic_tp": 25,
+      "synthetic_fp": 0,
+      "synthetic_fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "consistency": 0.9523809523809523,
+      "complete_valid_share": 1.0,
+      "latency_median_s": 9.5804,
+      "transport_errors": 0,
+      "invalid_responses": 0
+    },
+    "qwen3-30b-a3b-instruct-2507": {
+      "label": "Qwen 3 30B A3B",
+      "runs_total": 30,
+      "synthetic_tp": 25,
+      "synthetic_fp": 0,
+      "synthetic_fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "consistency": 1.0,
+      "complete_valid_share": 1.0,
+      "latency_median_s": 14.35065,
+      "transport_errors": 0,
+      "invalid_responses": 0
+    },
+    "qwen3.8-27b": {
+      "label": "Qwen 3.8 27B",
+      "runs_total": 30,
+      "synthetic_tp": 10,
+      "synthetic_fp": 0,
+      "synthetic_fn": 15,
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714285714285715,
+      "consistency": 0.4523809523809524,
+      "complete_valid_share": 0.43333333333333335,
+      "latency_median_s": 159.8256,
+      "transport_errors": 17,
+      "invalid_responses": 0
+    },
+    "glm-5.3-flash": {
+      "label": "GLM 5.3 Flash",
+      "runs_total": 30,
+      "synthetic_tp": 25,
+      "synthetic_fp": 0,
+      "synthetic_fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "consistency": 0.9285714285714286,
+      "complete_valid_share": 1.0,
+      "latency_median_s": 96.15195,
+      "transport_errors": 0,
+      "invalid_responses": 0
+    },
+    "meta-llama-3.1-8b-instruct": {
+      "label": "Llama 3.1 8B",
+      "runs_total": 30,
+      "synthetic_tp": 19,
+      "synthetic_fp": 0,
+      "synthetic_fn": 6,
+      "precision": 1.0,
+      "recall": 0.76,
+      "f1": 0.8636363636363636,
+      "consistency": 0.9047619047619048,
+      "complete_valid_share": 1.0,
+      "latency_median_s": 4.13095,
+      "transport_errors": 0,
+      "invalid_responses": 0
+    }
+  },
+  "reference_model": "deepseek-v4-flash-0731",
+  "hybrid_rows": [
+    {
+      "form": "Synthetisch konform",
+      "score_min": 100,
+      "score_max": 100,
+      "status": "green_compliant",
+      "semantic_violations": {},
+      "runs": 5
+    },
+    {
+      "form": "Synthetisch fehlerhaft",
+      "score_min": 0,
+      "score_max": 0,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-STAMM-02": 5,
+        "HWG-UI-01": 5,
+        "HWG-BTN-01": 5,
+        "HWG-LANG-01": 5,
+        "HWG-FEEDBACK-01": 5
+      },
+      "runs": 5
+    },
+    {
+      "form": "Auslagenerstattung (Prod)",
+      "score_min": 14,
+      "score_max": 14,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-BTN-01": 5,
+        "HWG-LANG-01": 5,
+        "HWG-FEEDBACK-01": 5
+      },
+      "runs": 5
+    },
+    {
+      "form": "Antrag-Sprints (alt)",
+      "score_min": 3,
+      "score_max": 3,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-STAMM-02": 5,
+        "HWG-BTN-01": 5,
+        "HWG-LANG-01": 5,
+        "HWG-FEEDBACK-01": 5
+      },
+      "runs": 5
+    },
+    {
+      "form": "Antrag-Sprints (saniert)",
+      "score_min": 100,
+      "score_max": 100,
+      "status": "green_compliant",
+      "semantic_violations": {},
+      "runs": 5
+    },
+    {
+      "form": "Master-Formular (Vorlage)",
+      "score_min": 29,
+      "score_max": 35,
+      "status": "red_blocked",
+      "semantic_violations": {
+        "HWG-UI-01": 5,
+        "HWG-LANG-01": 5,
+        "HWG-STAMM-02": 1,
+        "HWG-FEEDBACK-01": 2
+      },
+      "runs": 5
+    }
+  ]
+}

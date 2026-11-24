@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "model": "qwen3.8-27b",
+    "form": "Synthetisch konform",
+    "run": 3,
+    "wall_ms": 180074.8,
+    "statuses": {
+      "HWG-STAMM-02": "UNVERIFIED",
+      "HWG-UI-01": "UNVERIFIED",
+      "HWG-BTN-01": "UNVERIFIED",
+      "HWG-UX-02": "NOT_APPLICABLE",
+      "HWG-LANG-01": "UNVERIFIED",
+      "HWG-LANG-02": "UNVERIFIED",
+      "HWG-FEEDBACK-01": "UNVERIFIED"
+    },
+    "score": 100,
+    "release_status": "pending_ai_review",
+    "llm_status": "error",
+    "llm_reason": "LLM-API nicht erreichbar oder Antwort ungültig (TimeoutError).",
+    "llm_latency_ms": null,
+    "attempts": 4,
+    "transport_error": true
+  },
+  "result": {
+    "form": "synthetic_compliant_form.xfp",
+    "violations": [],
+    "recommendations": [],
+    "passed": [
+      "HWG-CD-01 (Layout-Breite durchgängig 850px)",
+      "HWG-CD-02 (Header-Logo 60px, rechtsbündig, mit korrektem Alt-Text)",
+      "HWG-CD-03 (XIMA-Herstellerlogo im Footer deaktiviert)",
+      "HWG-CD-04 (Formulartitel im Header eindeutig als H1 ausgezeichnet)",
+      "HWG-A11Y-01 (2 XFieldSet-Gruppen mit Legenden vorhanden)",
+      "HWG-A11Y-02 (7 Pflichtfelder programmatisch inkl. globaler Legende deklariert)",
+      "HWG-A11Y-03 (Saubere Label-Syntax ohne störende HTML-Fragmente)",
+      "HWG-STAMM-01 (Kanonische Stammdaten-Abfolge in allen Sektionen eingehalten)",
+      "HWG-DSGVO-01 (DSGVO-Datenschutzhinweis mit Verlinkung / Footer-Option vorhanden)",
+      "HWG-UPLOAD-01 (Alle Dateiuploads technisch und im Hilfetext konsistent spezifiziert)",
+      "HWG-VAL-01 (Alle strukturierten Eingabefelder formal validiert)",
+      "HWG-UX-01 (Affordanzgerechte kompakte Feldbreiten eingehalten)",
+      "HWG-WF-01 (Kanonischer Workflow-Lebenszyklus eingehalten: Eingegangen, In Prüfung, In Prüfung Rückmeldung, Genehmigt, Abgelehnt)",
+      "HWG-WF-02 (Dynamische Vorgangsreferenz ([%$RECORD_ID%]) in allen 1/1 Workflow-E-Mails vorhanden)"
+    ],
+    "not_applicable": {
+      "HWG-BTN-02": "Einseitiges Formular ohne Seitennavigation.",
+      "HWG-UX-02": "Formular unterhalb des Komplexitätsschwellenwerts (1 Seite(n), 9 Eingabefelder; Schwellenwert: >= 3 Seiten oder >= 25 Felder).",
+      "HWG-STAMM-02": "KI-Prüfung ausstehend (Semantische KI-Regel): Diese Regel wurde NICHT durch ein Sprachmodell (LLM) begutachtet. Grund: LLM-API nicht erreichbar oder Antwort ungültig (TimeoutError).",
+      "HWG-UI-01": "KI-Prüfung ausstehend (Hybride AST/KI-Regel): Diese Regel wurde NICHT durch ein Sprachmodell (LLM) begutachtet. Grund: LLM-API nicht erreichbar oder Antwort ungültig (TimeoutError).",
+      "HWG-BTN-01": "KI-Prüfung ausstehend (Semantische KI-Regel): Diese Regel wurde NICHT durch ein Sprachmodell (LLM) begutachtet. Grund: LLM-API nicht erreichbar oder Antwort ungültig (TimeoutError).",
+      "HWG-LANG-01": "KI-Prüfung ausstehend (Semantische KI-Regel): Diese Regel wurde NICHT durch ein Sprachmodell (LLM) begutachtet. Grund: LLM-API nicht erreichbar oder Antwort ungültig (TimeoutError).",
+      "HWG-LANG-02": "KI-Prüfung ausstehend (Hybride AST/KI-Regel): Diese Regel wurde NICHT durch ein Sprachmodell (LLM) begutachtet. Grund: LLM-API nicht erreichbar oder Antwort ungültig (TimeoutError).",
+      "HWG-FEEDBACK-01": "KI-Prüfung ausstehend (Hybride AST/KI-Regel): Diese Regel wurde NICHT durch ein Sprachmodell (LLM) begutachtet. Grund: LLM-API nicht erreichbar oder Antwort ungültig (TimeoutError)."
+    },
+    "unverified_semantic": [
+      "HWG-STAMM-02",
+      "HWG-UI-01",
+      "HWG-BTN-01",
+      "HWG-LANG-01",
+      "HWG-LANG-02",
+      "HWG-FEEDBACK-01"
+    ],
+    "llm_evaluation": {
+      "evaluated": false,
+      "status": "error",
+      "api_base": "https://chat-ai.academiccloud.de/v1",
+      "model": "qwen3.8-27b",
+      "reason": "LLM-API nicht erreichbar oder Antwort ungültig (TimeoutError).",
+      "unverified_rules": [
+        "HWG-STAMM-02",
+        "HWG-UI-01",
+        "HWG-BTN-01",
+        "HWG-LANG-01",
+        "HWG-LANG-02",
+        "HWG-FEEDBACK-01"
+      ]
+    },
+    "score": 100,
+    "provenance": {
+      "engine_version": "1.6.0",
+      "registry_version": "1.6.0",
+      "prompt_version": "1.6.0",
+      "input_sha256": "525816e6377865052a3d67ec4635aaa8f4f20b55ed8d240e83fce756d2f9cf93",
+      "stage1_ms": 0.623,
+      "prompt_sha256": "3fc2458536ecf6f8ddf89d179ec341a30795fdd45f1c45d4c9a198d13b55e6fe",
+      "model": "qwen3.8-27b",
+      "api_base": "https://chat-ai.academiccloud.de/v1"
+    },
+    "critical_count": 0,
+    "release_status": "pending_ai_review",
+    "release_label": "Vorläufig – 6 Regel(n) ohne KI-Prüfung (nicht freigabefähig)",
+    "is_releasable": false
+  }
+}

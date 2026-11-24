@@ -1,0 +1,99 @@
+{
+  "created": "20261109-153405",
+  "form": "Master-Formular (Vorlage)",
+  "model": "deepseek-v4-flash-0731",
+  "runs": 5,
+  "old_rev": "520619e",
+  "old_prompt_version": "1.6.1",
+  "arms": {
+    "alt": {
+      "prompt_version": [
+        "1.6.1"
+      ],
+      "registry_version": [
+        "1.6.3"
+      ],
+      "prompt_sha256": [
+        "37519fd00a819445067a9d8e7e816df049c4d7da90f3e592ea75606a5a93294a"
+      ],
+      "scores": [
+        35,
+        35,
+        35,
+        35,
+        35
+      ],
+      "release_status": {
+        "red_blocked": 5
+      },
+      "statuses": {
+        "HWG-STAMM-02": {
+          "PASS": 5
+        },
+        "HWG-UI-01": {
+          "VIOLATION": 5
+        },
+        "HWG-BTN-01": {
+          "NOT_APPLICABLE": 5
+        },
+        "HWG-UX-02": {
+          "RECOMMENDATION": 5
+        },
+        "HWG-LANG-01": {
+          "VIOLATION": 5
+        },
+        "HWG-LANG-02": {
+          "PASS": 5
+        },
+        "HWG-FEEDBACK-01": {
+          "NOT_APPLICABLE": 5
+        }
+      }
+    },
+    "neu": {
+      "prompt_version": [
+        "1.6.2"
+      ],
+      "registry_version": [
+        "1.6.4"
+      ],
+      "prompt_sha256": [
+        "063c16fc763faef4b188828e7ff632c492c9134cecf51fc981955bd4470f7e96"
+      ],
+      "scores": [
+        29,
+        29,
+        29,
+        29,
+        32
+      ],
+      "release_status": {
+        "red_blocked": 5
+      },
+      "statuses": {
+        "HWG-STAMM-02": {
+          "VIOLATION": 5
+        },
+        "HWG-UI-01": {
+          "VIOLATION": 5
+        },
+        "HWG-BTN-01": {
+          "NOT_APPLICABLE": 5
+        },
+        "HWG-UX-02": {
+          "RECOMMENDATION": 5
+        },
+        "HWG-LANG-01": {
+          "VIOLATION": 5
+        },
+        "HWG-LANG-02": {
+          "PASS": 5
+        },
+        "HWG-FEEDBACK-01": {
+          "VIOLATION": 4,
+          "NOT_APPLICABLE": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "created": "20261109-153146",
+  "form": "Auslagenerstattung (Prod)",
+  "model": "deepseek-v4-flash-0731",
+  "runs": 5,
+  "old_rev": "520619e",
+  "old_prompt_version": "1.6.1",
+  "arms": {
+    "alt": {
+      "prompt_version": [
+        "1.6.1"
+      ],
+      "registry_version": [
+        "1.6.3"
+      ],
+      "prompt_sha256": [
+        "3242cb989fc9b5e4d273cf74a2d58dcc92ce11e84beccbfacd2cd936d259fa08"
+      ],
+      "scores": [
+        14,
+        14,
+        14,
+        14,
+        14
+      ],
+      "release_status": {
+        "red_blocked": 5
+      },
+      "statuses": {
+        "HWG-STAMM-02": {
+          "PASS": 5
+        },
+        "HWG-UI-01": {
+          "PASS": 5
+        },
+        "HWG-BTN-01": {
+          "VIOLATION": 5
+        },
+        "HWG-UX-02": {
+          "RECOMMENDATION": 5
+        },
+        "HWG-LANG-01": {
+          "VIOLATION": 5
+        },
+        "HWG-LANG-02": {
+          "PASS": 5
+        },
+        "HWG-FEEDBACK-01": {
+          "VIOLATION": 5
+        }
+      }
+    },
+    "neu": {
+      "prompt_version": [
+        "1.6.2"
+      ],
+      "registry_version": [
+        "1.6.4"
+      ],
+      "prompt_sha256": [
+        "6c820bcfd3cc840b9067c4babec24d94d773589556f4c3fe03ddc0fafe4b0717"
+      ],
+      "scores": [
+        14,
+        14,
+        14,
+        14,
+        14
+      ],
+      "release_status": {
+        "red_blocked": 5
+      },
+      "statuses": {
+        "HWG-STAMM-02": {
+          "PASS": 5
+        },
+        "HWG-UI-01": {
+          "PASS": 5
+        },
+        "HWG-BTN-01": {
+          "VIOLATION": 5
+        },
+        "HWG-UX-02": {
+          "RECOMMENDATION": 5
+        },
+        "HWG-LANG-01": {
+          "VIOLATION": 5
+        },
+        "HWG-LANG-02": {
+          "PASS": 5
+        },
+        "HWG-FEEDBACK-01": {
+          "VIOLATION": 5
+        }
+      }
+    }
+  }
+}

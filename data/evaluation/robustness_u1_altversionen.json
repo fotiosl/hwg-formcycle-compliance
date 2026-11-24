@@ -1,0 +1,47 @@
+{
+  "test": "U1",
+  "beschreibung": "Zwischenspeichern mit der Aktion speichern und Fortsetzungs-Link [%$FORM_PROCESS_LINK%] erfüllt HWG-UX-02 (ohne Schaltfläche Empfehlung, mit Schaltfläche keine); Grundlage Auslagenerstattung _20260929.xfp",
+  "datum": "2026-11-15",
+  "ergebnisse": [
+    {
+      "commit": "00d901a",
+      "registry": "1.5.0",
+      "engine": "1.5.0",
+      "ohne_schaltflaeche": "nicht anwendbar",
+      "mit_schaltflaeche": "nicht anwendbar",
+      "bestanden": false
+    },
+    {
+      "commit": "a254df1",
+      "registry": "1.6.0",
+      "engine": "1.6.0",
+      "ohne_schaltflaeche": "Empfehlung",
+      "mit_schaltflaeche": "Empfehlung",
+      "bestanden": false
+    },
+    {
+      "commit": "4658434",
+      "registry": "1.6.2",
+      "engine": "1.6.2",
+      "ohne_schaltflaeche": "Empfehlung",
+      "mit_schaltflaeche": "Empfehlung",
+      "bestanden": false
+    },
+    {
+      "commit": "fcf21e4",
+      "registry": "1.6.12",
+      "engine": "1.6.6",
+      "ohne_schaltflaeche": "Empfehlung",
+      "mit_schaltflaeche": "erfüllt",
+      "bestanden": true
+    },
+    {
+      "commit": "Arbeitsstand",
+      "registry": "1.7.0",
+      "engine": "1.7.0",
+      "ohne_schaltflaeche": "Empfehlung",
+      "mit_schaltflaeche": "erfüllt",
+      "bestanden": true
+    }
+  ]
+}
